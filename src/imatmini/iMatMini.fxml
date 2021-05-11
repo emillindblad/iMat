@@ -14,7 +14,7 @@
     <children>
       <StackPane maxHeight="1080.0" maxWidth="1920.0" prefHeight="1080.0" prefWidth="1920.0">
          <children>
-            <AnchorPane fx:id="accountPane" prefHeight="200.0" prefWidth="1920.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+            <AnchorPane fx:id="accountPane" prefHeight="200.0" prefWidth="1920.0">
                <children>
                   <AnchorPane layoutX="886.0" layoutY="329.0" prefHeight="289.0" prefWidth="444.0" style="-fx-background-color: #e0e0e0;">
                      <children>
@@ -41,9 +41,9 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane id="mainPane" fx:id="shopPane" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@iMat.css">
+            <AnchorPane id="mainPane" fx:id="shopPane" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@iMat.css">
                <children>
-                  <AnchorPane layoutX="340.0" prefHeight="110.0" prefWidth="1580.0" style="-fx-background-color: #26263a;">
+                  <AnchorPane layoutX="340.0" prefHeight="110.0" prefWidth="1580.0" styleClass="mainblue">
                      <children>
                         <TextField fx:id="searchField" layoutX="150.0" layoutY="34.0" prefHeight="35.0" prefWidth="476.0" promptText="Sök vara">
                            <font>
@@ -72,7 +72,11 @@
                         <Label fx:id="costLabel" layoutX="107.0" layoutY="743.0" text="Kostnad: 3456.60" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="642.0" prefWidth="340.0" />
+                  <AnchorPane prefHeight="1080.0" prefWidth="340.0" styleClass="mainblue">
+                     <children>
+                        <Label id="logo" layoutX="93.0" layoutY="21.0" text="iMat" />
+                     </children>
+                  </AnchorPane>
                   <ScrollPane hbarPolicy="NEVER" layoutX="391.0" layoutY="150.0" prefHeight="890.0" prefWidth="1112.0" vbarPolicy="ALWAYS">
                      <content>
                         <FlowPane fx:id="productsFlowPane" prefHeight="716.0" prefWidth="923.0" style="-fx-background-color: #5e6d70;" vgap="4.0" />

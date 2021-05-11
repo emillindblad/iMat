@@ -20,6 +20,10 @@
     -fx-font-family: "Kelly Slab";
 }
 
-.mainblue {
+.mainbackgroud {
     -fx-background-color: #D9DCE4;
+}
+
+.mainblue {
+    -fx-background-color: #26263A;
 }

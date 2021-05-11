@@ -1,8 +1,8 @@
 /.idea/workspace.xml
-#/.idea/misc.xml
+/.idea/misc.xml
 *.class
 *.zip
 **/out/
-#/**/*.iml
+/**/*.iml
 /zips
-#/.idea/libraries/
+/.idea/libraries/

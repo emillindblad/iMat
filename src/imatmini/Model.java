@@ -134,9 +134,8 @@ public class Model {
         iMatDataHandler.shutDown();
     }
 
-    public void setFirstName(String firstName) {
-        getCustomer().setFirstName(firstName);
-    }
+    //Delegation methods to Customer
+    public void setFirstName(String firstName) { getCustomer().setFirstName(firstName); }
 
     public void setLastName(String lastName) {
         getCustomer().setLastName(lastName);
@@ -158,9 +157,8 @@ public class Model {
         getCustomer().setAddress(address);
     }
 
-    public void setCardName(String cardName) {
-        getCreditCard().setHoldersName(cardName);
-    }
+    //Delegation methods to CreditCard
+    public void setCardName(String cardName) { getCreditCard().setHoldersName(cardName); }
 
     public void setCardNumber(String cardNumber) {
         getCreditCard().setCardNumber(cardNumber);

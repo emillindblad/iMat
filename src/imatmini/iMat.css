@@ -5,3 +5,11 @@
     -fx-text-fill: #FFFFFF;
     -fx-font-size: 40px;
 }
+
+.button-back{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #0;
+    -fx-border-width: 5px;
+    -fx-text-fill: #0;
+    -fx-font-size: 40px;
+}

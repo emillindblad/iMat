@@ -28,6 +28,9 @@ public class MyInfo extends AnchorPane {
     @FXML private Button backButton;
     @FXML private Button saveButton;
 
+    @FXML private AnchorPane savedPane;
+    @FXML private Button okButton;
+
     private final Model model = Model.getInstance();
     private final iMatMiniController parentController;
 
@@ -59,5 +62,12 @@ public class MyInfo extends AnchorPane {
         model.setCardMonth(cardMonth.getText());
         model.setCardYear(cardYear.getText());
         model.setCVC(cardCVC.getText());
+
+        savedPane.toFront();
+    }
+
+    @FXML
+    public void onClose(Event event) {
+        parentController.showCurrentPane();
     }
 }

@@ -11,6 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane prefHeight="971.0" prefWidth="1818.0" stylesheets="@iMat.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#26263a" height="133.0" stroke="BLACK" strokeType="INSIDE" styleClass="mainblue" width="1819.0" />
@@ -117,7 +118,7 @@
             <Image url="@../../lib/images/baseline_info_white_48dp.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1717.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1717.0" layoutY="36.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../lib/images/baseline_close_white_48dp.png" />
          </image>
@@ -135,7 +136,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button fx:id="backButton" layoutX="1300.0" layoutY="861.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="226.0" styleClass="button-back" text="Tillbaka">
+      <Button fx:id="backButton" layoutX="1300.0" layoutY="861.0" mnemonicParsing="false" onAction="#onClose" prefHeight="75.0" prefWidth="226.0" styleClass="button-back" text="Tillbaka">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
@@ -144,5 +145,16 @@
          </effect>
       </Button>
       <Label id="logo" layoutX="27.0" layoutY="14.0" text="iMat" />
+      <AnchorPane fx:id="savedPane" prefHeight="971.0" prefWidth="1818.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9dce4" height="446.0" layoutX="467.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" width="990.0" />
+            <Label layoutX="682.0" layoutY="390.0" text="Dina uppgifter sparades!">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <Button fx:id="okButton" layoutX="907.0" layoutY="509.0" mnemonicParsing="false" onAction="#onClose" styleClass="button-next" text="OK" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

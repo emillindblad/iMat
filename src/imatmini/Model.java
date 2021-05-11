@@ -158,5 +158,23 @@ public class Model {
         getCustomer().setAddress(address);
     }
 
+    public void setCardName(String cardName) {
+        getCreditCard().setHoldersName(cardName);
+    }
 
+    public void setCardNumber(String cardNumber) {
+        getCreditCard().setCardNumber(cardNumber);
+    }
+
+    public void  setCardMonth(String cardMonth) {
+        getCreditCard().setValidMonth(Integer.parseInt(cardMonth));
+    }
+
+    public void setCardYear(String cardYear) {
+        getCreditCard().setValidYear(Integer.parseInt(cardYear));
+    }
+
+    public void setCVC(String cvc) {
+        getCreditCard().setVerificationCode(Integer.parseInt(cvc));
+    }
 }

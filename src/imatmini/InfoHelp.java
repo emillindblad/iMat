@@ -1,5 +1,6 @@
 package imatmini;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -12,7 +13,9 @@ public class InfoHelp extends AnchorPane {
     @FXML private ImageView closeImage;
     @FXML private Button backButton;
 
-    public InfoHelp(){
+    private final iMatMiniController parentController;
+
+    public InfoHelp(iMatMiniController parentController){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("infoHelp.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -22,5 +25,12 @@ public class InfoHelp extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+
+        this.parentController = parentController;
+    }
+
+    @FXML
+    public void onClose(Event event) {
+        parentController.showCurrentPane();
     }
 }

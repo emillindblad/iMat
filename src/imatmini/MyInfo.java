@@ -28,9 +28,9 @@ public class MyInfo extends AnchorPane {
     @FXML private Button backButton;
     @FXML private Button saveButton;
 
-    private final Model model;
+    private final Model model = Model.getInstance();
 
-    public MyInfo(Model model){
+    public MyInfo(){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("myInfo.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -41,22 +41,21 @@ public class MyInfo extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        this.model = model;
     }
 
     @FXML
     protected void onSave(Event event){
-        firstName.getText();
-        lastName.getText();
-        address.getText();
-        postNum.getText();
-        city.getText();
-        teleNum.getText();
+        model.setFirstName(firstName.getText());
+        model.setLastName(lastName.getText());
+        model.setAddress(address.getText());
+        model.setPostCode(postNum.getText());
+        model.setCity(city.getText());
+        model.setTeleNum(teleNum.getText());
 
-        cardName.getText();
-        cardNum.getText();
-        cardMonth.getText();
-        cardYear.getText();
-        cardCVC.getText();
+        model.setCardName(cardName.getText());
+        model.setCardNumber(cardNum.getText());
+        model.setCardMonth(cardMonth.getText());
+        model.setCardYear(cardYear.getText());
+        model.setCVC(cardCVC.getText());
     }
 }

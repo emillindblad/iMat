@@ -46,7 +46,7 @@
       <children>
             <ImageView fitHeight="213.0" fitWidth="419.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../.dat215/imat/images/product_1.jpg" />
+                  <Image url="@../../../../../.dat215/imat/images/product_1.jpg" />
                </image>
             </ImageView>
             <Label layoutX="322.0" layoutY="25.0" prefHeight="71.0" prefWidth="464.0" text="Produktnamn">

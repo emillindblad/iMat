@@ -41,7 +41,7 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="shopPane" prefHeight="240.0" prefWidth="1920.0" style="-fx-background-color: #d9dce4;">
+            <AnchorPane id="mainPane" fx:id="shopPane" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@iMat.css">
                <children>
                   <AnchorPane layoutX="340.0" prefHeight="110.0" prefWidth="1580.0" style="-fx-background-color: #26263a;">
                      <children>
@@ -63,7 +63,7 @@
                         <Label layoutX="148.0" layoutY="37.0" text="Varukorg" />
                         <ScrollPane layoutY="86.0" prefHeight="632.0" prefWidth="340.0">
                            <content>
-                              <FlowPane prefHeight="200.0" prefWidth="184.0" />
+                              <FlowPane prefHeight="428.0" prefWidth="251.0" />
                            </content>
                         </ScrollPane>
                         <Button layoutX="44.0" layoutY="827.0" mnemonicParsing="false" onAction="#handleClearCartAction" text="Töm" />
@@ -72,9 +72,10 @@
                         <Label fx:id="costLabel" layoutX="107.0" layoutY="743.0" text="Kostnad: 3456.60" />
                      </children>
                   </AnchorPane>
+                  <AnchorPane prefHeight="642.0" prefWidth="340.0" />
                   <ScrollPane hbarPolicy="NEVER" layoutX="391.0" layoutY="150.0" prefHeight="890.0" prefWidth="1112.0" vbarPolicy="ALWAYS">
                      <content>
-                        <FlowPane fx:id="productsFlowPane" prefHeight="62.0" prefWidth="122.0" style="-fx-background-color: #5e6d70;" vgap="4.0" />
+                        <FlowPane fx:id="productsFlowPane" prefHeight="716.0" prefWidth="923.0" style="-fx-background-color: #5e6d70;" vgap="4.0" />
                      </content>
                   </ScrollPane>
                </children>

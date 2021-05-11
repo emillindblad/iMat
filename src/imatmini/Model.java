@@ -133,4 +133,30 @@ public class Model {
     public void shutDown() {
         iMatDataHandler.shutDown();
     }
+
+    public void setFirstName(String firstName) {
+        getCustomer().setFirstName(firstName);
+    }
+
+    public void setLastName(String lastName) {
+        getCustomer().setLastName(lastName);
+    }
+
+    public void setTeleNum(String teleNum) {
+        getCustomer().setPhoneNumber(teleNum);
+    }
+
+    public void setPostCode(String postCode) {
+        getCustomer().setPostCode(postCode);
+    }
+
+    public void setCity(String city) {
+        getCustomer().setPostAddress(city);
+    }
+
+    public void setAddress(String address) {
+        getCustomer().setAddress(address);
+    }
+
+
 }

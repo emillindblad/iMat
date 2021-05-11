@@ -29,8 +29,9 @@ public class MyInfo extends AnchorPane {
     @FXML private Button saveButton;
 
     private final Model model = Model.getInstance();
+    private final iMatMiniController parentController;
 
-    public MyInfo(){
+    public MyInfo(iMatMiniController parentController){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("myInfo.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -41,6 +42,7 @@ public class MyInfo extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+        this.parentController = parentController;
     }
 
     @FXML

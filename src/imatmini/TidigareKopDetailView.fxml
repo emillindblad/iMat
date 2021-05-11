@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="971.0" prefWidth="1818.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="971.0" prefWidth="1818.0" stylesheets="@iMat.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="971.0" prefWidth="1818.0" style="-fx-background-color: #D9DCE4;">
          <children>
@@ -29,7 +29,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <Button layoutX="1543.0" layoutY="836.0" minHeight="90.0" minWidth="225.0" mnemonicParsing="false" text="Tillbaka">
+            <Button layoutX="1543.0" layoutY="836.0" minHeight="90.0" minWidth="225.0" mnemonicParsing="false" styleClass="button-back" text="Tillbaka">
                <font>
                   <Font size="48.0" />
                </font>

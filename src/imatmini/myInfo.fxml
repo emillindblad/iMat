@@ -11,7 +11,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="971.0" prefWidth="1818.0" stylesheets="@iMat.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.MyInfo">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#26263a" height="133.0" stroke="BLACK" strokeType="INSIDE" width="1819.0" />
@@ -26,31 +25,31 @@
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="59.0" layoutY="269.0" prefHeight="38.0" prefWidth="406.0" />
+      <TextField fx:id="personNum" layoutX="59.0" layoutY="269.0" prefHeight="38.0" prefWidth="406.0" />
       <Label layoutX="58.0" layoutY="327.0" text="Förnamn">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="60.0" layoutY="379.0" prefHeight="38.0" prefWidth="406.0" />
+      <TextField fx:id="firstName" layoutX="60.0" layoutY="379.0" prefHeight="38.0" prefWidth="406.0" />
       <Label layoutX="57.0" layoutY="434.0" text="Efternamn">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="59.0" layoutY="486.0" prefHeight="38.0" prefWidth="406.0" />
+      <TextField fx:id="lastName" layoutX="59.0" layoutY="486.0" prefHeight="38.0" prefWidth="406.0" />
       <Label layoutX="59.0" layoutY="532.0" text="Adress">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="61.0" layoutY="584.0" prefHeight="38.0" prefWidth="406.0" />
+      <TextField fx:id="address" layoutX="61.0" layoutY="584.0" prefHeight="38.0" prefWidth="406.0" />
       <Label layoutX="61.0" layoutY="745.0" text="Telefonnummer">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="63.0" layoutY="797.0" prefHeight="38.0" prefWidth="406.0" />
+      <TextField fx:id="teleNum" layoutX="63.0" layoutY="797.0" prefHeight="38.0" prefWidth="406.0" />
       <Label layoutX="61.0" layoutY="634.0" text="Postnr.">
          <font>
             <Font size="35.0" />
@@ -61,14 +60,14 @@
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="63.0" layoutY="686.0" prefHeight="38.0" prefWidth="106.0" />
-      <TextField layoutX="208.0" layoutY="685.0" prefHeight="38.0" prefWidth="258.0" />
+      <TextField fx:id="postNum" layoutX="63.0" layoutY="686.0" prefHeight="38.0" prefWidth="106.0" />
+      <TextField fx:id="city" layoutX="208.0" layoutY="685.0" prefHeight="38.0" prefWidth="258.0" />
       <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="446.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../lib/images/baseline_perm_contact_calendar_black_36dp.png" />
          </image>
       </ImageView>
-      <Button layoutX="484.0" layoutY="268.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="159.0" text="Hämta uppgifter">
+      <Button fx:id="getInfoButton" layoutX="484.0" layoutY="268.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="159.0" style="-fx-background-color: #AD282F;" text="Hämta uppgifter" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -83,31 +82,31 @@
             <Image url="@../../lib/images/baseline_payment_black_36dp.png" />
          </image>
       </ImageView>
-      <Label layoutX="751.0" layoutY="218.0" text="Personnummer (12 siffror)">
+      <Label layoutX="751.0" layoutY="218.0" text="Namn på kortet">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="755.0" layoutY="269.0" prefHeight="38.0" prefWidth="406.0" />
-      <Label layoutX="754.0" layoutY="327.0" text="Förnamn">
+      <TextField fx:id="cardName" layoutX="755.0" layoutY="269.0" prefHeight="38.0" prefWidth="406.0" />
+      <Label layoutX="754.0" layoutY="327.0" text="Kortnummer">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="756.0" layoutY="379.0" prefHeight="38.0" prefWidth="406.0" />
+      <TextField fx:id="cardNum" layoutX="756.0" layoutY="379.0" prefHeight="38.0" prefWidth="406.0" />
       <Label layoutX="755.0" layoutY="434.0" text="MM/ÅÅ">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="757.0" layoutY="486.0" prefHeight="38.0" prefWidth="61.0" />
+      <TextField fx:id="cardMonth" layoutX="757.0" layoutY="486.0" prefHeight="38.0" prefWidth="61.0" />
       <Label layoutX="823.0" layoutY="479.0" text="/">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="842.0" layoutY="486.0" prefHeight="38.0" prefWidth="61.0" />
-      <TextField layoutX="757.0" layoutY="584.0" prefHeight="38.0" prefWidth="61.0" />
+      <TextField fx:id="cardYear" layoutX="842.0" layoutY="486.0" prefHeight="38.0" prefWidth="61.0" />
+      <TextField fx:id="cardCVC" layoutX="757.0" layoutY="584.0" prefHeight="38.0" prefWidth="61.0" />
       <Label layoutX="755.0" layoutY="532.0" text="CVC">
          <font>
             <Font size="35.0" />
@@ -128,7 +127,7 @@
             <Font name="System Bold" size="40.0" />
          </font>
       </Label>
-      <Button layoutX="1548.0" layoutY="861.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="226.0" styleClass="button-next" text="Spara" textFill="WHITE">
+      <Button fx:id="saveButton" layoutX="1548.0" layoutY="861.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="226.0" styleClass="button-next" text="Spara" textFill="WHITE">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
@@ -136,5 +135,14 @@
             <DropShadow />
          </effect>
       </Button>
+      <Button fx:id="backButton" layoutX="1300.0" layoutY="861.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="226.0" styleClass="button-back" text="Tillbaka">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label id="logo" layoutX="27.0" layoutY="14.0" text="iMat" />
    </children>
 </AnchorPane>

@@ -1,6 +1,7 @@
 .button-next{
     -fx-background-color: #AD282F;
     -fx-border-color: #0;
+    -fx-border-width: 2px;
     -fx-text-fill: #FFFFFF;
     -fx-font-size: 40px;
 }

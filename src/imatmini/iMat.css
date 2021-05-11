@@ -16,5 +16,6 @@
 
 #logo{
     -fx-font-size: 72px;
+    -fx-text-fill: #FFFFFF;
     -fx-font-family: "Kelly Slab";
 }

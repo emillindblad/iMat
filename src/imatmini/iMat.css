@@ -13,3 +13,8 @@
     -fx-text-fill: #0;
     -fx-font-size: 40px;
 }
+
+#logo{
+    -fx-font-size: 72px;
+    -fx-font-family: "Kelly Slab";
+}

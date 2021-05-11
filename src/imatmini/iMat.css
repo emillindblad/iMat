@@ -1,0 +1,21 @@
+.button-next{
+    -fx-background-color: #AD282F;
+    -fx-border-color: #0;
+    -fx-border-width: 5px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 40px;
+}
+
+.button-back{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #0;
+    -fx-border-width: 5px;
+    -fx-text-fill: #0;
+    -fx-font-size: 40px;
+}
+
+#logo{
+    -fx-font-size: 72px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Kelly Slab";
+}

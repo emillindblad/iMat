@@ -46,6 +46,6 @@ public class PreviouslyPurchased extends AnchorPane{
     }
     @FXML
     public void onClose(Event event) {
-        this.toBack();
+        this.getParent().toBack();
     }
 }

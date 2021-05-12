@@ -59,8 +59,11 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML
     private Label purchasesLabel;
 
+    // History Pane
     @FXML
     private AnchorPane historyPane;
+
+    private PreviouslyPurchased previouslyPurchased;
 
     // Use to remember which pane is under an overlay
     private AnchorPane currentPane = shopPane;
@@ -68,7 +71,6 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     // Other variables
     private final Model model = Model.getInstance();
 
-    private PreviouslyPurchased previouslyPurchased;
 
     // Shop pane actions
     @FXML
@@ -123,8 +125,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     private void setupPreviouslyPurchasedPane(){
         previouslyPurchased = new PreviouslyPurchased(this);
-        shopPane.getChildren().add(previouslyPurchased);
-        previouslyPurchased.toBack();
+        historyPane.getChildren().add(previouslyPurchased);
+        historyPane.toBack();
     }
 
     // Navigation
@@ -139,8 +141,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     }
 
     public void openPurchaseHistoryView() {
-        previouslyPurchased.toFront();
         previouslyPurchased.updateReceipts();
+        historyPane.toFront();
     }
     
     // Shop pane methods

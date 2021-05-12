@@ -16,11 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import se.chalmers.cse.dat216.project.CartEvent;
-import se.chalmers.cse.dat216.project.CreditCard;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCart;
-import se.chalmers.cse.dat216.project.ShoppingCartListener;
+import se.chalmers.cse.dat216.project.*;
 
 
 /**
@@ -40,6 +36,10 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private Label costLabel;
     @FXML
     private FlowPane productsFlowPane;
+
+    // Shopping Cart Pane
+    @FXML
+    private FlowPane cartFlowPane;
     
     // Account Pane
     @FXML
@@ -69,6 +69,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private final Model model = Model.getInstance();
 
     private PreviouslyPurchased previouslyPurchased;
+
     // Shop pane actions
     @FXML
     private void handleShowAccountAction(ActionEvent event) {
@@ -142,24 +143,30 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         previouslyPurchased.updateReceipts();
     }
     
-    // Shope pane methods
+    // Shop pane methods
     @Override
      public void shoppingCartChanged(CartEvent evt) {
         updateBottomPanel();
     }
    
-    
+    // Updated by search function
     private void updateProductList(List<Product> products) {
         productsFlowPane.getChildren().clear();
         for (Product product : products) {
             productsFlowPane.getChildren().add(new ProductPanel(product));
         }
     }
-    
+
+    // Updates every time a product gets added
     private void updateBottomPanel() {
         ShoppingCart shoppingCart = model.getShoppingCart();
         itemsLabel.setText("Antal varor: " + shoppingCart.getItems().size());
         costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
+
+        cartFlowPane.getChildren().clear();
+        for (ShoppingItem item : model.getShoppingCart().getItems()) {
+            cartFlowPane.getChildren().add(new ShoppingCartItem(item));
+        }
     }
     
     private void updateAccountPanel() {

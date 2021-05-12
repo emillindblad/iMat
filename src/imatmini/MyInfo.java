@@ -68,6 +68,6 @@ public class MyInfo extends AnchorPane {
 
     @FXML
     public void onClose(Event event) {
-        parentController.showCurrentPane();
+        this.toBack();
     }
 }

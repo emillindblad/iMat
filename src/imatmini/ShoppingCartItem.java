@@ -16,6 +16,8 @@ public class ShoppingCartItem extends AnchorPane {
     private ShoppingItem item;
     @FXML
     private Label itemLabel;
+    @FXML
+    private Label priceLabel;
 
     public ShoppingCartItem(ShoppingItem item) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ShoppingCart_Item.fxml"));
@@ -28,6 +30,7 @@ public class ShoppingCartItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
         this.itemLabel.setText(item.getProduct().getName());
+        this.priceLabel.setText(item.getProduct().getPrice() + " kr");
         this.item = item;
     }
 }

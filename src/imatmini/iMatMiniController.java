@@ -100,6 +100,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         closeAccountView();
     }
 
+    private PreviouslyPurchased previouslyPurchased;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -113,7 +114,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         /*
          Testing purposes
          */
-        //PreviouslyPurchased previouslyPurchased = new PreviouslyPurchased(this);
+        //previouslyPurchased = new PreviouslyPurchased(this);
+        //shopPane.getChildren().add(previouslyPurchased);
         //previouslyPurchased.toFront();
         //MyInfo myInfo = new MyInfo(this);
         //myInfo.toFront();

@@ -96,7 +96,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private void handleDoneAction(ActionEvent event) {
         closeAccountView();
     }
-      
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -106,7 +106,15 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         updateBottomPanel();
         
         setupAccountPane();
-        
+
+        /*
+         Testing purposes
+         */
+        //PreviouslyPurchased previouslyPurchased = new PreviouslyPurchased(this);
+        //previouslyPurchased.toFront();
+        //MyInfo myInfo = new MyInfo(this);
+        //myInfo.toFront();
+
     }    
     
     // Navigation

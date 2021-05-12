@@ -42,8 +42,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="971.0" prefWidth="1818.0" style="-fx-background-color: #D9DCE4;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root minHeight="0.0" minWidth="0.0" prefHeight="971.0" prefWidth="1818.0" style="-fx-background-color: #D9DCE4;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane">
    <children>
+      <ScrollPane layoutY="209.0" prefHeight="763.0" prefWidth="1818.0">
+         <content>
+            <FlowPane prefHeight="574.0" prefWidth="1813.0" />
+         </content>
+      </ScrollPane>
       <AnchorPane minHeight="206.0" minWidth="1818.0" prefHeight="206.0" prefWidth="1818.0" style="-fx-background-color: #26263A;">
          <children>
             <Label layoutX="41.0" layoutY="51.0" text="Tidigare köp" textFill="WHITE">
@@ -64,10 +69,5 @@
             <Font size="48.0" />
          </font>
       </Button>
-      <ScrollPane layoutY="209.0" prefHeight="763.0" prefWidth="1818.0">
-         <content>
-            <FlowPane prefHeight="574.0" prefWidth="1813.0" />
-         </content>
-      </ScrollPane>
    </children>
-</AnchorPane>
+</fx:root>

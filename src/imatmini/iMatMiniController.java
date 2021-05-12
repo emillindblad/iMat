@@ -165,8 +165,10 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         itemsLabel.setText("Antal varor: " + shoppingCart.getItems().size());
         costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
 
+
         cartFlowPane.getChildren().clear();
         for (ShoppingItem item : model.getShoppingCart().getItems()) {
+            //Doesn't check if it's the same item
             cartFlowPane.getChildren().add(new ShoppingCartItem(item));
         }
     }

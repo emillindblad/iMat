@@ -56,6 +56,11 @@
                               <Font size="18.0" />
                            </font>
                         </Button>
+                        <Button layoutX="719.0" layoutY="34.0" mnemonicParsing="false" onAction="#openPurchaseHistoryView" text="Tidigare köp">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
                      </children>
                   </AnchorPane>
                   <AnchorPane layoutX="1540.0" layoutY="150.0" maxHeight="890.0" maxWidth="340.0" prefHeight="890.0" prefWidth="340.0" style="-fx-background-color: #ff6600;">

@@ -129,6 +129,11 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         updateCreditCard();
         shopPane.toFront();
     }
+
+    public void openPurchaseHistoryView() {
+
+
+    }
     
     // Shope pane methods
     @Override

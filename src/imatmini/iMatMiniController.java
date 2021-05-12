@@ -139,6 +139,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     public void openPurchaseHistoryView() {
         previouslyPurchased.toFront();
+        previouslyPurchased.updateReceipts();
     }
     
     // Shope pane methods

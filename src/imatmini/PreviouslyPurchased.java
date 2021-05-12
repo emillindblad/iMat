@@ -4,13 +4,11 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class PreviouslyPurchased extends AnchorPane{
     @FXML private Button backButton;
@@ -34,12 +32,16 @@ public class PreviouslyPurchased extends AnchorPane{
         this.parentController = parentController;
     }
 
-    private void updateReceipts(){
+    private PreviouslyPurchasedItem purchasedItem;
+    public void updateReceipts(){
 
         //Testing
-        PreviouslyPurchasedItem purchasedItem = new PreviouslyPurchasedItem("770", "27/4");
-        items.add(purchasedItem);
-        flowPane.getChildren().add(purchasedItem);
+        /*
+        Den ska hämta alla tidigare köp och lägga in i flowpane på ett snyggt sätt
+         */
+        //purchasedItem = new PreviouslyPurchasedItem("770", "27/4");
+        //items.add(purchasedItem);
+        //flowPane.getChildren().add(purchasedItem);
 
     }
     @FXML

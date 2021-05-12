@@ -68,39 +68,39 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     // Other variables
     private final Model model = Model.getInstance();
 
+    private PreviouslyPurchased previouslyPurchased;
     // Shop pane actions
     @FXML
     private void handleShowAccountAction(ActionEvent event) {
         openAccountView();
     }
-    
+
     @FXML
     private void handleSearchAction(ActionEvent event) {
-        
+
         List<Product> matches = model.findProducts(searchField.getText());
         updateProductList(matches);
         System.out.println("# matching products: " + matches.size());
 
     }
-    
+
     @FXML
     private void handleClearCartAction(ActionEvent event) {
         model.clearShoppingCart();
     }
-    
+
     @FXML
     private void handleBuyItemsAction(ActionEvent event) {
         model.placeOrder();
         costLabel.setText("Köpet klart!");
     }
-    
+
     // Account pane actions
      @FXML
     private void handleDoneAction(ActionEvent event) {
         closeAccountView();
     }
 
-    private PreviouslyPurchased previouslyPurchased;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -110,18 +110,22 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         updateBottomPanel();
         
         setupAccountPane();
+        setupPreviouslyPurchasedPane();
 
         /*
          Testing purposes
          */
-        //previouslyPurchased = new PreviouslyPurchased(this);
-        //shopPane.getChildren().add(previouslyPurchased);
-        //previouslyPurchased.toFront();
         //MyInfo myInfo = new MyInfo(this);
         //myInfo.toFront();
 
     }    
-    
+
+    private void setupPreviouslyPurchasedPane(){
+        previouslyPurchased = new PreviouslyPurchased(this);
+        shopPane.getChildren().add(previouslyPurchased);
+        previouslyPurchased.toBack();
+    }
+
     // Navigation
     public void openAccountView() {
         updateAccountPanel();
@@ -134,8 +138,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     }
 
     public void openPurchaseHistoryView() {
-        historyPane.getChildren().clear();
-        historyPane.getChildren().add(new PreviouslyPurchased(this));
+        previouslyPurchased.toFront();
     }
     
     // Shope pane methods

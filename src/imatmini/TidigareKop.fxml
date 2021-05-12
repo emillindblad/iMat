@@ -42,7 +42,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root minHeight="0.0" minWidth="0.0" prefHeight="971.0" prefWidth="1818.0" style="-fx-background-color: #D9DCE4;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane">
+<fx:root minHeight="0.0" minWidth="0.0" prefHeight="971.0" prefWidth="1818.0" style="-fx-background-color: #D9DCE4;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ScrollPane layoutY="209.0" prefHeight="763.0" prefWidth="1818.0">
          <content>
@@ -57,14 +57,14 @@
                </font>
             </Label>
             <Pane layoutY="203.0" prefHeight="7.0" prefWidth="1818.0" style="-fx-background-color: #AD282F;" />
-            <ImageView fitHeight="86.0" fitWidth="88.0" layoutX="1732.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+            <ImageView fitHeight="86.0" fitWidth="88.0" layoutX="1732.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true" smooth="false">
                <image>
                   <Image url="@../../lib/images/baseline_close_white_48dp.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <Button layoutX="1543.0" layoutY="836.0" minHeight="90.0" minWidth="225.0" mnemonicParsing="false" text="Tillbaka">
+      <Button layoutX="1543.0" layoutY="836.0" minHeight="90.0" minWidth="225.0" mnemonicParsing="false" onAction="#onClose" text="Tillbaka">
          <font>
             <Font size="48.0" />
          </font>

@@ -49,6 +49,9 @@ public class MyInfo extends AnchorPane {
         }
 
         this.parentController = parentController;
+
+        cardMonth.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12);
+        cardYear.getItems().addAll(12);
     }
 
     @FXML
@@ -62,8 +65,8 @@ public class MyInfo extends AnchorPane {
 
         model.setCardName(cardName.getText());
         model.setCardNumber(cardNum.getText());
-        model.setCardMonth(cardMonth.getText());
-        model.setCardYear(cardYear.getText());
+        //model.setCardMonth(cardMonth.get());
+        //model.setCardYear(cardYear.getText());
         model.setCVC(cardCVC.getText());
 
         this.savedPane.getChildren().add(new SaveConf(this));
@@ -81,8 +84,8 @@ public class MyInfo extends AnchorPane {
         cardNum.setText(card.getCardNumber());
         cardName.setText(card.getHoldersName());
 
-        cardMonth.setText("" + card.getValidMonth());
-        cardYear.setText("" + card.getValidYear());
+        //cardMonth.setText("" + card.getValidMonth());
+        //cardYear.setText("" + card.getValidYear());
         //yearCombo.getSelectionModel().select(""+card.getValidYear());
 
         cardCVC.setText(""+card.getVerificationCode());

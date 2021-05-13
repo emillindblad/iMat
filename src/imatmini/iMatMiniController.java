@@ -141,7 +141,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     }
 
     public void openPurchaseHistoryView() {
-        previouslyPurchased.updateReceipts();
+        previouslyPurchased.updateReceipts(model.getOrders());
         historyPane.toFront();
     }
     
@@ -165,10 +165,12 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         itemsLabel.setText("Antal varor: " + shoppingCart.getItems().size());
         costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
 
-
+        /*
+         Add to the shopping cart
+         Currently does not check if we already have the same item in the cart
+         */
         cartFlowPane.getChildren().clear();
         for (ShoppingItem item : model.getShoppingCart().getItems()) {
-            //Doesn't check if it's the same item
             cartFlowPane.getChildren().add(new ShoppingCartItem(item));
         }
     }

@@ -7,15 +7,14 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class PreviouslyPurchasedItem extends AnchorPane {
-    @FXML
-    private ImageView recipeListItemCuisine;
     @FXML
     private Label receiptPrice;
     @FXML
     private Label receiptDate;
-    public PreviouslyPurchasedItem(String receiptPrice, String receiptDate) {
+    public PreviouslyPurchasedItem(double receiptPrice, Date receiptDate) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TidigareKop_Item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -26,8 +25,8 @@ public class PreviouslyPurchasedItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        this.receiptPrice.setText(receiptPrice);
-        this.receiptDate.setText(receiptDate);
+        this.receiptPrice.setText(receiptPrice + " kr");
+        //this.receiptDate.setText("" + receiptDate);
     }
 
     private void updateOverviewImages(){

@@ -10,12 +10,12 @@
    <children>
       <ImageView fx:id="imageView" fitHeight="172.0" fitWidth="232.0" layoutX="56.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
       <Button alignment="CENTER" contentDisplay="CENTER" layoutY="339.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="86.0" prefWidth="340.0" styleClass="addtocartbutton" stylesheets="@iMat.css" text="Lägg till i Varukorgen" textAlignment="CENTER" />
-      <Label fx:id="nameLabel" alignment="CENTER" layoutX="124.0" layoutY="277.0" text="prodname" textAlignment="CENTER">
+      <Label fx:id="nameLabel" alignment="CENTER" layoutX="26.0" layoutY="277.0" prefHeight="21.0" prefWidth="290.0" text="prodname" textAlignment="CENTER" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="24.0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="prizeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="310.0" text="price" />
+      <Label fx:id="prizeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="310.0" text="price" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="123.0" />
       <Label fx:id="ecoLabel" layoutX="256.0" layoutY="14.0" text="Ekologisk" textFill="#5cc343">
          <font>
             <Font name="System Bold" size="13.0" />

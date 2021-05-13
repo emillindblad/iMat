@@ -21,6 +21,7 @@ import se.chalmers.cse.dat216.project.CreditCard;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
+import se.chalmers.cse.dat216.project.*;
 
 
 /**
@@ -58,6 +59,9 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private TextField cvcField;
     @FXML
     private Label purchasesLabel;
+
+    @FXML
+    private FlowPane cartFlowPane;
 
     @FXML
     private AnchorPane historyPane;
@@ -178,6 +182,15 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         ShoppingCart shoppingCart = model.getShoppingCart();
         itemsLabel.setText("Antal varor: " + shoppingCart.getItems().size());
         costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
+
+        /*
+         Add to the shopping cart
+         Currently does not check if we already have the same item in the cart
+         */
+        cartFlowPane.getChildren().clear();
+        for (ShoppingItem item : model.getShoppingCart().getItems()) {
+            cartFlowPane.getChildren().add(new ShoppingCartItem(item));
+        }
     }
     
     private void updateAccountPanel() {

@@ -62,6 +62,9 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML
     private AnchorPane historyPane;
 
+    @FXML
+    private AnchorPane myAccountPane;
+
     // Use to remember which pane is under an overlay
     private AnchorPane currentPane = shopPane;
     
@@ -124,8 +127,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     private void setupMyInfoView() {
         myInfo = new MyInfo(this);
-        shopPane.getChildren().add(myInfo);
-        myInfo.toBack();
+        myAccountPane.getChildren().add(myInfo);
+        myAccountPane.toBack();
     }
 
     private void setupPreviouslyPurchasedPane(){
@@ -137,7 +140,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     // Navigation
     public void openAccountView() {
         myInfo.updateMyInfo();
-        myInfo.toFront();
+        myAccountPane.toFront();
     }
 
     public void closeAccountView() {

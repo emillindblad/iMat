@@ -27,3 +27,7 @@
 .mainblue {
     -fx-background-color: #26263A;
 }
+
+.overlay-shadow {
+    -fx-background-color: rgba(0, 0, 0, 0.75);
+}

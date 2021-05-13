@@ -79,18 +79,18 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="1540.0" layoutY="150.0" maxHeight="890.0" maxWidth="340.0" prefHeight="890.0" prefWidth="340.0" style="-fx-background-color: #ff6600;">
+                  <AnchorPane layoutX="1540.0" layoutY="150.0" minHeight="0.0" minWidth="0.0" prefHeight="890.0" prefWidth="340.0" styleClass="cartbg" stylesheets="@iMat.css">
                      <children>
-                        <Label layoutX="148.0" layoutY="37.0" text="Varukorg" />
-                        <ScrollPane layoutY="86.0" prefHeight="632.0" prefWidth="340.0">
+                        <Label layoutX="45.0" layoutY="14.0" styleClass="carttext" text="Varukorg" />
+                        <ScrollPane layoutY="86.0" prefHeight="576.0" prefWidth="340.0">
                            <content>
                               <FlowPane fx:id="cartFlowPane" prefHeight="428.0" prefWidth="251.0" />
                            </content>
                         </ScrollPane>
-                        <Button layoutX="44.0" layoutY="827.0" mnemonicParsing="false" onAction="#handleClearCartAction" text="Töm" />
-                        <Button layoutX="144.0" layoutY="827.0" mnemonicParsing="false" onAction="#handleBuyItemsAction" text="Köp" />
-                        <Label fx:id="itemsLabel" layoutX="95.0" layoutY="784.0" prefHeight="17.0" prefWidth="150.0" text="Antal varor: 3456" />
-                        <Label fx:id="costLabel" layoutX="107.0" layoutY="743.0" text="Kostnad: 3456.60" />
+                        <Button layoutX="22.0" layoutY="680.0" mnemonicParsing="false" onAction="#handleClearCartAction" text="Töm" />
+                        <Button layoutY="804.0" mnemonicParsing="false" onAction="#handleBuyItemsAction" prefHeight="86.0" prefWidth="340.0" styleClass="addtocartbutton" text="Till kassan" />
+                        <Label fx:id="itemsLabel" layoutX="112.0" layoutY="704.0" prefHeight="17.0" prefWidth="150.0" text="Antal varor: 3456" />
+                        <Label fx:id="costLabel" layoutX="129.0" layoutY="676.0" text="Kostnad: 3456.60" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="1080.0" prefWidth="340.0" styleClass="mainblue">

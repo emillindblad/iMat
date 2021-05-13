@@ -61,3 +61,12 @@
     -fx-border-color: #000;
     -fx-border-width: 1px;
 }
+
+.cartbg {
+    -fx-background-color: #e4e4e4;
+}
+
+.carttext {
+    -fx-font-weight: bold;
+    -fx-font-size: 48;
+}

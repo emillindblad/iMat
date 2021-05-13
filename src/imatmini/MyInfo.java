@@ -17,7 +17,7 @@ import se.chalmers.cse.dat216.project.Customer;
 
 import java.io.IOException;
 
-public class MyInfo extends AnchorPane {
+public class MyInfo extends AnchorPane implements Info {
     @FXML private TextField personNum;
     @FXML private TextField firstName;
     @FXML private TextField lastName;
@@ -37,7 +37,7 @@ public class MyInfo extends AnchorPane {
     @FXML private Button saveButton;
 
     @FXML private AnchorPane savedPane;
-    @FXML private Button okButton;
+    @FXML private AnchorPane infoPane;
 
     private final Model model = Model.getInstance();
     private final iMatMiniController parentController;
@@ -164,5 +164,17 @@ public class MyInfo extends AnchorPane {
         savedPane.getChildren().clear();
         savedPane.toBack();
         this.getParent().toBack();
+    }
+
+    @FXML
+    public void onInfo(Event event) {
+        infoPane.getChildren().add(new InfoHelp(this));
+        infoPane.toFront();
+    }
+
+    @Override
+    public void closeInfo() {
+        infoPane.getChildren().clear();
+        infoPane.toBack();
     }
 }

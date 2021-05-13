@@ -52,6 +52,9 @@ public class PreviouslyPurchased extends AnchorPane{
 
     }
 
+    /*
+        Den här delen kanske skall sitta i model
+     */
     public double calculateTotalCost(Order order){
         float cost = 0;
         for (ShoppingItem item: order.getItems()) {

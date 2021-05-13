@@ -13,13 +13,13 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root stylesheets="@iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane layoutX="3.0">
          <children>
             <AnchorPane fx:id="infoPane" onMouseClicked="#closeInfo" prefHeight="200.0" prefWidth="200.0" styleClass="overlayFade" />
             <AnchorPane fx:id="savedPane" onMouseClicked="#onClose" prefHeight="200.0" prefWidth="200.0" styleClass="overlayFade" />
-            <javafx.scene.layout.AnchorPane prefHeight="971.0" prefWidth="1818.0" styleClass="mainbackgroud" stylesheets="@iMat.css">
+            <javafx.scene.layout.AnchorPane prefHeight="971.0" prefWidth="1818.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#26263a" height="133.0" stroke="BLACK" strokeType="INSIDE" styleClass="mainblue" width="1819.0" />
                   <Line endX="1377.0" endY="-136.99996948242188" layoutX="438.0" layoutY="269.0" startX="-437.0" startY="-136.99996948242188" stroke="#ad282f" strokeWidth="8.0" />
@@ -72,7 +72,7 @@
                   <TextField fx:id="city" layoutX="208.0" layoutY="685.0" prefHeight="38.0" prefWidth="258.0" />
                   <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="446.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../lib/images/baseline_perm_contact_calendar_black_36dp.png" />
+                        <Image url="@../../../../lib/images/baseline_perm_contact_calendar_black_36dp.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="getInfoButton" layoutX="484.0" layoutY="268.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="159.0" style="-fx-background-color: #AD282F;" text="Hämta uppgifter" textFill="WHITE">
@@ -87,7 +87,7 @@
                   </Label>
                   <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="1185.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../lib/images/baseline_payment_black_36dp.png" />
+                        <Image url="@../../../../lib/images/baseline_payment_black_36dp.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="751.0" layoutY="218.0" text="Namn på kortet">
@@ -120,12 +120,12 @@
                   </Label>
                   <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1615.0" layoutY="36.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../lib/images/baseline_info_white_48dp.png" />
+                        <Image url="@../../../../lib/images/baseline_info_white_48dp.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1717.0" layoutY="36.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../lib/images/baseline_close_white_48dp.png" />
+                        <Image url="@../../../../lib/images/baseline_close_white_48dp.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="1413.0" layoutY="37.0" onMouseClicked="#onInfo" text="Hjälp/Info" textFill="WHITE">

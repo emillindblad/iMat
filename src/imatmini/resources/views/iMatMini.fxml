@@ -10,19 +10,19 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@iMat.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
+<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
     <children>
       <StackPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0">
          <children>
-            <AnchorPane fx:id="historyPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@iMat.css">
+            <AnchorPane fx:id="historyPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css">
                <children>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="overlayFade" stylesheets="@iMat.css" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="overlayFade" stylesheets="@../css/iMat.css" />
       
                            </children>
             </AnchorPane>
-            <AnchorPane fx:id="myAccountPane" layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@iMat.css">
+            <AnchorPane fx:id="myAccountPane" layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css">
                <children>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="overlayFade" stylesheets="@iMat.css" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="overlayFade" stylesheets="@../css/iMat.css" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="accountPane" prefHeight="200.0" prefWidth="1920.0">
@@ -52,7 +52,7 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane id="mainPane" fx:id="shopPane" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@iMat.css">
+            <AnchorPane id="mainPane" fx:id="shopPane" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
                <children>
                   <AnchorPane layoutX="340.0" prefHeight="110.0" prefWidth="1580.0" styleClass="mainblue">
                      <children>
@@ -79,7 +79,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="1540.0" layoutY="150.0" minHeight="0.0" minWidth="0.0" prefHeight="890.0" prefWidth="340.0" styleClass="cartbg" stylesheets="@iMat.css">
+                  <AnchorPane layoutX="1540.0" layoutY="150.0" minHeight="0.0" minWidth="0.0" prefHeight="890.0" prefWidth="340.0" styleClass="cartbg" stylesheets="@../css/iMat.css">
                      <children>
                         <Label layoutX="45.0" layoutY="14.0" styleClass="carttext" text="Varukorg" />
                         <ScrollPane layoutY="86.0" prefHeight="576.0" prefWidth="340.0">

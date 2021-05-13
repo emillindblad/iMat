@@ -13,9 +13,9 @@ public class InfoHelp extends AnchorPane {
     @FXML private ImageView closeImage;
     @FXML private Button backButton;
 
-    private final iMatMiniController parentController;
+    private final Info parentController;
 
-    public InfoHelp(iMatMiniController parentController){
+    public InfoHelp(Info parentController){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("infoHelp.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -31,6 +31,6 @@ public class InfoHelp extends AnchorPane {
 
     @FXML
     public void onClose(Event event) {
-        parentController.showCurrentPane();
+        parentController.closeInfo();
     }
 }

@@ -17,6 +17,7 @@
    <children>
       <StackPane layoutX="3.0">
          <children>
+            <AnchorPane fx:id="infoPane" prefHeight="200.0" prefWidth="200.0" styleClass="overlayFade" />
             <AnchorPane fx:id="savedPane" prefHeight="200.0" prefWidth="200.0" styleClass="overlayFade" />
             <javafx.scene.layout.AnchorPane prefHeight="971.0" prefWidth="1818.0" styleClass="mainbackgroud" stylesheets="@iMat.css">
                <children>
@@ -117,7 +118,7 @@
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1615.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1615.0" layoutY="36.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../lib/images/baseline_info_white_48dp.png" />
                      </image>
@@ -127,7 +128,7 @@
                         <Image url="@../../lib/images/baseline_close_white_48dp.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="1413.0" layoutY="37.0" text="Hjälp/Info" textFill="WHITE">
+                  <Label layoutX="1413.0" layoutY="37.0" onMouseClicked="#onInfo" text="Hjälp/Info" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="40.0" />
                      </font>

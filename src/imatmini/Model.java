@@ -118,6 +118,9 @@ public class Model {
 
     }
 
+    public boolean isFirstRun() {
+        return iMatDataHandler.isFirstRun();
+    }
     
     public int getNumberOfOrders() {
         return iMatDataHandler.getOrders().size();

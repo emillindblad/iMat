@@ -10,15 +10,16 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="1080.0" maxWidth="1920.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@iMat.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
+<AnchorPane id="AnchorPane" maxHeight="1080.0" maxWidth="1920.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@iMat.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
     <children>
       <StackPane maxHeight="1080.0" maxWidth="1920.0" prefHeight="1080.0" prefWidth="1920.0">
          <children>
-            <AnchorPane fx:id="historyPane" prefHeight="200.0" prefWidth="200.0" styleClass="mainbackgroud" stylesheets="@iMat.css">
+            <AnchorPane fx:id="historyPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@iMat.css">
                <children>
-                  <AnchorPane layoutX="609.0" layoutY="284.0" prefHeight="476.0" prefWidth="728.0" styleClass="mainblue" stylesheets="@iMat.css" />
-
-               </children></AnchorPane>
+                  <AnchorPane layoutX="-16.0" layoutY="-11.0" prefHeight="1114.0" prefWidth="1953.0" styleClass="overlayFade" stylesheets="@iMat.css" />
+      
+                     </children>
+            </AnchorPane>
             <AnchorPane fx:id="accountPane" prefHeight="200.0" prefWidth="1920.0">
                <children>
                   <AnchorPane layoutX="886.0" layoutY="329.0" prefHeight="289.0" prefWidth="444.0" style="-fx-background-color: #e0e0e0;">

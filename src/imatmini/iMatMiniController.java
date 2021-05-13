@@ -126,6 +126,11 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private void setupPreviouslyPurchasedPane(){
         previouslyPurchased = new PreviouslyPurchased(this);
         historyPane.getChildren().add(previouslyPurchased);
+        /*
+         Hard coding to get the layout slightly right
+         */
+        previouslyPurchased.setLayoutX(60);
+        previouslyPurchased.setLayoutY(55);
         historyPane.toBack();
     }
 

@@ -27,3 +27,8 @@
 .mainblue {
     -fx-background-color: #26263A;
 }
+
+.overlayFade {
+    -fx-background-color: #000000;
+    -fx-opacity: 0.5;
+}

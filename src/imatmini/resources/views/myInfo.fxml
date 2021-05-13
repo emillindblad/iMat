@@ -72,7 +72,7 @@
                   <TextField fx:id="city" layoutX="208.0" layoutY="685.0" prefHeight="38.0" prefWidth="258.0" />
                   <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="446.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../lib/images/baseline_perm_contact_calendar_black_36dp.png" />
+                        <Image url="@../images/baseline_perm_contact_calendar_black_36dp.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="getInfoButton" layoutX="484.0" layoutY="268.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="159.0" style="-fx-background-color: #AD282F;" text="Hämta uppgifter" textFill="WHITE">
@@ -87,7 +87,7 @@
                   </Label>
                   <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="1185.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../lib/images/baseline_payment_black_36dp.png" />
+                        <Image url="@../images/baseline_payment_black_36dp.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="751.0" layoutY="218.0" text="Namn på kortet">
@@ -120,12 +120,12 @@
                   </Label>
                   <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1615.0" layoutY="36.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../lib/images/baseline_info_white_48dp.png" />
+                        <Image url="@../images/baseline_info_white_48dp.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1717.0" layoutY="36.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../lib/images/baseline_close_white_48dp.png" />
+                        <Image url="@../images/baseline_close_white_48dp.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="1413.0" layoutY="37.0" onMouseClicked="#onInfo" text="Hjälp/Info" textFill="WHITE">

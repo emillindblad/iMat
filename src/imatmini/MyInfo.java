@@ -1,12 +1,17 @@
 package imatmini;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import se.chalmers.cse.dat216.project.CreditCard;
 import se.chalmers.cse.dat216.project.Customer;
 
@@ -51,7 +56,62 @@ public class MyInfo extends AnchorPane {
         this.parentController = parentController;
 
         cardMonth.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12);
-        cardYear.getItems().addAll(12);
+        cardMonth.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Integer>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
+                model.getCreditCard().setValidMonth(newValue);
+            }
+        });
+        cardYear.getItems().addAll(2021,2022,2023,2024,2025);
+        cardYear.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Integer>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
+                model.getCreditCard().setValidYear(newValue);
+            }
+        });
+
+        cardName.setFont(Font.font("System", FontWeight.NORMAL, 25));
+        cardNum.setFont(Font.font("System", FontWeight.NORMAL, 25));
+        cardCVC.setFont(Font.font("System", FontWeight.NORMAL, 25));
+
+        personNum.setFont(Font.font("System", FontWeight.NORMAL, 25));
+        firstName.setFont(Font.font("System", FontWeight.NORMAL, 25));
+        lastName.setFont(Font.font("System", FontWeight.NORMAL, 25));
+        address.setFont(Font.font("System", FontWeight.NORMAL, 25));
+        postNum.setFont(Font.font("System", FontWeight.NORMAL, 25));
+        city.setFont(Font.font("System", FontWeight.NORMAL, 25));
+        teleNum.setFont(Font.font("System", FontWeight.NORMAL, 25));
+
+        cardMonth.setButtonCell(new ListCell(){
+
+            @Override
+            protected void updateItem(Object item, boolean empty) {
+                super.updateItem(item, empty);
+                if(empty || item==null){
+                    setStyle("-fx-font-size:25");
+                } else {
+                    setStyle("-fx-font-size:25");
+                    setText(item.toString());
+                }
+            }
+
+        });
+        cardYear.setButtonCell(new ListCell(){
+
+            @Override
+            protected void updateItem(Object item, boolean empty) {
+                super.updateItem(item, empty);
+                if(empty || item==null){
+                    setStyle("-fx-font-size:25");
+                } else {
+                    setStyle("-fx-font-size:25");
+                    setText(item.toString());
+                }
+            }
+
+        });
     }
 
     @FXML
@@ -65,8 +125,6 @@ public class MyInfo extends AnchorPane {
 
         model.setCardName(cardName.getText());
         model.setCardNumber(cardNum.getText());
-        //model.setCardMonth(cardMonth.get());
-        //model.setCardYear(cardYear.getText());
         model.setCVC(cardCVC.getText());
 
         this.savedPane.getChildren().add(new SaveConf(this));
@@ -84,9 +142,8 @@ public class MyInfo extends AnchorPane {
         cardNum.setText(card.getCardNumber());
         cardName.setText(card.getHoldersName());
 
-        //cardMonth.setText("" + card.getValidMonth());
-        //cardYear.setText("" + card.getValidYear());
-        //yearCombo.getSelectionModel().select(""+card.getValidYear());
+        cardMonth.getSelectionModel().select(card.getValidMonth() - 1);
+        cardYear.getSelectionModel().select(card.getValidYear());
 
         cardCVC.setText(""+card.getVerificationCode());
     }

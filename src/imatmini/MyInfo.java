@@ -4,6 +4,7 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.CreditCard;
@@ -22,8 +23,8 @@ public class MyInfo extends AnchorPane {
 
     @FXML private TextField cardName;
     @FXML private TextField cardNum;
-    @FXML private TextField cardMonth;
-    @FXML private TextField cardYear;
+    @FXML private ComboBox<Integer> cardMonth;
+    @FXML private ComboBox<Integer> cardYear;
     @FXML private TextField cardCVC;
 
     @FXML private Button getInfoButton;

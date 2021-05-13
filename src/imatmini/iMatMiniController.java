@@ -71,7 +71,6 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private PreviouslyPurchased previouslyPurchased;
 
     private MyInfo myInfo;
-
     // Shop pane actions
     @FXML
     private void handleShowAccountAction(ActionEvent event) {
@@ -112,8 +111,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         updateProductList(model.getProducts());
         updateBottomPanel();
         
-        setupAccountPane();
         setupPreviouslyPurchasedPane();
+        setupMyInfoView();
 
         /*
          Testing purposes
@@ -121,7 +120,13 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         //MyInfo myInfo = new MyInfo(this);
         //myInfo.toFront();
 
-    }    
+    }
+
+    private void setupMyInfoView() {
+        myInfo = new MyInfo(this);
+        shopPane.getChildren().add(myInfo);
+        myInfo.toBack();
+    }
 
     private void setupPreviouslyPurchasedPane(){
         previouslyPurchased = new PreviouslyPurchased(this);
@@ -131,8 +136,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     // Navigation
     public void openAccountView() {
-        updateAccountPanel();
-        accountPane.toFront();
+        myInfo.updateMyInfo();
+        myInfo.toFront();
     }
 
     public void closeAccountView() {

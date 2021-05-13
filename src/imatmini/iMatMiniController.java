@@ -106,7 +106,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
         try {
             Stage stage = (Stage) cartFlowPane.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("purchase_process.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("resources/views/purchase_process.fxml"));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

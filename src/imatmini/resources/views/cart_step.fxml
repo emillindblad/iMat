@@ -21,12 +21,12 @@
                      <children>
                         <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1737.0" layoutY="35.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../lib/images/baseline_info_white_48dp.png" />
+                              <Image url="@../../../../lib/images/baseline_info_white_48dp.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1839.0" layoutY="35.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../lib/images/baseline_close_white_48dp.png" />
+                              <Image url="@../../../../lib/images/baseline_close_white_48dp.png" />
                            </image>
                         </ImageView>
                         <Label layoutX="1535.0" layoutY="36.0" onMouseClicked="#onInfo" text="Hjälp/Info" textFill="WHITE">

@@ -9,7 +9,7 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
 
 
     public CartStep() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cart_step.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/cart_step.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

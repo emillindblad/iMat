@@ -130,8 +130,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     private void setupPreviouslyPurchasedPane(){
         previouslyPurchased = new PreviouslyPurchased(this);
-        shopPane.getChildren().add(previouslyPurchased);
-        previouslyPurchased.toBack();
+        historyPane.getChildren().add(previouslyPurchased);
+        historyPane.toBack();
     }
 
     // Navigation
@@ -146,8 +146,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     }
 
     public void openPurchaseHistoryView() {
-        previouslyPurchased.toFront();
         previouslyPurchased.updateReceipts(model.getOrders());
+        historyPane.toFront();
 
     }
     

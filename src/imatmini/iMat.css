@@ -35,8 +35,7 @@
 }
 
 .overlayFade {
-    -fx-background-color: #000000;
-    -fx-opacity: 0.5;
+     -fx-background-color: rgba(0, 0, 0, 0.75);
 }
 
 .addtocartbutton {

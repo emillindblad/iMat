@@ -12,12 +12,11 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <fx:root stylesheets="@iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane layoutX="3.0">
          <children>
-            <AnchorPane fx:id="savedPane" prefHeight="200.0" prefWidth="200.0" styleClass="overlay-shadow" />
+            <AnchorPane fx:id="savedPane" prefHeight="200.0" prefWidth="200.0" styleClass="overlayFade" />
             <javafx.scene.layout.AnchorPane prefHeight="971.0" prefWidth="1818.0" styleClass="mainbackgroud" stylesheets="@iMat.css">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#26263a" height="133.0" stroke="BLACK" strokeType="INSIDE" styleClass="mainblue" width="1819.0" />

@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -103,13 +104,19 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private void handleBuyItemsAction(ActionEvent event) {
         /*model.placeOrder();
         costLabel.setText("Köpet klart!");*/
-
+        Stage stage;
+        Parent root;
         try {
-            Stage stage = (Stage) cartFlowPane.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("purchase_process.fxml"));
+            stage = (Stage) cartFlowPane.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("purchase_process.fxml"));
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+
 
     }
 

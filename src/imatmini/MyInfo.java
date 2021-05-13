@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.CreditCard;
+import se.chalmers.cse.dat216.project.Customer;
 
 import java.io.IOException;
 
@@ -63,11 +65,43 @@ public class MyInfo extends AnchorPane {
         model.setCardYear(cardYear.getText());
         model.setCVC(cardCVC.getText());
 
+        this.savedPane.getChildren().add(new SaveConf(this));
         savedPane.toFront();
+    }
+
+    public void updateMyInfo() {
+        updateCardInfo();
+        updateContactInfo();
+    }
+
+    private void updateCardInfo() {
+        CreditCard card = model.getCreditCard();
+
+        cardNum.setText(card.getCardNumber());
+        cardName.setText(card.getHoldersName());
+
+        cardMonth.setText("" + card.getValidMonth());
+        cardYear.setText("" + card.getValidYear());
+        //yearCombo.getSelectionModel().select(""+card.getValidYear());
+
+        cardCVC.setText(""+card.getVerificationCode());
+    }
+
+    private void updateContactInfo(){
+        Customer customer = model.getCustomer();
+
+        firstName.setText(customer.getFirstName());
+        lastName.setText(customer.getLastName());
+        address.setText(customer.getAddress());
+        postNum.setText(customer.getPostCode());
+        city.setText(customer.getPostCode());
+        teleNum.setText(customer.getPhoneNumber());
     }
 
     @FXML
     public void onClose(Event event) {
+        savedPane.getChildren().clear();
+        savedPane.toBack();
         this.toBack();
     }
 }

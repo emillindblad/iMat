@@ -19,7 +19,7 @@
             <Line endX="892.0" layoutX="104.0" layoutY="133.0" startX="-100.0" stroke="#ad282f" strokeWidth="8.0" />
             <ImageView fx:id="closeImage" fitHeight="69.0" fitWidth="69.0" layoutX="905.0" layoutY="32.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../lib/images/baseline_close_white_48dp.png" />
+                  <Image url="@../images/baseline_close_white_48dp.png" />
                </image>
             </ImageView>
             <Label layoutX="314.0" layoutY="209.0" text="Behöver du hjälp?" wrapText="true">

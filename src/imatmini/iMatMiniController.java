@@ -69,8 +69,6 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML
     private AnchorPane myAccountPane;
 
-    // Use to remember which pane is under an overlay
-    private AnchorPane currentPane = shopPane;
     
     // Other variables
     private final Model model = Model.getInstance();
@@ -237,13 +235,5 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         
         yearCombo.getItems().addAll(model.getYears());
         
-    }
-
-    public void setCurrentPane(AnchorPane currentPane) {
-        this.currentPane = currentPane;
-    }
-
-    public void showCurrentPane() {
-        this.currentPane.toFront();
     }
 }

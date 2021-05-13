@@ -14,7 +14,7 @@ public class SaveConf extends AnchorPane {
     @FXML private Button okButton;
 
     public SaveConf(MyInfo parentController){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("saveConf.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/saveConf.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

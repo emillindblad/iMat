@@ -7,7 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Order;
-import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class PreviouslyPurchased extends AnchorPane{
     private ArrayList<PreviouslyPurchasedItem> items = new ArrayList<>();
 
     public PreviouslyPurchased(iMatMiniController parentController){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TidigareKop.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/TidigareKop.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {

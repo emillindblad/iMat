@@ -10,7 +10,6 @@ import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
-import java.util.Date;
 
 public class PreviouslyPurchasedItem extends AnchorPane {
     private Order order;
@@ -25,7 +24,7 @@ public class PreviouslyPurchasedItem extends AnchorPane {
     private final Model model = Model.getInstance();
 
     public PreviouslyPurchasedItem(Order order) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TidigareKop_Item.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/TidigareKop_Item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {

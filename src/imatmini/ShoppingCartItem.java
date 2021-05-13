@@ -20,7 +20,7 @@ public class ShoppingCartItem extends AnchorPane {
     private Label priceLabel;
 
     public ShoppingCartItem(ShoppingItem item) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ShoppingCart_Item.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/ShoppingCart_Item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

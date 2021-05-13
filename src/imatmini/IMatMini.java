@@ -10,7 +10,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  *
@@ -20,7 +19,7 @@ public class IMatMini extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("iMatMini.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("resources/views/iMatMini.fxml"));
         
         Scene scene = new Scene(root);
         

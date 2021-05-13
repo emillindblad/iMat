@@ -6,17 +6,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="100.0" prefWidth="695.0" style="-fx-background-color: #ffffff;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root minHeight="0.0" minWidth="0.0" prefHeight="425.0" prefWidth="340.0" scaleShape="false" styleClass="itemcard" stylesheets="@iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="imageView" fitHeight="75.0" fitWidth="100.0" layoutX="14.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
-      <Button layoutX="614.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleAddAction" text="Lägg till" AnchorPane.rightAnchor="14.0" />
-      <Label fx:id="nameLabel" layoutX="133.0" layoutY="14.0" text="Mellanmjök fin produkt för allt möjligt" AnchorPane.leftAnchor="133.0">
+      <ImageView fx:id="imageView" fitHeight="172.0" fitWidth="232.0" layoutX="56.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutY="339.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="86.0" prefWidth="340.0" styleClass="addtocartbutton" stylesheets="@iMat.css" text="Lägg till i Varukorgen" textAlignment="CENTER" />
+      <Label fx:id="nameLabel" alignment="CENTER" layoutX="124.0" layoutY="277.0" text="prodname" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="prizeLabel" layoutX="133.0" layoutY="57.0" text="437,50 per förpackning" />
-      <Label fx:id="ecoLabel" layoutX="528.0" layoutY="57.0" text="Ekologisk" textFill="#5cc343">
+      <Label fx:id="prizeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="310.0" text="price" />
+      <Label fx:id="ecoLabel" layoutX="256.0" layoutY="14.0" text="Ekologisk" textFill="#5cc343">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Label>

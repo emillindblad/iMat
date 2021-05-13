@@ -21,6 +21,7 @@ import se.chalmers.cse.dat216.project.CreditCard;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
+import se.chalmers.cse.dat216.project.*;
 
 
 /**
@@ -60,7 +61,13 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private Label purchasesLabel;
 
     @FXML
+    private FlowPane cartFlowPane;
+
+    @FXML
     private AnchorPane historyPane;
+
+    @FXML
+    private AnchorPane myAccountPane;
 
     // Use to remember which pane is under an overlay
     private AnchorPane currentPane = shopPane;
@@ -124,20 +131,26 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     private void setupMyInfoView() {
         myInfo = new MyInfo(this);
-        shopPane.getChildren().add(myInfo);
-        myInfo.toBack();
+        myAccountPane.getChildren().add(myInfo);
+        myInfo.setLayoutX(60);
+        myInfo.setLayoutY(55);
+        myAccountPane.toBack();
     }
 
     private void setupPreviouslyPurchasedPane(){
         previouslyPurchased = new PreviouslyPurchased(this);
+
         historyPane.getChildren().add(previouslyPurchased);
+        previouslyPurchased.setLayoutX(60);
+        previouslyPurchased.setLayoutY(55);
+
         historyPane.toBack();
     }
 
     // Navigation
     public void openAccountView() {
         myInfo.updateMyInfo();
-        myInfo.toFront();
+        myAccountPane.toFront();
     }
 
     public void closeAccountView() {
@@ -169,6 +182,15 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         ShoppingCart shoppingCart = model.getShoppingCart();
         itemsLabel.setText("Antal varor: " + shoppingCart.getItems().size());
         costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
+
+        /*
+         Add to the shopping cart
+         Currently does not check if we already have the same item in the cart
+         */
+        cartFlowPane.getChildren().clear();
+        for (ShoppingItem item : model.getShoppingCart().getItems()) {
+            cartFlowPane.getChildren().add(new ShoppingCartItem(item));
+        }
     }
     
     private void updateAccountPanel() {

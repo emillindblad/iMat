@@ -163,6 +163,6 @@ public class MyInfo extends AnchorPane {
     public void onClose(Event event) {
         savedPane.getChildren().clear();
         savedPane.toBack();
-        this.toBack();
+        this.getParent().toBack();
     }
 }

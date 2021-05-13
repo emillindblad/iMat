@@ -16,7 +16,7 @@ public class InfoHelp extends AnchorPane {
     private final Info parentController;
 
     public InfoHelp(Info parentController){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("infoHelp.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/infoHelp.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

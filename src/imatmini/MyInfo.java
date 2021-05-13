@@ -43,7 +43,7 @@ public class MyInfo extends AnchorPane implements Info {
     private final iMatMiniController parentController;
 
     public MyInfo(iMatMiniController parentController){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("myInfo.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/myInfo.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

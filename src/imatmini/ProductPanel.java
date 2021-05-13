@@ -33,7 +33,7 @@ public class ProductPanel extends AnchorPane {
     private final static double kImageRatio = 0.75;
 
     public ProductPanel(Product product) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProductPanel.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/ProductPanel.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

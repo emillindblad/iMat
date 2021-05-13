@@ -40,7 +40,7 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
     }
 }

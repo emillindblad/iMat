@@ -5,17 +5,21 @@
  */
 package imatmini;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.CreditCard;
 import se.chalmers.cse.dat216.project.Product;
@@ -69,8 +73,6 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML
     private AnchorPane myAccountPane;
 
-    // Use to remember which pane is under an overlay
-    private AnchorPane currentPane = shopPane;
     
     // Other variables
     private final Model model = Model.getInstance();
@@ -99,8 +101,16 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void handleBuyItemsAction(ActionEvent event) {
-        model.placeOrder();
-        costLabel.setText("Köpet klart!");
+        /*model.placeOrder();
+        costLabel.setText("Köpet klart!");*/
+
+        try {
+            Stage stage = (Stage) cartFlowPane.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("purchase_process.fxml"));
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 
     // Account pane actions
@@ -237,13 +247,5 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         
         yearCombo.getItems().addAll(model.getYears());
         
-    }
-
-    public void setCurrentPane(AnchorPane currentPane) {
-        this.currentPane = currentPane;
-    }
-
-    public void showCurrentPane() {
-        this.currentPane.toFront();
     }
 }

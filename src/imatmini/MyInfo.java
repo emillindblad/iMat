@@ -115,7 +115,7 @@ public class MyInfo extends AnchorPane implements Info {
     }
 
     @FXML
-    protected void onSave(Event event){
+    private void onSave(Event event){
         model.setFirstName(firstName.getText());
         model.setLastName(lastName.getText());
         model.setAddress(address.getText());
@@ -167,7 +167,7 @@ public class MyInfo extends AnchorPane implements Info {
     }
 
     @FXML
-    public void onInfo(Event event) {
+    private void onInfo(Event event) {
         infoPane.getChildren().add(new InfoHelp(this));
         infoPane.toFront();
     }

@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="460.0" minWidth="549.0" prefHeight="400.0" prefWidth="600.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
@@ -21,106 +18,15 @@
             <Font name="System Bold" size="29.0" />
          </font>
       </Label>
-      <GridPane alignment="CENTER" layoutX="25.0" layoutY="55.0" prefHeight="351.0" prefWidth="550.0">
-        <columnConstraints>
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="172.0" layoutY="102.0" pickOnBounds="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" pickOnBounds="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_1.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="34.0" layoutY="102.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_1.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="34.0" layoutY="14.0" pickOnBounds="true" GridPane.columnIndex="2">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" pickOnBounds="true" GridPane.columnIndex="3">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="447.0" layoutY="14.0" pickOnBounds="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="447.0" layoutY="102.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="310.0" layoutY="102.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="310.0" layoutY="190.0" pickOnBounds="true" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="34.0" layoutY="190.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="172.0" layoutY="190.0" pickOnBounds="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="447.0" layoutY="190.0" pickOnBounds="true" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="34.0" layoutY="278.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="172.0" layoutY="14.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="310.0" layoutY="278.0" pickOnBounds="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../../../../../.dat215/imat/images/product_105.jpg" />
-               </image>
-            </ImageView>
-         </children>
-      </GridPane>
       <Label alignment="CENTER" layoutX="153.0" layoutY="417.0" prefHeight="43.0" prefWidth="295.0" text="Visa kvitto">
          <font>
             <Font name="System Italic" size="29.0" />
          </font>
       </Label>
+      <FlowPane fx:id="flowPane" alignment="CENTER" columnHalignment="CENTER" hgap="10.0" layoutY="54.0" maxHeight="377.0" maxWidth="610.0" prefHeight="367.0" prefWidth="610.0" rowValignment="TOP" vgap="10.0">
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </FlowPane>
    </children>
 </fx:root>

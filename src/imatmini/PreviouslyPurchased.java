@@ -42,6 +42,7 @@ public class PreviouslyPurchased extends AnchorPane{
         /*
         Den ska hämta alla tidigare köp och lägga in i flowpane på ett snyggt sätt
          */
+        flowPane.getChildren().clear();
         for (Order order: orders) {
         purchasedItem = new PreviouslyPurchasedItem(calculateTotalCost(order), order.getDate());
         flowPane.getChildren().add(purchasedItem);
@@ -55,7 +56,7 @@ public class PreviouslyPurchased extends AnchorPane{
     /*
         Den här delen kanske skall sitta i model
      */
-    public double calculateTotalCost(Order order){
+    public float calculateTotalCost(Order order){
         float cost = 0;
         for (ShoppingItem item: order.getItems()) {
             cost += item.getProduct().getPrice();

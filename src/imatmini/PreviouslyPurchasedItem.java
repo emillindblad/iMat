@@ -14,7 +14,7 @@ public class PreviouslyPurchasedItem extends AnchorPane {
     private Label receiptPrice;
     @FXML
     private Label receiptDate;
-    public PreviouslyPurchasedItem(double receiptPrice, Date receiptDate) {
+    public PreviouslyPurchasedItem(float receiptPrice, Date receiptDate) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TidigareKop_Item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);

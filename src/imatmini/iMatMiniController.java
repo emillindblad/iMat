@@ -128,12 +128,18 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private void setupMyInfoView() {
         myInfo = new MyInfo(this);
         myAccountPane.getChildren().add(myInfo);
+        myInfo.setLayoutX(60);
+        myInfo.setLayoutY(55);
         myAccountPane.toBack();
     }
 
     private void setupPreviouslyPurchasedPane(){
         previouslyPurchased = new PreviouslyPurchased(this);
+
         historyPane.getChildren().add(previouslyPurchased);
+        previouslyPurchased.setLayoutX(60);
+        previouslyPurchased.setLayoutY(55);
+
         historyPane.toBack();
     }
 

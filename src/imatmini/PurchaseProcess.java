@@ -13,23 +13,28 @@ public class PurchaseProcess implements Initializable {
     @FXML private AnchorPane deliveryStepPane;
     @FXML private AnchorPane finalStepPane;
 
-    private final DetailsStep detailsStep = new DetailsStep();
-    private final DeliveryStep deliveryStep = new DeliveryStep();
-    private final FinalStep finalStep = new FinalStep();
-    private final CartStep cartStep = new CartStep();
+    private DetailsStep detailsStep;
+    private DeliveryStep deliveryStep;
+    private FinalStep finalStep;
+    private CartStep cartStep;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        boolean detailsMissing = Model.getInstance().isDetailMissing();
+        this.detailsStep = new DetailsStep(detailsMissing);
         detailsStepPane.getChildren().add(detailsStep);
         detailsStepPane.toBack();
 
+        this.deliveryStep = new DeliveryStep(detailsMissing);
         deliveryStepPane.getChildren().add(deliveryStep);
         deliveryStepPane.toBack();
 
+        this.finalStep = new FinalStep(detailsMissing);
         finalStepPane.getChildren().add(finalStep);
         finalStepPane.toBack();
 
+        this.cartStep = new CartStep(detailsMissing);
         cartStepPane.getChildren().add(cartStep);
 
         addSteps();

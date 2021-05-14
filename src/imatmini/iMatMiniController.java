@@ -46,24 +46,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private Label costLabel;
     @FXML
     private FlowPane productsFlowPane;
-    
-    // Account Pane
-    @FXML
-    private AnchorPane accountPane;
-    @FXML 
-    ComboBox cardTypeCombo;
-    @FXML
-    private TextField numberTextField;
-    @FXML
-    private TextField nameTextField;
-    @FXML 
-    private ComboBox monthCombo;
-    @FXML
-    private ComboBox yearCombo;
-    @FXML
-    private TextField cvcField;
-    @FXML
-    private Label purchasesLabel;
+
 
     @FXML
     private FlowPane cartFlowPane;
@@ -169,7 +152,6 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     }
 
     public void closeAccountView() {
-        updateCreditCard();
         shopPane.toFront();
     }
 
@@ -206,52 +188,5 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         for (ShoppingItem item : model.getShoppingCart().getItems()) {
             cartFlowPane.getChildren().add(new ShoppingCartItem(item));
         }
-    }
-    
-    private void updateAccountPanel() {
-        
-        CreditCard card = model.getCreditCard();
-        
-        numberTextField.setText(card.getCardNumber());
-        nameTextField.setText(card.getHoldersName());
-        
-        cardTypeCombo.getSelectionModel().select(card.getCardType());
-        monthCombo.getSelectionModel().select(""+card.getValidMonth());
-        yearCombo.getSelectionModel().select(""+card.getValidYear());
-
-        cvcField.setText(""+card.getVerificationCode());
-        
-        purchasesLabel.setText(model.getNumberOfOrders()+ " tidigare inköp hos iMat");
-        
-    }
-    
-    private void updateCreditCard() {
-        
-        CreditCard card = model.getCreditCard();
-        
-        card.setCardNumber(numberTextField.getText());
-        card.setHoldersName(nameTextField.getText());
-        
-        String selectedValue = (String) cardTypeCombo.getSelectionModel().getSelectedItem();
-        card.setCardType(selectedValue);
-        
-        selectedValue = (String) monthCombo.getSelectionModel().getSelectedItem();
-        card.setValidMonth(Integer.parseInt(selectedValue));
-        
-        selectedValue = (String) yearCombo.getSelectionModel().getSelectedItem();
-        card.setValidYear(Integer.parseInt(selectedValue));
-        
-        card.setVerificationCode(Integer.parseInt(cvcField.getText()));
-
-    }
-    
-    private void setupAccountPane() {
-                
-        cardTypeCombo.getItems().addAll(model.getCardTypes());
-        
-        monthCombo.getItems().addAll(model.getMonths());
-        
-        yearCombo.getItems().addAll(model.getYears());
-        
     }
 }

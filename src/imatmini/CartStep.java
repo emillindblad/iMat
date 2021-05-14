@@ -55,7 +55,7 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
     public void back() {
         try {
             Stage stage = (Stage) infoPane.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("iMatMini.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("resources/views/iMatMini.fxml"));
 
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -72,7 +72,7 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
 
     private void addProgressBar(boolean detailsMissing) {
         if (detailsMissing)
-            infoPane.getChildren().add(new ProgressBarMissing(this, 1));
+            progressBar.getChildren().add(new ProgressBarMissing(this, 1));
     }
 
     @Override

@@ -107,6 +107,6 @@ public class ProgressBar extends AnchorPane {
     }
 
     private void setNumberCompleted(Label number) {
-        number.setStyle("-fx-fill: #FFFFFF");
+        number.setStyle("-fx-text-fill: #FFFFFF");
     }
 }

@@ -22,45 +22,57 @@ public class PurchaseProcess implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        this.detailsStep = new DetailsStep(detailsMissing, this);
-        detailsStepPane.getChildren().add(detailsStep);
-        detailsStepPane.toBack();
-
-        this.deliveryStep = new DeliveryStep(detailsMissing, this);
-        deliveryStepPane.getChildren().add(deliveryStep);
-        deliveryStepPane.toBack();
-
-        this.finalStep = new FinalStep(detailsMissing, this);
-        finalStepPane.getChildren().add(finalStep);
-        finalStepPane.toBack();
-
-        this.cartStep = new CartStep(detailsMissing, this);
-        cartStepPane.getChildren().add(cartStep);
+        cartStepPane.getChildren().add(new CartStep(detailsMissing, this));
+        cartStepPane.toFront();
     }
 
     public void firstStep() {
+        detailsStepPane.getChildren().clear();
+        detailsStepPane.toBack();
+        cartStepPane.getChildren().add(new CartStep(detailsMissing, this));
         cartStepPane.toFront();
     }
 
     public void secondStep() {
-        if (detailsMissing)
+        if (detailsMissing) {
+            cartStepPane.getChildren().clear();
+            cartStepPane.toBack();
+            detailsStepPane.getChildren().add(new DetailsStep(true, this));
             detailsStepPane.toFront();
-        else
+        }
+        else {
+            detailsStepPane.getChildren().clear();
+            detailsStepPane.toBack();
+            deliveryStepPane.getChildren().add(new DeliveryStep(false, this));
             deliveryStepPane.toFront();
+        }
     }
 
     public void firstOrSecondStep() {
-        if (detailsMissing)
+        if (detailsMissing) {
+            deliveryStepPane.getChildren().clear();
+            deliveryStepPane.toBack();
+            detailsStepPane.getChildren().add(new DetailsStep(true, this));
             detailsStepPane.toFront();
-        else
+        }
+        else {
+            deliveryStepPane.getChildren().clear();
+            deliveryStepPane.toBack();
+            cartStepPane.getChildren().add(new CartStep(false, this));
             cartStepPane.toFront();
+        }
     }
 
     public void deliveryStep() {
+        finalStepPane.getChildren().clear();
+        detailsStepPane.getChildren().clear();
+        deliveryStepPane.getChildren().add(new DeliveryStep(detailsMissing, this));
         deliveryStepPane.toFront();
     }
 
     public void finalStep() {
+        deliveryStepPane.getChildren().clear();
+        finalStepPane.getChildren().add(new FinalStep(detailsMissing, this));
         finalStepPane.toFront();
     }
 

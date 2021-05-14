@@ -31,9 +31,9 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
 
     private void addProgressBar(boolean detailsMissing) {
         if (detailsMissing)
-            progressBar.getChildren().add(new ProgressBarMissing(this, 1));
+            progressBar.getChildren().add(new ProgressBarMissing(this, 3));
         else
-            progressBar.getChildren().add(new ProgressBar(this, 1));
+            progressBar.getChildren().add(new ProgressBar(this, 2));
     }
 
     @Override

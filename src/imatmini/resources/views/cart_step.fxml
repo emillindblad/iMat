@@ -14,7 +14,7 @@
       <StackPane prefHeight="150.0" prefWidth="200.0">
          <children>
             <AnchorPane fx:id="infoPane" prefHeight="200.0" prefWidth="200.0" />
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud">
+            <AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud">
                <children>
                   <AnchorPane fx:id="progressBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="1920.0" />
                   <Button layoutX="39.0" layoutY="958.0" mnemonicParsing="false" onAction="#back" styleClass="button-back" text="Tillbaka" />

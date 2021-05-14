@@ -18,6 +18,8 @@ public class CartStep extends AnchorPane implements PurchaseStep {
 
     @FXML private AnchorPane progressBar;
 
+    @FXML private AnchorPane mainPane;
+
     @FXML private Label sumLabel;
 
     private final Model model = Model.getInstance();
@@ -37,8 +39,8 @@ public class CartStep extends AnchorPane implements PurchaseStep {
         }
         this.parentProcess = parentProcess;
         addProgressBar(detailsMissing);
-
         updateCartStep();
+        mainPane.toFront();
     }
 
     public void  updateCartStep() {
@@ -48,7 +50,7 @@ public class CartStep extends AnchorPane implements PurchaseStep {
 
     @Override
     public void next() {
-        parentProcess.firstOrSecondStep();
+        parentProcess.secondStep();
     }
 
     @Override

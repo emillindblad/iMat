@@ -57,7 +57,7 @@
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="teleNum" layoutX="63.0" layoutY="797.0" prefHeight="38.0" prefWidth="406.0" />
+                  <TextField fx:id="phoneNumber" layoutX="63.0" layoutY="797.0" prefHeight="38.0" prefWidth="406.0" />
                   <Label layoutX="61.0" layoutY="634.0" text="Postnr.">
                      <font>
                         <Font size="35.0" />

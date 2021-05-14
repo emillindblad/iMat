@@ -1,5 +1,6 @@
 package imatmini;
 
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
@@ -41,6 +42,11 @@ public class DeliveryStep extends AnchorPane implements PurchaseSteps {
 
     @Override
     public void closeInfo() {
+
+    }
+
+    @Override
+    public void onInfo(Event event) {
 
     }
 }

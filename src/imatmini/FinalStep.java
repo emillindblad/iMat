@@ -9,6 +9,8 @@ import java.io.IOException;
 
 public class FinalStep extends AnchorPane implements PurchaseSteps {
 
+    @FXML private AnchorPane infoPane;
+
     @FXML private AnchorPane progressBar;
 
     public FinalStep(boolean detailsMissing) {
@@ -53,11 +55,13 @@ public class FinalStep extends AnchorPane implements PurchaseSteps {
 
     @Override
     public void closeInfo() {
-
+        infoPane.getChildren().clear();
+        infoPane.toBack();
     }
 
     @Override
     public void onInfo(Event event) {
-
+        infoPane.getChildren().add(new InfoHelp(this));
+        infoPane.toFront();
     }
 }

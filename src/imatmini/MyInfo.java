@@ -168,8 +168,8 @@ public class MyInfo extends AnchorPane implements Info {
         this.getParent().toBack();
     }
 
-    @FXML
-    private void onInfo(Event event) {
+    @FXML @Override
+    public void onInfo(Event event) {
         infoPane.getChildren().add(new InfoHelp(this));
         infoPane.toFront();
     }

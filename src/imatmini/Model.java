@@ -134,14 +134,18 @@ public class Model {
         iMatDataHandler.shutDown();
     }
 
-    public boolean isContactDetailMissing() {
+    public boolean isDetailMissing() {
+        return isContactDetailMissing() || isPaymentDetailMissing();
+    }
+
+    private boolean isContactDetailMissing() {
         Customer customer = getCustomer();
 
         return customer.getAddress().isEmpty() || customer.getFirstName().isEmpty() || customer.getLastName().isEmpty() ||
                 customer.getPhoneNumber().isEmpty() || customer.getPostAddress().isEmpty() || customer.getPostCode().isEmpty();
     }
 
-    public boolean isPaymentDetailMissing() {
+    private boolean isPaymentDetailMissing() {
         CreditCard card = getCreditCard();
 
         return card.getCardNumber().isEmpty() || card.getHoldersName().isEmpty();

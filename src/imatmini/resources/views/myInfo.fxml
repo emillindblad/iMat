@@ -118,7 +118,7 @@
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1615.0" layoutY="36.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1617.0" layoutY="33.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/baseline_info_white_48dp.png" />
                      </image>

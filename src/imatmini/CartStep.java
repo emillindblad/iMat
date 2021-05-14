@@ -15,6 +15,8 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
 
     @FXML private AnchorPane infoPane;
 
+    @FXML private AnchorPane progressBar;
+
     @FXML private Label sumLabel;
 
     private final Model model = Model.getInstance();
@@ -22,7 +24,7 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
 
     private PurchaseSteps nextStep;
 
-    public CartStep() {
+    public CartStep(boolean detailsMissing) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/cart_step.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -64,4 +66,9 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
 
     @Override
     public void addPreviousStep(PurchaseSteps previousStep){}
+
+    @Override
+    public void closeInfo() {
+
+    }
 }

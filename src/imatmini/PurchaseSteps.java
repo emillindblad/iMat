@@ -1,6 +1,6 @@
 package imatmini;
 
-public interface PurchaseSteps {
+public interface PurchaseSteps extends Info {
     public void next();
     public void back();
 

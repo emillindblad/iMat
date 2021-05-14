@@ -18,36 +18,50 @@ public class PurchaseProcess implements Initializable {
     private FinalStep finalStep;
     private CartStep cartStep;
 
+    private final boolean detailsMissing = Model.getInstance().isDetailMissing();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        boolean detailsMissing = Model.getInstance().isDetailMissing();
-        this.detailsStep = new DetailsStep(detailsMissing);
+        this.detailsStep = new DetailsStep(detailsMissing, this);
         detailsStepPane.getChildren().add(detailsStep);
         detailsStepPane.toBack();
 
-        this.deliveryStep = new DeliveryStep(detailsMissing);
+        this.deliveryStep = new DeliveryStep(detailsMissing, this);
         deliveryStepPane.getChildren().add(deliveryStep);
         deliveryStepPane.toBack();
 
-        this.finalStep = new FinalStep(detailsMissing);
+        this.finalStep = new FinalStep(detailsMissing, this);
         finalStepPane.getChildren().add(finalStep);
         finalStepPane.toBack();
 
-        this.cartStep = new CartStep(detailsMissing);
+        this.cartStep = new CartStep(detailsMissing, this);
         cartStepPane.getChildren().add(cartStep);
-
-        addSteps();
     }
 
-    private void addSteps() {
-        Model model = Model.getInstance();
-
-        if (model.isFirstRun()) {
-            cartStep.addNextStep(detailsStep);
-            deliveryStep.addPreviousStep(detailsStep);
-        }
+    public void firstStep() {
+        cartStepPane.toFront();
     }
 
+    public void secondStep() {
+        if (detailsMissing)
+            detailsStepPane.toFront();
+        else
+            deliveryStepPane.toFront();
+    }
+
+    public void firstOrSecondStep() {
+        if (detailsMissing)
+            detailsStepPane.toFront();
+        else
+            cartStepPane.toFront();
+    }
+
+    public void deliveryStep() {
+        deliveryStepPane.toFront();
+    }
+
+    public void finalStep() {
+        finalStepPane.toFront();
+    }
 
 }

@@ -12,7 +12,7 @@ import se.chalmers.cse.dat216.project.ShoppingCart;
 
 import java.io.IOException;
 
-public class CartStep extends AnchorPane implements PurchaseSteps {
+public class CartStep extends AnchorPane implements PurchaseStep {
 
     @FXML private AnchorPane infoPane;
 
@@ -23,9 +23,9 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
     private final Model model = Model.getInstance();
     private ShoppingCart shoppingCart;
 
-    private PurchaseSteps nextStep;
+    private PurchaseProcess parentProcess;
 
-    public CartStep(boolean detailsMissing) {
+    public CartStep(boolean detailsMissing, PurchaseProcess parentProcess) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/cart_step.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -35,7 +35,7 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-
+        this.parentProcess = parentProcess;
         addProgressBar(detailsMissing);
 
         updateCartStep();
@@ -48,7 +48,7 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
 
     @Override
     public void next() {
-
+        parentProcess.firstOrSecondStep();
     }
 
     @Override
@@ -64,11 +64,6 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
             System.out.println(e.getMessage());
         }
     }
-
-    public void addNextStep(PurchaseSteps nextStep) { this.nextStep = nextStep; }
-
-    @Override
-    public void addPreviousStep(PurchaseSteps previousStep){}
 
     private void addProgressBar(boolean detailsMissing) {
         if (detailsMissing)

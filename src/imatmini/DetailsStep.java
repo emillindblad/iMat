@@ -7,13 +7,15 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class DetailsStep extends AnchorPane implements PurchaseSteps{
+public class DetailsStep extends AnchorPane implements PurchaseStep {
 
     @FXML private AnchorPane infoPane;
 
     @FXML private AnchorPane progressBar;
 
-    public DetailsStep(boolean detailsMissing) {
+    private final PurchaseProcess parentProcess;
+
+    public DetailsStep(boolean detailsMissing, PurchaseProcess parentProcess) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/details_step.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -24,6 +26,7 @@ public class DetailsStep extends AnchorPane implements PurchaseSteps{
             throw new RuntimeException(exception);
         }
         addProgressBar(detailsMissing);
+        this.parentProcess = parentProcess;
     }
 
     private void addProgressBar(boolean detailsMissing) {
@@ -35,22 +38,12 @@ public class DetailsStep extends AnchorPane implements PurchaseSteps{
 
     @Override
     public void next() {
-
+        parentProcess.deliveryStep();
     }
 
     @Override
     public void back() {
-
-    }
-
-    @Override
-    public void addNextStep(PurchaseSteps nextStep) {
-
-    }
-
-    @Override
-    public void addPreviousStep(PurchaseSteps previousStep) {
-
+        parentProcess.firstStep();
     }
 
     @Override

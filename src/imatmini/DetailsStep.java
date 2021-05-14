@@ -51,7 +51,10 @@ public class DetailsStep extends AnchorPane implements PurchaseStep {
 
     @Override
     public void onInfo(Event event) {
-        infoPane.getChildren().add(new InfoHelp(this));
+        InfoHelp infoHelp = new InfoHelp(this);
+        infoPane.getChildren().add(infoHelp);
+        infoHelp.setLayoutX(-250);
+        infoHelp.setLayoutY(0);
         infoPane.toFront();
     }
 }

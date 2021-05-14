@@ -1,5 +1,6 @@
 package imatmini;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -35,6 +36,8 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
             throw new RuntimeException(exception);
         }
 
+        addProgressBar(detailsMissing);
+
         updateCartStep();
     }
 
@@ -67,8 +70,20 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
     @Override
     public void addPreviousStep(PurchaseSteps previousStep){}
 
+    private void addProgressBar(boolean detailsMissing) {
+        if (detailsMissing)
+            infoPane.getChildren().add(new ProgressBarMissing(this, 1));
+    }
+
     @Override
     public void closeInfo() {
+        infoPane.getChildren().clear();
+        infoPane.toBack();
+    }
 
+    @Override
+    public void onInfo(Event event) {
+        infoPane.getChildren().add(new InfoHelp(this));
+        infoPane.toFront();
     }
 }

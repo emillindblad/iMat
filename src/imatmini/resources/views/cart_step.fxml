@@ -16,26 +16,7 @@
             <AnchorPane fx:id="infoPane" prefHeight="200.0" prefWidth="200.0" />
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud">
                <children>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="1920.0" styleClass="mainblue">
-                     <children>
-                        <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1737.0" layoutY="35.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/baseline_info_white_48dp.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1839.0" layoutY="35.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/baseline_close_white_48dp.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="1535.0" layoutY="36.0" onMouseClicked="#onInfo" text="Hjälp/Info" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="40.0" />
-                           </font>
-                        </Label>
-                        <Label id="logo" layoutX="25.0" layoutY="16.0" text="iMat" />
-                     </children>
-                  </AnchorPane>
+                  <AnchorPane fx:id="progressBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="1920.0" />
                   <Button layoutX="39.0" layoutY="958.0" mnemonicParsing="false" onAction="#back" styleClass="button-back" text="Tillbaka" />
                   <Line endX="1475.0" endY="-136.99996948242188" layoutX="441.0" layoutY="270.0" startX="-437.0" startY="-136.99996948242188" stroke="#ad282f" strokeWidth="8.0" />
                   <Button layoutX="1642.0" layoutY="958.0" mnemonicParsing="false" onAction="#next" styleClass="button-next" text="Nästa steg" />

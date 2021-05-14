@@ -28,5 +28,25 @@
       <Line fx:id="firstLine" endX="40.0" layoutX="768.0" layoutY="65.0" startX="-40.0" strokeWidth="5.0" />
       <Line fx:id="secondLine" endX="40.0" layoutX="960.0" layoutY="68.0" startX="-40.0" strokeWidth="5.0" />
       <Line fx:id="thirdLine" endX="40.0" layoutX="1152.0" layoutY="68.0" startX="-40.0" strokeWidth="5.0" />
+      <Label fx:id="one" layoutX="660.0" layoutY="34.0" text="1">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="two" layoutX="852.0" layoutY="34.0" text="2">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="three" layoutX="1044.0" layoutY="34.0" text="3">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="four" layoutX="1236.0" layoutY="34.0" text="4">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
    </children>
 </fx:root>

@@ -1,12 +1,15 @@
 package imatmini;
 
 import javafx.event.Event;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
 public class DetailsStep extends AnchorPane implements PurchaseSteps{
+
+    @FXML private AnchorPane progressBar;
 
     public DetailsStep(boolean detailsMissing) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/details_step.fxml"));
@@ -18,6 +21,14 @@ public class DetailsStep extends AnchorPane implements PurchaseSteps{
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+        addProgressBar(detailsMissing);
+    }
+
+    private void addProgressBar(boolean detailsMissing) {
+        if (detailsMissing)
+            progressBar.getChildren().add(new ProgressBarMissing(this, 1));
+        else
+            progressBar.getChildren().add(new ProgressBar(this, 1));
     }
 
     @Override

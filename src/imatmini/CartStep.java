@@ -73,6 +73,8 @@ public class CartStep extends AnchorPane implements PurchaseSteps {
     private void addProgressBar(boolean detailsMissing) {
         if (detailsMissing)
             progressBar.getChildren().add(new ProgressBarMissing(this, 1));
+        else
+            progressBar.getChildren().add(new ProgressBar(this, 1));
     }
 
     @Override

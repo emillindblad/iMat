@@ -24,7 +24,7 @@ public class MyInfo extends AnchorPane implements Info {
     @FXML private TextField address;
     @FXML private TextField postNum;
     @FXML private TextField city;
-    @FXML private TextField teleNum;
+    @FXML private TextField phoneNumber;
 
     @FXML private TextField cardName;
     @FXML private TextField cardNum;
@@ -82,7 +82,7 @@ public class MyInfo extends AnchorPane implements Info {
         address.setFont(Font.font("System", FontWeight.NORMAL, 25));
         postNum.setFont(Font.font("System", FontWeight.NORMAL, 25));
         city.setFont(Font.font("System", FontWeight.NORMAL, 25));
-        teleNum.setFont(Font.font("System", FontWeight.NORMAL, 25));
+        phoneNumber.setFont(Font.font("System", FontWeight.NORMAL, 25));
 
         cardMonth.setButtonCell(new ListCell(){
 
@@ -116,16 +116,18 @@ public class MyInfo extends AnchorPane implements Info {
 
     @FXML
     private void onSave(Event event){
-        model.setFirstName(firstName.getText());
-        model.setLastName(lastName.getText());
-        model.setAddress(address.getText());
-        model.setPostCode(postNum.getText());
-        model.setCity(city.getText());
-        model.setTeleNum(teleNum.getText());
+        Customer customer = model.getCustomer();
+        customer.setFirstName(firstName.getText());
+        customer.setLastName(lastName.getText());
+        customer.setAddress(address.getText());
+        customer.setPostCode(postNum.getText());
+        customer.setPostAddress(city.getText());
+        customer.setPhoneNumber(phoneNumber.getText());
 
-        model.setCardName(cardName.getText());
-        model.setCardNumber(cardNum.getText());
-        model.setCVC(cardCVC.getText());
+        CreditCard card = model.getCreditCard();
+        card.setHoldersName(cardName.getText());
+        card.setCardNumber(cardNum.getText());
+        card.setVerificationCode(Integer.parseInt(cardCVC.getText()));
 
         this.savedPane.getChildren().add(new SaveConf(this));
         savedPane.toFront();
@@ -142,7 +144,7 @@ public class MyInfo extends AnchorPane implements Info {
         cardNum.setText(card.getCardNumber());
         cardName.setText(card.getHoldersName());
 
-        cardMonth.getSelectionModel().select(card.getValidMonth() - 1);
+        cardMonth.getSelectionModel().select(card.getValidMonth());
         cardYear.getSelectionModel().select(card.getValidYear());
 
         cardCVC.setText(""+card.getVerificationCode());
@@ -156,7 +158,7 @@ public class MyInfo extends AnchorPane implements Info {
         address.setText(customer.getAddress());
         postNum.setText(customer.getPostCode());
         city.setText(customer.getPostCode());
-        teleNum.setText(customer.getPhoneNumber());
+        phoneNumber.setText(customer.getPhoneNumber());
     }
 
     @FXML

@@ -25,7 +25,7 @@ public class ProgressBar extends AnchorPane {
     private final PurchaseStep parentController;
 
     public ProgressBar(PurchaseStep parentController, int step) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/progress_bar_missing.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/progress_bar.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

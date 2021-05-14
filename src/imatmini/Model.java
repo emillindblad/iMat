@@ -134,45 +134,16 @@ public class Model {
         iMatDataHandler.shutDown();
     }
 
-    //Delegation methods to Customer
-    public void setFirstName(String firstName) { getCustomer().setFirstName(firstName); }
+    public boolean isContactDetailMissing() {
+        Customer customer = getCustomer();
 
-    public void setLastName(String lastName) {
-        getCustomer().setLastName(lastName);
+        return customer.getAddress().isEmpty() || customer.getFirstName().isEmpty() || customer.getLastName().isEmpty() ||
+                customer.getPhoneNumber().isEmpty() || customer.getPostAddress().isEmpty() || customer.getPostCode().isEmpty();
     }
 
-    public void setTeleNum(String teleNum) {
-        getCustomer().setPhoneNumber(teleNum);
-    }
+    public boolean isPaymentDetailMissing() {
+        CreditCard card = getCreditCard();
 
-    public void setPostCode(String postCode) {
-        getCustomer().setPostCode(postCode);
-    }
-
-    public void setCity(String city) {
-        getCustomer().setPostAddress(city);
-    }
-
-    public void setAddress(String address) {
-        getCustomer().setAddress(address);
-    }
-
-    //Delegation methods to CreditCard
-    public void setCardName(String cardName) { getCreditCard().setHoldersName(cardName); }
-
-    public void setCardNumber(String cardNumber) {
-        getCreditCard().setCardNumber(cardNumber);
-    }
-
-    public void  setCardMonth(String cardMonth) {
-        getCreditCard().setValidMonth(Integer.parseInt(cardMonth));
-    }
-
-    public void setCardYear(String cardYear) {
-        getCreditCard().setValidYear(Integer.parseInt(cardYear));
-    }
-
-    public void setCVC(String cvc) {
-        getCreditCard().setVerificationCode(Integer.parseInt(cvc));
+        return card.getCardNumber().isEmpty() || card.getHoldersName().isEmpty();
     }
 }

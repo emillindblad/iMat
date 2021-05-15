@@ -111,6 +111,10 @@ public class MyInfo extends AnchorPane implements Info {
         });
     }
 
+    @FXML private void mouseTrap(Event event) {
+        event.consume();
+    }
+
     @FXML
     private void onSave(Event event){
         Customer customer = model.getCustomer();
@@ -126,10 +130,6 @@ public class MyInfo extends AnchorPane implements Info {
         card.setCardNumber(cardNum.getText());
         card.setVerificationCode(Integer.parseInt(cardCVC.getText()));
 
-        SaveConf saveConf = new SaveConf(this);
-        this.savedPane.getChildren().add(saveConf);
-        saveConf.setLayoutX(60);
-        saveConf.setLayoutY(50);
         savedPane.toFront();
     }
 
@@ -163,7 +163,6 @@ public class MyInfo extends AnchorPane implements Info {
 
     @FXML
     public void onClose(Event event) {
-        savedPane.getChildren().clear();
         savedPane.toBack();
         this.getParent().toBack();
     }

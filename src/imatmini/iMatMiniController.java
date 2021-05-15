@@ -102,12 +102,6 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     }
 
-    // Account pane actions
-     @FXML
-    private void handleDoneAction(ActionEvent event) {
-        closeAccountView();
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -128,7 +122,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     }
 
     private void setupMyInfoView() {
-        myInfo = new MyInfo(this);
+        myInfo = new MyInfo();
         myAccountPane.getChildren().add(myInfo);
         myInfo.setLayoutX(60);
         myInfo.setLayoutY(55);
@@ -149,10 +143,6 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     public void openAccountView() {
         myInfo.updateMyInfo();
         myAccountPane.toFront();
-    }
-
-    public void closeAccountView() {
-        shopPane.toFront();
     }
 
     public void openPurchaseHistoryView() {

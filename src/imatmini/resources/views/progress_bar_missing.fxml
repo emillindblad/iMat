@@ -8,18 +8,22 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="1920.0" styleClass="mainblue" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="1920.0" styleClass="mainblue" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="1816.0" layoutY="35.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/baseline_info_white_48dp.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="1614.0" layoutY="36.0" onMouseClicked="#onInfo" text="Hjälp/Info" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="40.0" />
-         </font>
-      </Label>
+      <AnchorPane layoutX="1614.0" layoutY="33.0" styleClass="cross-and-info">
+         <children>
+            <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="202.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/baseline_info_white_48dp.png" />
+               </image>
+            </ImageView>
+            <Label layoutY="3.0" onMouseClicked="#onInfo" text="Hjälp/Info" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
       <Label id="logo" layoutX="25.0" layoutY="16.0" text="iMat" />
       <Circle fx:id="first" fill="DODGERBLUE" layoutX="672.0" layoutY="65.0" radius="46.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="second" fill="DODGERBLUE" layoutX="864.0" layoutY="65.0" radius="46.0" stroke="BLACK" strokeType="INSIDE" />

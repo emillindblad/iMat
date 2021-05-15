@@ -101,3 +101,9 @@
     -fx-border-color: #000;
     -fx-border-width: 1 0 1 0;
 }
+
+.anchor-box{
+    -fx-background-color: white;
+    -fx-border-color: #000;
+    -fx-border-width: 1px;
+}

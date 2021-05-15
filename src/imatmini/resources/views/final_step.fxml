@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane prefHeight="150.0" prefWidth="200.0">
          <children>
             <AnchorPane fx:id="infoPane" prefHeight="200.0" prefWidth="200.0" styleClass="overlayFade" />
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud">
+            <AnchorPane fx:id="detailsPane" prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane fx:id="purchaseCompletePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="overlayFade">
+               <children>
+                  <AnchorPane layoutX="480.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" styleClass="mainbackgroud">
+                     <children>
+                        <AnchorPane prefHeight="100.0" prefWidth="960.0" styleClass="mainblue" />
+                        <Line endX="857.0" layoutX="101.0" layoutY="100.0" startX="-99.0" stroke="#ad282f" strokeWidth="5.0" />
+                        <Label fx:id="endMessage" layoutX="55.0" layoutY="136.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="163.0" prefWidth="850.0" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="45.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="425.0" layoutY="397.0" mnemonicParsing="false" onAction="#backToStart" styleClass="button-next" text="OK" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud">
                <children>
                   <AnchorPane fx:id="progressBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="1920.0" />
                   <Button layoutX="39.0" layoutY="958.0" mnemonicParsing="false" onAction="#back" styleClass="button-back" text="Tillbaka" />
                   <Line endX="1475.0" endY="-136.99996948242188" layoutX="441.0" layoutY="270.0" startX="-437.0" startY="-136.99996948242188" stroke="#ad282f" strokeWidth="8.0" />
                   <Button layoutX="1642.0" layoutY="958.0" mnemonicParsing="false" onAction="#next" styleClass="button-next" text="Slutför köp" />
+                  <AnchorPane layoutX="1267.0" layoutY="159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="775.0" prefWidth="625.0" styleClass="anchor-box" />
                </children>
             </AnchorPane>
          </children>

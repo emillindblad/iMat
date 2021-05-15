@@ -12,7 +12,7 @@
 
 <fx:root onMouseClicked="#onClose" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="659.0" layoutY="41.0" prefHeight="594.0" prefWidth="1000.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
+      <AnchorPane onMouseClicked="#mouseTrap" layoutX="659.0" layoutY="41.0" prefHeight="594.0" prefWidth="1000.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#26263a" height="133.0" stroke="BLACK" strokeType="INSIDE" styleClass="mainblue" width="1000.0" />
             <Line endX="892.0" layoutX="104.0" layoutY="133.0" startX="-100.0" stroke="#ad282f" strokeWidth="8.0" />

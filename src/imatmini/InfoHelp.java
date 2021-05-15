@@ -33,4 +33,6 @@ public class InfoHelp extends AnchorPane {
     public void onClose(Event event) {
         parentController.closeInfo();
     }
+
+    @FXML private void mouseTrap(Event event) {event.consume();}
 }

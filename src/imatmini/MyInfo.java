@@ -186,5 +186,4 @@ public class MyInfo extends AnchorPane implements Info {
         infoPane.toBack();
     }
 
-    @FXML private void  mouseTrap(Event event) {event.consume();}
 }

@@ -31,4 +31,6 @@ public class SaveConf extends AnchorPane {
     public void onClose(Event event) {
         parentController.onClose(event);
     }
+
+    @FXML private void mouseTrap(Event event) {event.consume();}
 }

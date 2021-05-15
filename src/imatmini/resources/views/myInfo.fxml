@@ -22,7 +22,7 @@
             <javafx.scene.layout.AnchorPane prefHeight="971.0" prefWidth="1818.0" styleClass="mainbackgroud">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#26263a" height="133.0" stroke="BLACK" strokeType="INSIDE" styleClass="mainblue" width="1819.0" />
-                  <Line endX="1377.0" endY="-136.99996948242188" layoutX="438.0" layoutY="269.0" startX="-437.0" startY="-136.99996948242188" stroke="#ad282f" strokeWidth="8.0" />
+                  <Line endX="1377.0" endY="-136.99996948242188" layoutX="438.0" layoutY="269.0" startX="-434.0" startY="-136.99996948242188" stroke="#ad282f" strokeWidth="8.0" />
                   <Label layoutX="55.0" layoutY="160.0" text="Kontaktinformation">
                      <font>
                         <Font name="System Bold" size="40.0" />

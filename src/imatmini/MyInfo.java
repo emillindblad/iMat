@@ -40,9 +40,8 @@ public class MyInfo extends AnchorPane implements Info {
     @FXML private AnchorPane infoPane;
 
     private final Model model = Model.getInstance();
-    private final iMatMiniController parentController;
 
-    public MyInfo(iMatMiniController parentController){
+    public MyInfo(){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/myInfo.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -52,8 +51,6 @@ public class MyInfo extends AnchorPane implements Info {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-
-        this.parentController = parentController;
 
         cardMonth.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12);
         cardMonth.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Integer>() {

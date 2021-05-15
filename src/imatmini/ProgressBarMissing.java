@@ -124,11 +124,11 @@ public class ProgressBarMissing extends AnchorPane {
     }
 
     private void setLineCompleted(Line line) {
-        line.setStyle("-fx-fill: #AD282F");
+        line.setStyle("-fx-stroke: #AD282F");
     }
 
     private void setLineUncompleted(Line line) {
-        line.setStyle("-fx-fill: #FFFFFF");
+        line.setStyle("-fx-stroke: #FFFFFF");
     }
 
     private void setNumberCompleted(Label number) {

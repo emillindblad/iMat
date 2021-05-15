@@ -20,6 +20,24 @@
     -fx-background-insets: 0;
 }
 
+.button-next:hover{
+    -fx-cursor: hand;
+    -fx-background-color:  #92230C
+}
+
+.button-back:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #D2D2D2
+}
+
+.cross-and-info{
+    -fx-opacity: 1;
+}
+.cross-and-info:hover{
+    -fx-cursor: hand;
+    -fx-opacity: 0.7;
+}
+
 #logo{
     -fx-font-size: 72px;
     -fx-text-fill: #FFFFFF;

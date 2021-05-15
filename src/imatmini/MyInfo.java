@@ -129,7 +129,10 @@ public class MyInfo extends AnchorPane implements Info {
         card.setCardNumber(cardNum.getText());
         card.setVerificationCode(Integer.parseInt(cardCVC.getText()));
 
-        this.savedPane.getChildren().add(new SaveConf(this));
+        SaveConf saveConf = new SaveConf(this);
+        this.savedPane.getChildren().add(saveConf);
+        saveConf.setLayoutX(60);
+        saveConf.setLayoutY(50);
         savedPane.toFront();
     }
 

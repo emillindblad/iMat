@@ -37,7 +37,9 @@ public class PurchaseProcess implements Initializable {
         if (detailsMissing) {
             cartStepPane.getChildren().clear();
             cartStepPane.toBack();
-            detailsStepPane.getChildren().add(new DetailsStep(true, this));
+            DetailsStep detailsStep = new DetailsStep(true, this);
+            detailsStep.updateMyInfo();
+            detailsStepPane.getChildren().add(detailsStep);
             detailsStepPane.toFront();
         }
         else {
@@ -52,7 +54,9 @@ public class PurchaseProcess implements Initializable {
         if (detailsMissing) {
             deliveryStepPane.getChildren().clear();
             deliveryStepPane.toBack();
-            detailsStepPane.getChildren().add(new DetailsStep(true, this));
+            DetailsStep detailsStep = new DetailsStep(true, this);
+            detailsStep.updateMyInfo();
+            detailsStepPane.getChildren().add(detailsStep);
             detailsStepPane.toFront();
         }
         else {

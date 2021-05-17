@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane prefHeight="150.0" prefWidth="200.0">
          <children>
@@ -16,6 +22,108 @@
                   <Button layoutX="39.0" layoutY="958.0" mnemonicParsing="false" onAction="#back" styleClass="button-back" text="Tillbaka" />
                   <Line endX="1475.0" endY="-136.99996948242188" layoutX="441.0" layoutY="270.0" startX="-437.0" startY="-136.99996948242188" stroke="#ad282f" strokeWidth="8.0" />
                   <Button layoutX="1642.0" layoutY="958.0" mnemonicParsing="false" onAction="#next" styleClass="button-next" text="Nästa steg" />
+                  <Label layoutX="270.0" layoutY="339.0" text="Personnummer (12 siffror)">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="personNum" layoutX="269.0" layoutY="382.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="270.0" layoutY="443.0" text="Förnamn">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="firstName" layoutX="269.0" layoutY="486.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="270.0" layoutY="543.0" text="Efternamn">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lastName" layoutX="269.0" layoutY="586.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="270.0" layoutY="643.0" text="Adress">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="address" layoutX="269.0" layoutY="686.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="267.0" layoutY="737.0" text="Postnr.">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="417.0" layoutY="737.0" text="Stad">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="postNum" layoutX="270.0" layoutY="780.0" prefHeight="38.0" prefWidth="106.0" />
+                  <TextField fx:id="city" layoutX="417.0" layoutY="780.0" prefHeight="38.0" prefWidth="258.0" />
+                  <Label layoutX="269.0" layoutY="836.0" text="Telefonnummer">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="phoneNumber" layoutX="269.0" layoutY="879.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="270.0" layoutY="232.0" text="Kontaktinformation">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="672.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/baseline_perm_contact_calendar_black_36dp.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="getInfoButton" layoutX="720.0" layoutY="376.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="159.0" style="-fx-background-color: #AD282F;" text="Hämta uppgifter" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="1097.0" layoutY="227.0" text="Betalningsinformation">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="1546.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/baseline_payment_black_36dp.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1097.0" layoutY="339.0" text="Namn på kortet">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cardName" layoutX="1097.0" layoutY="382.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="1097.0" layoutY="446.0" text="Kortnummer">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cardNum" layoutX="1097.0" layoutY="489.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="1097.0" layoutY="543.0" text="MM/ÅÅ">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1186.0" layoutY="584.0" text="/">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cardCVC" layoutX="1098.0" layoutY="686.0" prefHeight="38.0" prefWidth="85.0" />
+                  <Label layoutX="1097.0" layoutY="643.0" text="CVC">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cardMonth" layoutX="1097.0" layoutY="586.0" prefHeight="38.0" prefWidth="86.0" />
+                  <ComboBox fx:id="cardYear" layoutX="1203.0" layoutY="586.0" prefHeight="38.0" prefWidth="114.0" />
+                  <Label fx:id="errorMessage" layoutX="1071.0" layoutY="947.0" prefHeight="88.0" prefWidth="555.0" textFill="RED" wrapText="true">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </children>

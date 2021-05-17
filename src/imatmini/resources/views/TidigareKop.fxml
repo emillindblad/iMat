@@ -47,10 +47,60 @@
    <children>
       <ScrollPane layoutY="209.0" prefHeight="763.0" prefWidth="1818.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
          <content>
-            <FlowPane fx:id="flowPane" alignment="CENTER" hgap="70.0" prefHeight="537.0" prefWidth="1803.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" vgap="70.0">
+            <FlowPane fx:id="flowPane" alignment="CENTER" hgap="70.0" prefHeight="537.0" prefWidth="1801.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" vgap="70.0">
                <padding>
-                  <Insets right="40.0" top="25.0" />
-               </padding></FlowPane>
+                  <Insets right="200.0" top="100.0" />
+               </padding>
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="460.0" minWidth="549.0" prefHeight="400.0" prefWidth="600.0" styleClass="itemcard" stylesheets="@../css/iMat.css">
+                     <children>
+                        <Label fx:id="receiptDate" layoutX="14.0" layoutY="6.0" text="Köp - 28/3">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="receiptPrice" alignment="CENTER_RIGHT" layoutX="440.0" layoutY="6.0" prefHeight="43.0" prefWidth="146.0" text="1700 kr">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="153.0" layoutY="417.0" prefHeight="43.0" prefWidth="295.0" text="Visa kvitto">
+                           <font>
+                              <Font name="System Italic" size="29.0" />
+                           </font>
+                        </Label>
+                        <FlowPane fx:id="flowPane1" alignment="CENTER" columnHalignment="CENTER" hgap="10.0" layoutY="54.0" maxHeight="377.0" maxWidth="610.0" prefHeight="367.0" prefWidth="610.0" rowValignment="TOP" vgap="10.0">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </FlowPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="460.0" minWidth="549.0" prefHeight="400.0" prefWidth="600.0" styleClass="itemcard" stylesheets="@../css/iMat.css">
+                     <children>
+                        <Label fx:id="receiptDate1" layoutX="14.0" layoutY="6.0" text="Köp - 28/3">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="receiptPrice1" alignment="CENTER_RIGHT" layoutX="440.0" layoutY="6.0" prefHeight="43.0" prefWidth="146.0" text="1700 kr">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="153.0" layoutY="417.0" prefHeight="43.0" prefWidth="295.0" text="Visa kvitto">
+                           <font>
+                              <Font name="System Italic" size="29.0" />
+                           </font>
+                        </Label>
+                        <FlowPane fx:id="flowPane2" alignment="CENTER" columnHalignment="CENTER" hgap="10.0" layoutY="54.0" maxHeight="377.0" maxWidth="610.0" prefHeight="367.0" prefWidth="610.0" rowValignment="TOP" vgap="10.0">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </FlowPane>
+                     </children>
+                  </AnchorPane>
+               </children></FlowPane>
          </content>
       </ScrollPane>
       <AnchorPane minHeight="206.0" minWidth="1818.0" prefHeight="206.0" prefWidth="1818.0" styleClass="mainblue" stylesheets="@../css/iMat.css">
@@ -61,7 +111,7 @@
                </font>
             </Label>
             <Pane layoutY="203.0" prefHeight="7.0" prefWidth="1818.0" style="-fx-background-color: #AD282F;" />
-            <ImageView fitHeight="86.0" fitWidth="88.0" layoutX="1732.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true" smooth="false">
+            <ImageView fitHeight="86.0" fitWidth="88.0" layoutX="1732.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true" smooth="false" styleClass="cross-and-info">
                <image>
                   <Image url="@../images/baseline_close_white_48dp.png" />
                </image>

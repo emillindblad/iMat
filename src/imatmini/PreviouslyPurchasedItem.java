@@ -1,5 +1,6 @@
 package imatmini;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -38,6 +39,12 @@ public class PreviouslyPurchasedItem extends AnchorPane {
         updateOverviewImages();
         //this.receiptDate.setText("" + receiptDate);
     }
+
+    @FXML
+    private void onOpenReceipt(Event event){
+        System.out.println("swag");
+    }
+
 
     /*
     Den här delen kanske skall sitta i model

@@ -62,6 +62,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private final Model model = Model.getInstance();
 
     private PreviouslyPurchased previouslyPurchased;
+    private PreviouslyPurchasedDetailView previouslyPurchasedDetailView;
 
     private MyInfo myInfo;
     // Shop pane actions
@@ -112,6 +113,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         
         setupPreviouslyPurchasedPane();
         setupMyInfoView();
+        setupPreviousPurchasedDetailView();
 
         /*
          Testing purposes
@@ -129,26 +131,10 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         myAccountPane.toBack();
     }
 
-    private void setupPreviouslyPurchasedPane(){
-        previouslyPurchased = new PreviouslyPurchased(this);
-
-        historyPane.getChildren().add(previouslyPurchased);
-        previouslyPurchased.setLayoutX(60);
-        previouslyPurchased.setLayoutY(55);
-
-        historyPane.toBack();
-    }
-
     // Navigation
     public void openAccountView() {
         myInfo.updateMyInfo();
         myAccountPane.toFront();
-    }
-
-    public void openPurchaseHistoryView() {
-        previouslyPurchased.updateReceipts(model.getOrders());
-        historyPane.toFront();
-
     }
     
     // Shope pane methods
@@ -179,4 +165,36 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
             cartFlowPane.getChildren().add(new ShoppingCartItem(item));
         }
     }
+
+    /*
+        Previous Purchases Detail View
+     */
+    private void setupPreviouslyPurchasedPane(){
+        previouslyPurchased = new PreviouslyPurchased(this);
+
+        historyPane.getChildren().add(previouslyPurchased);
+        previouslyPurchased.setLayoutX(60);
+        previouslyPurchased.setLayoutY(55);
+
+        historyPane.toBack();
+    }
+    public void openPurchaseHistoryView() {
+        previouslyPurchased.updateReceipts(model.getOrders());
+        historyPane.toFront();
+    }
+
+    private void setupPreviousPurchasedDetailView()
+    {
+        previouslyPurchasedDetailView = new PreviouslyPurchasedDetailView(this);
+        historyPane.getChildren().add(previouslyPurchasedDetailView);
+        previouslyPurchasedDetailView.setLayoutX(60);
+        previouslyPurchasedDetailView.setLayoutY(55);
+        previouslyPurchasedDetailView.toBack();
+
+    }
+
+    public void openPreviousPurchasedDetailView(){
+        previouslyPurchasedDetailView.toFront();
+    }
+
 }

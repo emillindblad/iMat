@@ -43,7 +43,7 @@ public class PreviouslyPurchased extends AnchorPane{
          */
         flowPane.getChildren().clear();
         for (Order order: orders) {
-        purchasedItem = new PreviouslyPurchasedItem(order);
+        purchasedItem = new PreviouslyPurchasedItem(order, parentController);
         flowPane.getChildren().add(purchasedItem);
         }
     }

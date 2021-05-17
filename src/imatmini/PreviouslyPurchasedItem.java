@@ -1,5 +1,6 @@
 package imatmini;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -12,6 +13,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 import java.io.IOException;
 
 public class PreviouslyPurchasedItem extends AnchorPane {
+    private iMatMiniController parentController;
     private Order order;
     @FXML
     private Label receiptPrice;
@@ -23,7 +25,7 @@ public class PreviouslyPurchasedItem extends AnchorPane {
     private final int imageSlotSize = 15;
     private final Model model = Model.getInstance();
 
-    public PreviouslyPurchasedItem(Order order) {
+    public PreviouslyPurchasedItem(Order order, iMatMiniController parentController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/TidigareKop_Item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -32,12 +34,18 @@ public class PreviouslyPurchasedItem extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-
+        this.parentController = parentController;
         this.order = order;
         this.receiptPrice.setText(calculateTotalCost(order) + " kr");
         updateOverviewImages();
         //this.receiptDate.setText("" + receiptDate);
     }
+
+    @FXML
+    private void onOpenReceipt(Event event){
+        parentController.openPreviousPurchasedDetailView();
+    }
+
 
     /*
     Den här delen kanske skall sitta i model

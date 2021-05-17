@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="91.0" prefWidth="533.0" styleClass="itemcard" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="productImage" fitHeight="86.0" fitWidth="86.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../../Pictures/sadge.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="productNameLabel" layoutX="109.0" layoutY="14.0" text="Productname">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceLabel" layoutX="109.0" layoutY="46.0" text="500 kr">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="amountLabel" layoutX="468.0" layoutY="29.0" text="15 st">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</fx:root>

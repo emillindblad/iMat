@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -41,14 +42,185 @@
             <Font size="31.0" />
          </font>
       </Label>
-      <ScrollPane layoutX="40.0" layoutY="273.0" minHeight="460.0" minWidth="550.0" prefHeight="649.0" prefWidth="550.0">
+      <ScrollPane hbarPolicy="NEVER" hmax="0.0" layoutX="40.0" layoutY="273.0" minHeight="460.0" minWidth="550.0" prefHeight="649.0" prefWidth="550.0">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="643.0" prefWidth="520.0" />
+            <FlowPane fx:id="flowPane" prefHeight="653.0" prefWidth="533.0">
+               <children>
+                  <AnchorPane prefHeight="91.0" prefWidth="533.0" styleClass="itemcard">
+                     <children>
+                        <ImageView fitHeight="86.0" fitWidth="86.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../../../../Pictures/sadge.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="109.0" layoutY="14.0" text="Productname">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="109.0" layoutY="46.0" text="500 kr">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="468.0" layoutY="29.0" text="15 st">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="91.0" prefWidth="533.0" styleClass="itemcard">
+                     <children>
+                        <ImageView fitHeight="86.0" fitWidth="86.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../../../../Pictures/sadge.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="109.0" layoutY="14.0" text="Productname">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="109.0" layoutY="46.0" text="500 kr">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="468.0" layoutY="29.0" text="15 st">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="101.0" prefHeight="91.0" prefWidth="533.0" styleClass="itemcard">
+                     <children>
+                        <ImageView fitHeight="86.0" fitWidth="86.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../../../../Pictures/sadge.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="109.0" layoutY="14.0" text="Productname">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="109.0" layoutY="46.0" text="500 kr">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="468.0" layoutY="29.0" text="15 st">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="192.0" prefHeight="91.0" prefWidth="533.0" styleClass="itemcard">
+                     <children>
+                        <ImageView fitHeight="86.0" fitWidth="86.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../../../../Pictures/sadge.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="109.0" layoutY="14.0" text="Productname">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="109.0" layoutY="46.0" text="500 kr">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="468.0" layoutY="29.0" text="15 st">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="283.0" prefHeight="91.0" prefWidth="533.0" styleClass="itemcard">
+                     <children>
+                        <ImageView fitHeight="86.0" fitWidth="86.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../../../../Pictures/sadge.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="109.0" layoutY="14.0" text="Productname">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="109.0" layoutY="46.0" text="500 kr">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="468.0" layoutY="29.0" text="15 st">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="374.0" prefHeight="91.0" prefWidth="533.0" styleClass="itemcard">
+                     <children>
+                        <ImageView fitHeight="86.0" fitWidth="86.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../../../../Pictures/sadge.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="109.0" layoutY="14.0" text="Productname">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="109.0" layoutY="46.0" text="500 kr">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="468.0" layoutY="29.0" text="15 st">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="465.0" prefHeight="91.0" prefWidth="533.0" styleClass="itemcard">
+                     <children>
+                        <ImageView fitHeight="86.0" fitWidth="86.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../../../../Pictures/sadge.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="109.0" layoutY="14.0" text="Productname">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="109.0" layoutY="46.0" text="500 kr">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="468.0" layoutY="29.0" text="15 st">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </FlowPane>
          </content>
       </ScrollPane>
       <AnchorPane layoutX="648.0" layoutY="273.0" minWidth="550.0" prefHeight="649.0" prefWidth="550.0" style="-fx-background-color: #FFFFFF;">
          <children>
-            <Label layoutX="32.0" layoutY="283.0" text="Mastercard **** **** **** **56">
+            <Label fx:id="creditCardLabel" layoutX="32.0" layoutY="283.0" text="Mastercard **** **** **** **56">
                <font>
                   <Font size="24.0" />
                </font>
@@ -58,17 +230,17 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Label>
-            <Label layoutX="32.0" layoutY="67.0" text="Rune Foobar">
+            <Label fx:id="nameLabel" layoutX="32.0" layoutY="67.0" text="Rune Foobar">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="32.0" layoutY="102.0" text="Gibraltargatan 1337">
+            <Label fx:id="adressLabel" layoutX="32.0" layoutY="102.0" text="Gibraltargatan 1337">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="32.0" layoutY="137.0" text="420 69 Göteborg">
+            <Label fx:id="cityLabel" layoutX="32.0" layoutY="137.0" text="420 69 Göteborg">
                <font>
                   <Font size="24.0" />
                </font>
@@ -78,7 +250,7 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Label>
-            <Label layoutX="32.0" layoutY="248.0" text="Rune Foobar">
+            <Label fx:id="creditNameLabel" layoutX="32.0" layoutY="248.0" text="Rune Foobar">
                <font>
                   <Font size="24.0" />
                </font>

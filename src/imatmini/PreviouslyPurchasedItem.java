@@ -43,7 +43,7 @@ public class PreviouslyPurchasedItem extends AnchorPane {
 
     @FXML
     private void onOpenReceipt(Event event){
-        parentController.openPreviousPurchasedDetailView();
+        parentController.openPreviousPurchasedDetailView(order);
     }
 
 

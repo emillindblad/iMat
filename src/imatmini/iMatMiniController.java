@@ -193,7 +193,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     }
 
-    public void openPreviousPurchasedDetailView(){
+    public void openPreviousPurchasedDetailView(Order order){
+        previouslyPurchasedDetailView.populateView(order);
         previouslyPurchasedDetailView.toFront();
     }
 

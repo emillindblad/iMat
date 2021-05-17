@@ -45,7 +45,7 @@
 
 <fx:root minHeight="0.0" minWidth="0.0" prefHeight="971.0" prefWidth="1818.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane layoutY="209.0" prefHeight="763.0" prefWidth="1818.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
+      <ScrollPane hbarPolicy="NEVER" layoutY="209.0" prefHeight="763.0" prefWidth="1818.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
          <content>
             <FlowPane fx:id="flowPane" alignment="CENTER" hgap="70.0" prefHeight="537.0" prefWidth="1801.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" vgap="70.0">
                <padding>

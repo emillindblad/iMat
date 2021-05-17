@@ -35,7 +35,50 @@
                   <Button layoutX="39.0" layoutY="958.0" mnemonicParsing="false" onAction="#back" styleClass="button-back" text="Tillbaka" />
                   <Line endX="1475.0" endY="-136.99996948242188" layoutX="441.0" layoutY="270.0" startX="-437.0" startY="-136.99996948242188" stroke="#ad282f" strokeWidth="8.0" />
                   <Button layoutX="1642.0" layoutY="958.0" mnemonicParsing="false" onAction="#next" styleClass="button-next" text="Slutför köp" />
-                  <AnchorPane layoutX="1267.0" layoutY="159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="775.0" prefWidth="625.0" styleClass="anchor-box" />
+                  <AnchorPane layoutX="1267.0" layoutY="159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="775.0" prefWidth="625.0" styleClass="anchor-box">
+                     <children>
+                        <Label layoutX="20.0" layoutY="14.0" text="Leveransinformation">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fullName" layoutX="20.0" layoutY="90.0" text="Label">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="address" layoutX="20.0" layoutY="182.0" text="Label">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="cityPostNum" layoutX="20.0" layoutY="275.0" text="Label">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="358.0" text="Betalingsuppgifter">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="cardName" layoutX="24.0" layoutY="434.0" text="Label">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="cardNumber" layoutX="24.0" layoutY="526.0" text="Label">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="validDateCVC" layoutX="24.0" layoutY="619.0" text="Label">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
          </children>

@@ -1,5 +1,6 @@
 package imatmini;
 
+import imatmini.resources.views.FinalStepProduct;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,23 +8,36 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
+import se.chalmers.cse.dat216.project.CreditCard;
+import se.chalmers.cse.dat216.project.Customer;
+import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.List;
 
 public class FinalStep extends AnchorPane implements PurchaseStep {
 
     @FXML private AnchorPane infoPane;
-    @FXML private AnchorPane mainPane;
     @FXML private AnchorPane progressBar;
+    @FXML private AnchorPane detailsPane;
+
+    @FXML private AnchorPane mainPane;
+    @FXML private Label fullName;
+    @FXML private Label address;
+    @FXML private Label cityPostNum;
+    @FXML private Label cardName;
+    @FXML private Label cardNumber;
+    @FXML private Label cardValidDateCVC;
+
+    @FXML private FlowPane productFlowPane;
+    @FXML private Label totalSum;
 
     @FXML private AnchorPane purchaseCompletePane;
     @FXML private Label endMessage;
 
-    @FXML private AnchorPane detailsPane;
-    @FXML private Label fullName;
-    @FXML private Label address;
-    @FXML private Label cityPostNum;
 
     private final PurchaseProcess parentProcess;
 
@@ -38,7 +52,19 @@ public class FinalStep extends AnchorPane implements PurchaseStep {
             throw new RuntimeException(exception);
         }
         addProgressBar(detailsMissing);
+        updateDetails();
+        updateProductList();
         this.parentProcess = parentProcess;
+    }
+
+    private void updateProductList() {
+        List<ShoppingItem> items = Model.getInstance().getShoppingCart().getItems();
+        boolean gray = false;
+        for (ShoppingItem item : items) {
+            productFlowPane.getChildren().add(new FinalStepProduct(item, gray));
+            gray = !gray;
+        }
+        totalSum.setText(Model.getInstance().getShoppingCart().getTotal() + " kr");
     }
 
     private void addProgressBar(boolean detailsMissing) {
@@ -48,7 +74,18 @@ public class FinalStep extends AnchorPane implements PurchaseStep {
             progressBar.getChildren().add(new ProgressBar(this, 3));
     }
 
+    private void updateDetails() {
+        Customer customer = Model.getInstance().getCustomer();
+        CreditCard card = Model.getInstance().getCreditCard();
 
+        fullName.setText(customer.getFirstName() + " " + customer.getLastName());
+        address.setText(customer.getAddress());
+        cityPostNum.setText(customer.getPostCode() + " " + customer.getPostAddress());
+
+        cardName.setText(card.getHoldersName());
+        cardNumber.setText(card.getCardNumber());
+        cardValidDateCVC.setText(card.getValidMonth() + "/" + card.getValidYear() + "\t" + card.getVerificationCode());
+    }
 
     @FXML private void changeDetails(Event event) {
         MyInfo myInfo = new MyInfo();
@@ -63,7 +100,7 @@ public class FinalStep extends AnchorPane implements PurchaseStep {
     public void next() {
         Model model = Model.getInstance();
         model.placeOrder();
-        endMessage.setText("Tack " + model.getCustomer().getFirstName() + " för att du har handlat hos oss.");
+        endMessage.setText("Tack " + model.getCustomer().getFirstName() + ", för att du har handlat hos oss. Välkommen åter!");
         purchaseCompletePane.toFront();
     }
 

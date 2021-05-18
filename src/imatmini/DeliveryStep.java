@@ -5,17 +5,22 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.Pane;
 
 import java.awt.*;
 import java.io.IOException;
+import java.sql.Timestamp;
 
 public class DeliveryStep extends AnchorPane implements PurchaseStep {
 
     @FXML private AnchorPane infoPane;
-
+    @FXML private FlowPane flowPane;
     @FXML private AnchorPane progressBar;
     @FXML
     private Label timeLabel;
+
+    private TimeSlot selectedTimeSlot;
 
     private final PurchaseProcess parentProcess;
 
@@ -29,9 +34,11 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+
         addProgressBar(detailsMissing);
         this.timeLabel.setText("Välj en tid ovan");
         this.parentProcess = parentProcess;
+        setupTimeSlots();
     }
 
     private void addProgressBar(boolean detailsMissing) {
@@ -43,6 +50,10 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
 
     @Override
     public void next() {
+        if(selectedTimeSlot == null){
+            timeLabel.setText("Du måste välja en tid!");
+            return;
+        }
         parentProcess.finalStep();
     }
 
@@ -65,11 +76,33 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
         infoHelp.setLayoutY(0);
         infoPane.toFront();
     }
+    
+    private void setupTimeSlots(){
+        int h = 7; // Start hour
 
-    @FXML
-    private void onChooseTime(Event event)
+        for (int i = 0; i < 7; i++) { // Add a timeslot for each week
+            for (int j = 0; j < 7; j++) { // Timeslot for each day
+                TimeSlot newSlot = new TimeSlot(String.format("%02d:00", h+(2*i), h+2+(2*i)), this);
+                flowPane.getChildren().add(newSlot);
+            }
+        }
+    }
+
+    public void chooseTime(String time, TimeSlot timeSlot)
     {
-        timeLabel.setText("Du har nu valt XX:XX-XX:XX!");
+        if(selectedTimeSlot == timeSlot)
+            removeCurrentTime();
+
+        timeLabel.setText("Du har nu valt " + time + "!");
         System.out.println("You chose a time.");
+
+        removeCurrentTime();
+        selectedTimeSlot = timeSlot;
+    }
+
+    private void removeCurrentTime(){
+        if(selectedTimeSlot == null)
+            return;
+        selectedTimeSlot.deselectTime();
     }
 }

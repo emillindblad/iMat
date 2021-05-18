@@ -3,8 +3,10 @@ package imatmini;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class DeliveryStep extends AnchorPane implements PurchaseStep {
@@ -12,6 +14,8 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
     @FXML private AnchorPane infoPane;
 
     @FXML private AnchorPane progressBar;
+    @FXML
+    private Label timeLabel;
 
     private final PurchaseProcess parentProcess;
 
@@ -26,6 +30,7 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
             throw new RuntimeException(exception);
         }
         addProgressBar(detailsMissing);
+        this.timeLabel.setText("Välj en tid ovan");
         this.parentProcess = parentProcess;
     }
 
@@ -64,6 +69,7 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
     @FXML
     private void onChooseTime(Event event)
     {
+        timeLabel.setText("Du har nu valt XX:XX-XX:XX!");
         System.out.println("You chose a time.");
     }
 }

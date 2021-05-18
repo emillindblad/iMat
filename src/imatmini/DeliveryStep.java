@@ -93,8 +93,7 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
         if(selectedTimeSlot == timeSlot)
             removeCurrentTime();
 
-        timeLabel.setText("Du har nu valt " + time + "!");
-        System.out.println("You chose a time.");
+        timeLabel.setText("Du har nu valt klockan " + time + "!");
 
         removeCurrentTime();
         selectedTimeSlot = timeSlot;

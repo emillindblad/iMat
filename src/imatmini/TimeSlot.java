@@ -11,7 +11,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
-public class TimeSlot extends Pane {
+public class TimeSlot extends AnchorPane {
     @FXML
     private Label timeLabel;
     @FXML private Pane selectPane;

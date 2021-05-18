@@ -2,20 +2,21 @@
 
 <?import java.lang.String?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root onMouseClicked="#onChooseTime" prefHeight="70.0" prefWidth="212.0" type="Pane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root onMouseClicked="#onChooseTime" prefHeight="70.0" prefWidth="188.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane fx:id="selectPane" opacity="0.79" prefHeight="70.0" prefWidth="212.0" style="-fx-background-color: #1D9E34;" />
-      <Label fx:id="timeLabel" alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="06:00-08:00">
+      <Pane fx:id="selectPane" opacity="0.0" prefHeight="70.0" prefWidth="212.0" style="-fx-background-color: #1D9E34;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label fx:id="timeLabel" alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="06:00-08:00" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
    </children>
    <styleClass>
-      <String fx:value="itemcard" />
       <String fx:value="cross-and-info" />
+      <String fx:value="itemcard" />
    </styleClass>
 </fx:root>

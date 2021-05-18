@@ -8,7 +8,7 @@
 
 <fx:root onMouseClicked="#onChooseTime" prefHeight="70.0" prefWidth="188.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane fx:id="selectPane" opacity="0.0" prefHeight="70.0" prefWidth="212.0" style="-fx-background-color: #1D9E34;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Pane fx:id="selectPane" layoutX="2.0" prefHeight="72.0" prefWidth="186.0" style="-fx-background-color: #1D9E34;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Label fx:id="timeLabel" alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="06:00-08:00" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font size="35.0" />

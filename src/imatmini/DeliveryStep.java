@@ -60,4 +60,10 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
         infoHelp.setLayoutY(0);
         infoPane.toFront();
     }
+
+    @FXML
+    private void onChooseTime(Event event)
+    {
+        System.out.println("You chose a time.");
+    }
 }

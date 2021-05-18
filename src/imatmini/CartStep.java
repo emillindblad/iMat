@@ -7,8 +7,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
@@ -21,6 +23,8 @@ public class CartStep extends AnchorPane implements PurchaseStep {
     @FXML private AnchorPane mainPane;
 
     @FXML private Label sumLabel;
+
+    @FXML private FlowPane flowPane;
 
     private final Model model = Model.getInstance();
     private ShoppingCart shoppingCart;
@@ -45,7 +49,17 @@ public class CartStep extends AnchorPane implements PurchaseStep {
 
     public void  updateCartStep() {
         this.shoppingCart = model.getShoppingCart();
-        sumLabel.setText("" + shoppingCart.getTotal() + " kr");
+        populateProductList();
+    }
+
+    private void populateProductList()
+    {
+        sumLabel.setText("" + (float)shoppingCart.getTotal() + " kr");
+        flowPane.getChildren().clear();
+        for(ShoppingItem item : shoppingCart.getItems()){
+            CartStepProduct product = new CartStepProduct(item, this);
+            flowPane.getChildren().add(product);
+        }
     }
 
     @Override
@@ -87,5 +101,10 @@ public class CartStep extends AnchorPane implements PurchaseStep {
         infoHelp.setLayoutX(-250);
         infoHelp.setLayoutY(0);
         infoPane.toFront();
+    }
+
+    public void removeProduct(ShoppingItem shoppingItem){
+        shoppingCart.removeItem(shoppingItem);
+        populateProductList();
     }
 }

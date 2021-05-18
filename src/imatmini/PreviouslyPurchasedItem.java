@@ -57,7 +57,6 @@ public class PreviouslyPurchasedItem extends AnchorPane {
         }
         return cost;
     }
-    ImageView img;
     private void updateOverviewImages(){
         for (int i = 0; i < imageSlotSize; i++) {
             if(i >= order.getItems().size())

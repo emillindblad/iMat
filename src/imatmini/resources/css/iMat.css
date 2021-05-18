@@ -38,6 +38,16 @@
     -fx-opacity: 0.7;
 }
 
+.delete-product-overlay{
+    -fx-opacity: 0;
+    -fx-background-color: #CA2626
+}
+
+.delete-product-overlay:hover{
+    -fx-cursor: hand;
+    -fx-opacity: 0.25;
+}
+
 #logo{
     -fx-font-size: 72px;
     -fx-text-fill: #FFFFFF;

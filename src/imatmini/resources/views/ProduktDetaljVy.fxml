@@ -40,7 +40,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="848.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="848.0" prefWidth="1095.0" stylesheets="@../css/iMat.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
 <children>
       <ImageView fitHeight="213.0" fitWidth="419.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -62,12 +62,12 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <Button layoutX="501.0" layoutY="692.0" minHeight="101.0" minWidth="263.0" mnemonicParsing="false" text="Button">
+      <Button layoutX="501.0" layoutY="692.0" minHeight="101.0" minWidth="263.0" mnemonicParsing="false" styleClass="button-back" text="Tillbaka">
          <font>
             <Font size="40.0" />
          </font>
       </Button>
-      <Button layoutX="781.0" layoutY="692.0" minHeight="101.0" minWidth="263.0" mnemonicParsing="false" text="Button">
+      <Button layoutX="781.0" layoutY="692.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="101.0" prefWidth="263.0" styleClass="addtocartbutton" text="Lägg till i varukorgen" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
          <font>
             <Font size="40.0" />
          </font>

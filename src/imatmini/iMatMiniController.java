@@ -57,6 +57,9 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML
     private AnchorPane myAccountPane;
 
+    @FXML
+    private AnchorPane productDetailPane;
+
     
     // Other variables
     private final Model model = Model.getInstance();
@@ -120,6 +123,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
          */
         //MyInfo myInfo = new MyInfo(this);
         //myInfo.toFront();
+        shopPane.toFront();
 
     }
 

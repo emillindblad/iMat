@@ -57,7 +57,7 @@ public class ProductPanel extends AnchorPane {
     @FXML
     private void openDetailView() {
         System.out.println("Open " + product.getName());
-        parentController.openProductDetailView(product);
+        parentController.openProductDetailView(product, kImageWidth, kImageRatio);
     }
 
     @FXML

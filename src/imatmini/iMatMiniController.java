@@ -18,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
@@ -57,10 +58,13 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML
     private AnchorPane myAccountPane;
 
-    @FXML
-    private AnchorPane productDetailPane;
+    // Detail View
+    @FXML private AnchorPane productDetailPane;
+    @FXML private ImageView detailImageView;
+    @FXML private Label detailNameLabel;
+    @FXML private Label detailPrizeLabel;
+    @FXML private Label detailEcoLabel;
 
-    
     // Other variables
     private final Model model = Model.getInstance();
 
@@ -202,8 +206,13 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         previouslyPurchasedDetailView.toFront();
     }
 
-    public void openProductDetailView(Product product) {
-
+    public void openProductDetailView(Product product, double kImageWidth, double kImageRatio) {
+        detailNameLabel.setText(product.getName());
+        detailPrizeLabel.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
+        detailImageView.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
+        if (!product.isEcological()) {
+            detailEcoLabel.setText("");
+        }
         productDetailPane.toFront();
     }
 

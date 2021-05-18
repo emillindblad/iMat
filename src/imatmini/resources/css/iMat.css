@@ -130,3 +130,16 @@
     -fx-border-color: #000;
     -fx-border-width: 1px;
 }
+
+.productDetailView {
+    -fx-background-color: #d9dce4;
+    -fx-border-color: #000;
+    -fx-border-width: 1px;
+}
+
+.ecolabel {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #5cc343;
+}

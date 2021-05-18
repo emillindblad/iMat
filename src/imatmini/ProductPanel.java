@@ -19,6 +19,7 @@ import se.chalmers.cse.dat216.project.Product;
  * @author oloft
  */
 public class ProductPanel extends AnchorPane {
+    private iMatMiniController parentController;
 
     @FXML ImageView imageView;
     @FXML Label nameLabel;
@@ -32,7 +33,7 @@ public class ProductPanel extends AnchorPane {
     private final static double kImageWidth = 100.0;
     private final static double kImageRatio = 0.75;
 
-    public ProductPanel(Product product) {
+    public ProductPanel(Product product, iMatMiniController parentController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/ProductPanel.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -43,6 +44,7 @@ public class ProductPanel extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+        this.parentController = parentController;
         this.product = product;
         nameLabel.setText(product.getName());
         prizeLabel.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
@@ -51,7 +53,13 @@ public class ProductPanel extends AnchorPane {
             ecoLabel.setText("");
         }
     }
-    
+
+    @FXML
+    private void openDetailView() {
+        System.out.println("Open " + product.getName());
+        parentController.openProductDetailView(product);
+    }
+
     @FXML
     private void handleAddAction(ActionEvent event) {
         System.out.println("Add " + product.getName());

@@ -151,7 +151,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private void updateProductList(List<Product> products) {
         productsFlowPane.getChildren().clear();
         for (Product product : products) {
-            productsFlowPane.getChildren().add(new ProductPanel(product));
+            productsFlowPane.getChildren().add(new ProductPanel(product, this));
         }
     }
     
@@ -200,6 +200,11 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     public void openPreviousPurchasedDetailView(Order order){
         previouslyPurchasedDetailView.populateView(order);
         previouslyPurchasedDetailView.toFront();
+    }
+
+    public void openProductDetailView(Product product) {
+
+        productDetailPane.toFront();
     }
 
 }

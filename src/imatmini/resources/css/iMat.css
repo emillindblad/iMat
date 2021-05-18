@@ -121,5 +121,12 @@
 
 .button-change:hover{
     -fx-cursor: hand;
-    -fx-background-color:  #92230C
+    -fx-background-color: #92230C;
+}
+
+.openDetailView:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #c4c4c4;
+    -fx-border-color: #000;
+    -fx-border-width: 1px;
 }

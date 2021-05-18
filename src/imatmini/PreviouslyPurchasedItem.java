@@ -63,6 +63,7 @@ public class PreviouslyPurchasedItem extends AnchorPane {
             if(i >= order.getItems().size())
                 break;
             ImageView image = new ImageView();
+            image.setPreserveRatio(false);
             image.setImage(model.getImage(order.getItems().get(i).getProduct(), 100, 100));
             flowPane.getChildren().add(image);
         }

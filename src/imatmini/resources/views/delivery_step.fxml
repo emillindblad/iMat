@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -16,6 +20,525 @@
                   <Button layoutX="39.0" layoutY="958.0" mnemonicParsing="false" onAction="#back" styleClass="button-back" text="Tillbaka" />
                   <Line endX="1475.0" endY="-136.99996948242188" layoutX="441.0" layoutY="270.0" startX="-437.0" startY="-136.99996948242188" stroke="#ad282f" strokeWidth="8.0" />
                   <Button layoutX="1642.0" layoutY="958.0" mnemonicParsing="false" onAction="#next" styleClass="button-next" text="Nästa steg" />
+                  <FlowPane alignment="CENTER" hgap="50.0" layoutY="417.0" prefHeight="489.0" prefWidth="1920.0">
+                     <children>
+                        <Pane prefHeight="489.0" prefWidth="212.0" styleClass="itemcard">
+                           <children>
+                              <Pane prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="06:00-08:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="70.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="140.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="10:00-12:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="210.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="12:00-14:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="280.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="14:00-16:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="350.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="16:00-18:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="420.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="18:00-21:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="864.0" layoutY="10.0" prefHeight="489.0" prefWidth="212.0" styleClass="itemcard">
+                           <children>
+                              <Pane prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="70.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="140.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="210.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="280.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="350.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="420.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="995.0" layoutY="10.0" prefHeight="489.0" prefWidth="212.0" styleClass="itemcard">
+                           <children>
+                              <Pane prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="70.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="140.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="210.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="280.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="350.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="420.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="1126.0" layoutY="10.0" prefHeight="489.0" prefWidth="212.0" styleClass="itemcard">
+                           <children>
+                              <Pane prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="70.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="140.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="210.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="280.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="350.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="420.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="1257.0" layoutY="10.0" prefHeight="489.0" prefWidth="212.0" styleClass="itemcard">
+                           <children>
+                              <Pane prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="70.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="140.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="210.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="280.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="350.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="420.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="1388.0" layoutY="10.0" prefHeight="489.0" prefWidth="212.0" styleClass="itemcard">
+                           <children>
+                              <Pane prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="70.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="140.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="210.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="280.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="350.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="420.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="1519.0" layoutY="10.0" prefHeight="489.0" prefWidth="212.0" styleClass="itemcard">
+                           <children>
+                              <Pane prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="70.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="140.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="210.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="280.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="350.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="420.0" prefHeight="70.0" prefWidth="212.0" styleClass="itemcard">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="212.0" text="08:00-10:00">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </FlowPane>
+                  <Label layoutX="686.0" layoutY="164.0" text="Leverans hem till dörren">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <Line endX="779.0" endY="-144.0" layoutX="455.0" layoutY="374.0" startX="231.0" startY="-144.0" stroke="#2f2f2f" strokeWidth="4.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="637.0" layoutY="241.0" text="Välj en tid för att få varorna levererade hem till dig">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="374.0" text="Måndag">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="331.0" layoutY="374.0" prefHeight="43.0" prefWidth="212.0" text="Tisdag">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="592.0" layoutY="374.0" prefHeight="43.0" prefWidth="212.0" text="Onsdag">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="854.0" layoutY="374.0" prefHeight="43.0" prefWidth="212.0" text="Torsdag">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1115.0" layoutY="374.0" prefHeight="43.0" prefWidth="212.0" text="Fredag">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1378.0" layoutY="374.0" prefHeight="43.0" prefWidth="212.0" text="Lördag">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1642.0" layoutY="374.0" prefHeight="43.0" prefWidth="212.0" text="Söndag">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </children>

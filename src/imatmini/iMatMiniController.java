@@ -64,6 +64,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML private Label detailNameLabel;
     @FXML private Label detailPrizeLabel;
     @FXML private Label detailEcoLabel;
+    private Product product;
 
     // Other variables
     private final Model model = Model.getInstance();
@@ -206,7 +207,9 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         previouslyPurchasedDetailView.toFront();
     }
 
+
     public void openProductDetailView(Product product, double kImageWidth, double kImageRatio) {
+        this.product = product;
         detailNameLabel.setText(product.getName());
         detailPrizeLabel.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
         detailImageView.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
@@ -216,4 +219,13 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         productDetailPane.toFront();
     }
 
+    public void closeProductDetailView() {
+        productDetailPane.toBack();
+    }
+
+    public void productDetailViewAddToCart(ActionEvent actionEvent) {
+        System.out.println("Add " + product.getName());
+        model.addToShoppingCart(product);
+        closeProductDetailView();
+    }
 }

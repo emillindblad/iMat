@@ -40,6 +40,7 @@ public class MyInfo extends AnchorPane implements Info {
     @FXML private AnchorPane infoPane;
 
     private final Model model = Model.getInstance();
+    private FinalStep finalStep = null;
 
     public MyInfo(){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/myInfo.fxml"));
@@ -53,6 +54,7 @@ public class MyInfo extends AnchorPane implements Info {
         }
 
         cardMonth.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12);
+        cardMonth.getSelectionModel().select(model.getCreditCard().getValidMonth() - 1);
         cardMonth.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Integer>() {
 
             @Override
@@ -61,6 +63,7 @@ public class MyInfo extends AnchorPane implements Info {
             }
         });
         cardYear.getItems().addAll(2021,2022,2023,2024,2025);
+        cardYear.getSelectionModel().select(model.getCreditCard().getValidYear() - 2021);
         cardYear.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Integer>() {
 
             @Override
@@ -109,6 +112,11 @@ public class MyInfo extends AnchorPane implements Info {
             }
 
         });
+    }
+
+    public MyInfo(FinalStep finalStep) {
+        this();
+        this.finalStep = finalStep;
     }
 
     @FXML
@@ -161,6 +169,8 @@ public class MyInfo extends AnchorPane implements Info {
     @FXML
     public void onClose(Event event) {
         savedPane.toBack();
+        if (finalStep != null)
+            finalStep.updateDetails();
         this.getParent().toBack();
     }
 

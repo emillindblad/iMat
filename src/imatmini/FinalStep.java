@@ -74,7 +74,7 @@ public class FinalStep extends AnchorPane implements PurchaseStep {
             progressBar.getChildren().add(new ProgressBar(this, 3));
     }
 
-    private void updateDetails() {
+    public void updateDetails() {
         Customer customer = Model.getInstance().getCustomer();
         CreditCard card = Model.getInstance().getCreditCard();
 
@@ -88,7 +88,8 @@ public class FinalStep extends AnchorPane implements PurchaseStep {
     }
 
     @FXML private void changeDetails(Event event) {
-        MyInfo myInfo = new MyInfo();
+        MyInfo myInfo = new MyInfo(this);
+        myInfo.updateMyInfo();
         detailsPane.getChildren().add(myInfo);
         myInfo.setLayoutX(60);
         myInfo.setLayoutY(55);

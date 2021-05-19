@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane layoutX="3.0">
          <children>
@@ -41,54 +41,54 @@
                         <Font name="System Bold" size="40.0" />
                      </font>
                   </Label>
-                  <Label layoutX="55.0" layoutY="218.0" text="Personnummer (12 siffror)">
+                  <Label layoutX="55.0" layoutY="244.0" text="Personnummer (12 siffror)">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="personNum" layoutX="59.0" layoutY="269.0" prefHeight="38.0" prefWidth="406.0" />
-                  <Label layoutX="58.0" layoutY="327.0" text="Förnamn">
+                  <TextField fx:id="personNum" layoutX="59.0" layoutY="295.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="57.0" layoutY="345.0" text="Förnamn">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="firstName" layoutX="60.0" layoutY="379.0" prefHeight="38.0" prefWidth="406.0" />
-                  <Label layoutX="57.0" layoutY="434.0" text="Efternamn">
+                  <TextField fx:id="firstName" layoutX="60.0" layoutY="405.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="57.0" layoutY="460.0" text="Efternamn">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="lastName" layoutX="59.0" layoutY="486.0" prefHeight="38.0" prefWidth="406.0" />
-                  <Label layoutX="59.0" layoutY="532.0" text="Adress">
+                  <TextField fx:id="lastName" layoutX="59.0" layoutY="512.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="59.0" layoutY="558.0" text="Adress">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="address" layoutX="61.0" layoutY="584.0" prefHeight="38.0" prefWidth="406.0" />
-                  <Label layoutX="61.0" layoutY="634.0" text="Postnr.">
+                  <TextField fx:id="address" layoutX="61.0" layoutY="610.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="61.0" layoutY="660.0" text="Postnr.">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <Label layoutX="207.0" layoutY="636.0" text="Stad">
+                  <Label layoutX="207.0" layoutY="662.0" text="Stad">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="postNum" layoutX="63.0" layoutY="686.0" prefHeight="38.0" prefWidth="106.0" />
-                  <TextField fx:id="city" layoutX="208.0" layoutY="685.0" prefHeight="38.0" prefWidth="258.0" />
-                  <Label layoutX="61.0" layoutY="745.0" text="Telefonnummer">
+                  <TextField fx:id="postNum" layoutX="63.0" layoutY="712.0" prefHeight="38.0" prefWidth="106.0" />
+                  <TextField fx:id="city" layoutX="208.0" layoutY="711.0" prefHeight="38.0" prefWidth="258.0" />
+                  <Label layoutX="61.0" layoutY="771.0" text="Telefonnummer">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="phoneNumber" layoutX="63.0" layoutY="797.0" prefHeight="38.0" prefWidth="406.0" />
+                  <TextField fx:id="phoneNumber" layoutX="63.0" layoutY="823.0" prefHeight="38.0" prefWidth="406.0" />
                   <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="446.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/baseline_perm_contact_calendar_black_36dp.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="getInfoButton" layoutX="484.0" layoutY="268.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="159.0" style="-fx-background-color: #AD282F;" text="Hämta uppgifter" textFill="WHITE">
+                  <Button fx:id="getInfoButton" layoutX="484.0" layoutY="289.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="159.0" style="-fx-background-color: #AD282F;" text="Hämta uppgifter" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -103,30 +103,30 @@
                         <Image url="@../images/baseline_payment_black_36dp.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="751.0" layoutY="218.0" text="Namn på kortet">
+                  <Label layoutX="751.0" layoutY="244.0" text="Namn på kortet">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardName" layoutX="755.0" layoutY="269.0" prefHeight="38.0" prefWidth="406.0" />
-                  <Label layoutX="754.0" layoutY="327.0" text="Kortnummer">
+                  <TextField fx:id="cardName" layoutX="755.0" layoutY="295.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="754.0" layoutY="353.0" text="Kortnummer">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardNum" layoutX="756.0" layoutY="379.0" prefHeight="38.0" prefWidth="406.0" />
-                  <Label layoutX="755.0" layoutY="434.0" text="MM/ÅÅ">
+                  <TextField fx:id="cardNum" layoutX="756.0" layoutY="405.0" prefHeight="38.0" prefWidth="406.0" />
+                  <Label layoutX="755.0" layoutY="460.0" prefHeight="51.0" prefWidth="196.0" text="Giltighetstid">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <Label layoutX="845.0" layoutY="479.0" text="/">
+                  <Label layoutX="845.0" layoutY="505.0" text="/">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardCVC" layoutX="757.0" layoutY="584.0" prefHeight="38.0" prefWidth="85.0" />
-                  <Label layoutX="755.0" layoutY="532.0" text="CVC">
+                  <TextField fx:id="cardCVC" layoutX="981.0" layoutY="512.0" prefHeight="38.0" prefWidth="138.0" />
+                  <Label layoutX="979.0" layoutY="460.0" text="CVC-kod">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -167,8 +167,8 @@
                      </effect>
                   </Button>
                   <Label id="logo" layoutX="27.0" layoutY="14.0" text="iMat" />
-                  <ComboBox fx:id="cardMonth" layoutX="756.0" layoutY="486.0" prefHeight="38.0" prefWidth="86.0" />
-                  <ComboBox fx:id="cardYear" layoutX="862.0" layoutY="486.0" prefHeight="38.0" prefWidth="114.0" />
+                  <ComboBox fx:id="cardMonth" layoutX="756.0" layoutY="512.0" prefHeight="38.0" prefWidth="86.0" promptText="MM" />
+                  <ComboBox fx:id="cardYear" layoutX="862.0" layoutY="512.0" prefHeight="38.0" prefWidth="86.0" promptText="ÅÅ" />
                </children>
             </javafx.scene.layout.AnchorPane>
          </children>

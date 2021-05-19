@@ -1,5 +1,6 @@
 package imatmini;
 
+import imatmini.resources.Commons;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
@@ -112,6 +113,8 @@ public class MyInfo extends AnchorPane implements Info {
             }
 
         });
+
+        addActions();
     }
 
     public MyInfo(FinalStep finalStep) {
@@ -193,22 +196,17 @@ public class MyInfo extends AnchorPane implements Info {
         event.consume();
     }
 
-    @FXML
-    private void onCreditCardInput(){
-        int caretPos = cardNum.getCaretPosition(); // Get caret position
-        String input = cardNum.getText().replaceAll("\\s+","");
-        System.out.println("Input: " + input);
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < input.length(); i++) {
-            if (i % 4 == 0 && i != 0) {
-                result.append(" ");
-            }
-            result.append(input.charAt(i));
-        }
-
-        System.out.println("Result: " + result);
-        cardNum.setText(result.toString());
-        cardNum.positionCaret(caretPos+1); //Put it last
+    private void addActions(){
+        Commons.setTextLimit(personNum, 12);
+        Commons.setTextLimit(firstName, 20);
+        Commons.setTextLimit(lastName, 20);
+        Commons.setTextLimit(address, 20);
+        Commons.setTextLimit(city, 25);
+        Commons.setTextSplitAndLimit(postNum, 3, 5);
+        Commons.setTextSplitAndLimit(cardNum, 4, 16);
+        Commons.setTextLimit(cardCVC, 3);
     }
+
+
 
 }

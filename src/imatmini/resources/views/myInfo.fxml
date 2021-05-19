@@ -114,7 +114,7 @@
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardNum" layoutX="756.0" layoutY="405.0" onKeyTyped="#onCreditCardInput" prefHeight="38.0" prefWidth="406.0" />
+                  <TextField fx:id="cardNum" layoutX="756.0" layoutY="405.0" prefHeight="38.0" prefWidth="406.0" />
                   <Label layoutX="755.0" layoutY="460.0" prefHeight="51.0" prefWidth="196.0" text="Giltighetstid">
                      <font>
                         <Font size="35.0" />

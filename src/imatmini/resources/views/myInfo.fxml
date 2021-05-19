@@ -114,19 +114,19 @@
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardNum" layoutX="756.0" layoutY="405.0" prefHeight="38.0" prefWidth="406.0" />
+                  <TextField fx:id="cardNum" layoutX="756.0" layoutY="405.0" onKeyTyped="#onCreditCardInput" prefHeight="38.0" prefWidth="406.0" />
                   <Label layoutX="755.0" layoutY="460.0" prefHeight="51.0" prefWidth="196.0" text="Giltighetstid">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <Label layoutX="845.0" layoutY="505.0" text="/">
+                  <Label layoutX="859.0" layoutY="506.0" text="/">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardCVC" layoutX="981.0" layoutY="512.0" prefHeight="38.0" prefWidth="138.0" />
-                  <Label layoutX="979.0" layoutY="460.0" text="CVC-kod">
+                  <TextField fx:id="cardCVC" layoutX="1023.0" layoutY="512.0" prefHeight="38.0" prefWidth="138.0" />
+                  <Label layoutX="1023.0" layoutY="460.0" text="CVC-kod">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -167,8 +167,8 @@
                      </effect>
                   </Button>
                   <Label id="logo" layoutX="27.0" layoutY="14.0" text="iMat" />
-                  <ComboBox fx:id="cardMonth" layoutX="756.0" layoutY="512.0" prefHeight="38.0" prefWidth="86.0" promptText="MM" />
-                  <ComboBox fx:id="cardYear" layoutX="862.0" layoutY="512.0" prefHeight="38.0" prefWidth="86.0" promptText="ÅÅ" />
+                  <ComboBox fx:id="cardMonth" layoutX="756.0" layoutY="512.0" prefHeight="38.0" prefWidth="96.0" promptText="MM" />
+                  <ComboBox fx:id="cardYear" layoutX="880.0" layoutY="512.0" prefHeight="38.0" prefWidth="110.0" promptText="ÅÅ" />
                </children>
             </javafx.scene.layout.AnchorPane>
          </children>

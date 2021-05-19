@@ -193,4 +193,22 @@ public class MyInfo extends AnchorPane implements Info {
         event.consume();
     }
 
+    @FXML
+    private void onCreditCardInput(){
+        int caretPos = cardNum.getCaretPosition(); // Get caret position
+        String input = cardNum.getText().replaceAll("\\s+","");
+        System.out.println("Input: " + input);
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < input.length(); i++) {
+            if (i % 4 == 0 && i != 0) {
+                result.append(" ");
+            }
+            result.append(input.charAt(i));
+        }
+
+        System.out.println("Result: " + result);
+        cardNum.setText(result.toString());
+        cardNum.positionCaret(caretPos+1); //Put it last
+    }
+
 }

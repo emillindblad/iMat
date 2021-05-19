@@ -12,7 +12,6 @@ public class Commons {
             if (string.length() > length) {
                 textField.setText(string.substring(0, length));
                 textField.positionCaret(string.length());
-                System.out.println("Done");
             }
         });
     }

@@ -1,4 +1,4 @@
-package imatmini.resources.views;
+package imatmini;
 
 import imatmini.Model;
 import javafx.fxml.FXML;

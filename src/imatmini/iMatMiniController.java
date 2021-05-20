@@ -15,7 +15,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -23,7 +22,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.CartEvent;
-import se.chalmers.cse.dat216.project.CreditCard;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
@@ -117,7 +115,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         model.getShoppingCart().addShoppingCartListener(this);
 
         updateProductList(model.getProducts());
-        updateBottomPanel();
+        updateCartPanel();
         
         setupPreviouslyPurchasedPane();
         setupMyInfoView();
@@ -149,7 +147,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     // Shope pane methods
     @Override
      public void shoppingCartChanged(CartEvent evt) {
-        updateBottomPanel();
+        updateCartPanel();
     }
    
     
@@ -160,14 +158,13 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         }
     }
     
-    private void updateBottomPanel() {
+    private void updateCartPanel() {
         ShoppingCart shoppingCart = model.getShoppingCart();
         itemsLabel.setText("Antal varor: " + shoppingCart.getItems().size());
         costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
 
         /*
-         Add to the shopping cart
-         Currently does not check if we already have the same item in the cart
+         Adds all products in the shopping cart
          */
         cartFlowPane.getChildren().clear();
         for (ShoppingItem item : model.getShoppingCart().getItems()) {

@@ -73,13 +73,22 @@ public class Model {
         return iMatDataHandler.getFXImage(p, width, height);
     }
 
+    /*
+        Add product to the shopping cart
+     */
     public void addToShoppingCart(Product p) {
-        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
-
-        ShoppingItem item = new ShoppingItem(p);
-        Model.getInstance().getShoppingCart().addItem(item);
-        
-        //shoppingCart.addProduct(p);
+        ShoppingItem newItem = new ShoppingItem(p);
+        /*
+            Duplicate check
+         */
+        for (ShoppingItem item : getShoppingCart().getItems()) {
+            if(item.getProduct().equals(newItem.getProduct()))
+            {
+                item.setAmount(item.getAmount() + 1);
+                return;
+            }
+        }
+        getShoppingCart().addItem(newItem);
     }
 
     public List<String> getCardTypes() {

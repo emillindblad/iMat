@@ -4,6 +4,7 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -57,21 +58,45 @@ public class PreviouslyPurchasedItem extends AnchorPane {
         }
         return cost;
     }
+
     private void updateOverviewImages(){
         for (int i = 0; i < imageSlotSize; i++) {
             if(i >= order.getItems().size())
                 break;
-            ImageView image = new ImageView();
-            image.setPreserveRatio(false);
-            image.setImage(model.getImage(order.getItems().get(i).getProduct(), 100, 100));
+
+            PreviouslyPurchasedItemImage image = new PreviouslyPurchasedItemImage(model.getImage(order.getItems().get(i).getProduct()));
             flowPane.getChildren().add(image);
+
+
+            if(i+1 == imageSlotSize && order.getItems().size() > imageSlotSize) {
+                image.setExtraOverlay(order.getItems().size() - imageSlotSize);
+                break;
+            }
+
         }
+    }
+}
 
-        /*
-        img = new ImageView();
-        img.setImage(model.getImage(order.getItems().get(0).getProduct(), 100, 100));
-        flowPane.getChildren().add(img);
+class PreviouslyPurchasedItemImage extends AnchorPane{
+    @FXML private ImageView img;
+    @FXML private Label extraLabel;
 
-         */
+    public PreviouslyPurchasedItemImage(Image image)
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/TidigareKop_ItemImage.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
+        img.setImage(image);
+        img.toFront();
+    }
+
+    public void setExtraOverlay(int amount){
+        img.toBack();
+        extraLabel.setText("+" + amount);
     }
 }

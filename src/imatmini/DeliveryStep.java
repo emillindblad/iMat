@@ -36,9 +36,9 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
         }
 
         addProgressBar(detailsMissing);
-        this.timeLabel.setText("Välj en tid ovan");
         this.parentProcess = parentProcess;
         setupTimeSlots();
+        updateStatusLabel();
     }
 
     private void addProgressBar(boolean detailsMissing) {
@@ -50,10 +50,6 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
 
     @Override
     public void next() {
-        if(selectedTimeSlot == null){
-            timeLabel.setText("Du måste välja en tid!");
-            return;
-        }
         parentProcess.finalStep();
     }
 
@@ -90,18 +86,29 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
 
     public void chooseTime(String time, TimeSlot timeSlot)
     {
-        if(selectedTimeSlot == timeSlot)
+        if(selectedTimeSlot == timeSlot){
             removeCurrentTime();
-
-        timeLabel.setText("Du har nu valt klockan " + time + "!");
-
+        }else{
         removeCurrentTime();
+        timeSlot.selectTime();
         selectedTimeSlot = timeSlot;
+        }
+        updateStatusLabel();
     }
-
     private void removeCurrentTime(){
         if(selectedTimeSlot == null)
             return;
+        System.out.println("Removing timeslot");
         selectedTimeSlot.deselectTime();
+        selectedTimeSlot = null;
+    }
+
+    private void updateStatusLabel(){
+
+        if(selectedTimeSlot == null)
+            this.timeLabel.setText("Välj en tid ovan");
+        else
+            timeLabel.setText("Du har nu valt hemleverans för klockan " + selectedTimeSlot.getTime() + "!");
+
     }
 }

@@ -3,22 +3,21 @@ package imatmini;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.Pane;
 
 import java.awt.*;
 import java.io.IOException;
-import java.sql.Timestamp;
 
 public class DeliveryStep extends AnchorPane implements PurchaseStep {
 
     @FXML private AnchorPane infoPane;
     @FXML private FlowPane flowPane;
     @FXML private AnchorPane progressBar;
-    @FXML
-    private Label timeLabel;
+    @FXML private Label timeLabel;
+    @FXML private Button nextButton;
 
     private TimeSlot selectedTimeSlot;
 
@@ -38,7 +37,7 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
         addProgressBar(detailsMissing);
         this.parentProcess = parentProcess;
         setupTimeSlots();
-        updateStatusLabel();
+        updateStatus();
     }
 
     private void addProgressBar(boolean detailsMissing) {
@@ -84,7 +83,7 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
         }
     }
 
-    public void chooseTime(String time, TimeSlot timeSlot)
+    public void chooseTime(TimeSlot timeSlot)
     {
         if(selectedTimeSlot == timeSlot){
             removeCurrentTime();
@@ -93,7 +92,7 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
         timeSlot.selectTime();
         selectedTimeSlot = timeSlot;
         }
-        updateStatusLabel();
+        updateStatus();
     }
     private void removeCurrentTime(){
         if(selectedTimeSlot == null)
@@ -103,12 +102,13 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
         selectedTimeSlot = null;
     }
 
-    private void updateStatusLabel(){
-
-        if(selectedTimeSlot == null)
+    private void updateStatus(){
+        if(selectedTimeSlot == null) {
             this.timeLabel.setText("Välj en tid ovan");
-        else
+            this.nextButton.setDisable(true);
+        }else {
             timeLabel.setText("Du har nu valt hemleverans för klockan " + selectedTimeSlot.getTime() + "!");
-
+            this.nextButton.setDisable(false);
+        }
     }
 }

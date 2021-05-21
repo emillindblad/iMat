@@ -21,7 +21,7 @@
                   <AnchorPane fx:id="progressBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="1920.0" />
                   <Button layoutX="39.0" layoutY="958.0" mnemonicParsing="false" onAction="#back" styleClass="button-back" text="Tillbaka" />
                   <Line endX="1475.0" endY="-136.99996948242188" layoutX="441.0" layoutY="270.0" startX="-437.0" startY="-136.99996948242188" stroke="#ad282f" strokeWidth="8.0" />
-                  <Button layoutX="1642.0" layoutY="958.0" mnemonicParsing="false" onAction="#next" styleClass="button-next" text="Nästa steg" />
+                  <Button fx:id="nextButton" layoutX="1642.0" layoutY="958.0" mnemonicParsing="false" onAction="#next" styleClass="button-next" text="Nästa steg" />
                   <FlowPane fx:id="flowPane" alignment="TOP_CENTER" hgap="75.0" layoutY="359.0" prefHeight="563.0" prefWidth="1920.0" vgap="10.0">
                      <opaqueInsets>
                         <Insets />

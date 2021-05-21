@@ -33,7 +33,7 @@ public class TimeSlot extends AnchorPane {
 
     @FXML
     private void onChooseTime(Event event){
-        parent.chooseTime(timeLabel.getText(), this);
+        parent.chooseTime(this);
     }
 
     public void selectTime(){

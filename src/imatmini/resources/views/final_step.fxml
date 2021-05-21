@@ -15,22 +15,6 @@
          <children>
             <AnchorPane fx:id="infoPane" prefHeight="200.0" prefWidth="200.0" styleClass="overlayFade" />
             <AnchorPane fx:id="detailsPane" prefHeight="200.0" prefWidth="200.0" styleClass="overlayFade" />
-            <AnchorPane fx:id="purchaseCompletePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="overlayFade">
-               <children>
-                  <AnchorPane layoutX="480.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" styleClass="mainbackgroud">
-                     <children>
-                        <AnchorPane prefHeight="100.0" prefWidth="960.0" styleClass="mainblue" />
-                        <Line endX="857.0" layoutX="101.0" layoutY="100.0" startX="-99.0" stroke="#ad282f" strokeWidth="5.0" />
-                        <Label fx:id="endMessage" layoutX="55.0" layoutY="136.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="163.0" prefWidth="850.0" textAlignment="CENTER" wrapText="true">
-                           <font>
-                              <Font name="System Bold" size="45.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="425.0" layoutY="397.0" mnemonicParsing="false" onAction="#backToStart" styleClass="button-next" text="OK" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </AnchorPane>
             <AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud">
                <children>
                   <AnchorPane fx:id="progressBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="1920.0" />
@@ -112,6 +96,22 @@
                               <FlowPane fx:id="productFlowPane" prefHeight="688.0" prefWidth="1200.0" />
                            </content>
                         </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="purchaseCompletePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="overlayFade">
+               <children>
+                  <AnchorPane layoutX="480.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" styleClass="mainbackgroud">
+                     <children>
+                        <AnchorPane prefHeight="100.0" prefWidth="960.0" styleClass="mainblue" />
+                        <Line endX="857.0" layoutX="101.0" layoutY="100.0" startX="-99.0" stroke="#ad282f" strokeWidth="5.0" />
+                        <Label fx:id="endMessage" layoutX="55.0" layoutY="136.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="163.0" prefWidth="850.0" text="tack blablablablalballbalbalblabalblalba" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="45.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="265.0" layoutY="397.0" mnemonicParsing="false" onAction="#backToStart" styleClass="button-next" text="Tillbaka till Startsidan" />
                      </children>
                   </AnchorPane>
                </children>

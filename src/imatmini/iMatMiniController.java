@@ -92,6 +92,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void handleBuyItemsAction(ActionEvent event) {
+        if(model.getShoppingCart().getItems().size() == 0)
+            return;
         /*model.placeOrder();
         costLabel.setText("Köpet klart!");*/
         Stage stage;

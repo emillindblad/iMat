@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,6 +11,11 @@
 
 <fx:root prefHeight="100.0" prefWidth="1676.0" styleClass="cartbg" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Button layoutX="723.0" layoutY="21.0" mnemonicParsing="false" onAction="#onDecreaseProductAmount" prefHeight="58.0" prefWidth="61.0">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </Button>
       <ImageView fx:id="productImage" fitHeight="98.0" fitWidth="108.0" pickOnBounds="true">
          <image>
             <Image url="@../../../../../../../.dat215/imat/images/product_22.jpg" />
@@ -34,14 +41,16 @@
             <Pane layoutX="1.0" layoutY="-5.0" onMouseClicked="#onDeleteProduct" opacity="0.27" prefHeight="69.0" prefWidth="61.0" styleClass="delete-product-overlay" />
          </children>
       </Pane>
-      <Pane layoutX="793.0" layoutY="21.0" prefHeight="58.0" prefWidth="153.0" styleClass="itemcard">
-         <children>
-            <Label fx:id="productAmount" alignment="CENTER" prefHeight="58.0" prefWidth="153.0" text="5">
-               <font>
-                  <Font size="34.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
+      <Pane layoutX="1038.0" layoutY="19.0" prefHeight="58.0" prefWidth="153.0" styleClass="itemcard" />
+      <Button layoutX="958.0" layoutY="20.0" mnemonicParsing="false" onAction="#onIncreaseProductAmount" prefHeight="58.0" prefWidth="61.0">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </Button>
+      <TextField fx:id="productAmount" alignment="CENTER" layoutX="795.0" layoutY="21.0" maxHeight="58.0" maxWidth="153.0" minHeight="2.0" minWidth="2.0" onAction="#onSetProductAmount" prefHeight="58.0" prefWidth="153.0" text="5" AnchorPane.bottomAnchor="21.0" AnchorPane.topAnchor="21.0">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </TextField>
    </children>
 </fx:root>

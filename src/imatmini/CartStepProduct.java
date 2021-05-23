@@ -1,9 +1,11 @@
 package imatmini;
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -17,7 +19,8 @@ public class CartStepProduct extends AnchorPane {
     @FXML private Label productName;
     @FXML private ImageView productImage;
     @FXML private Label productCost;
-    @FXML private Label productAmount;
+    //@FXML private Label productAmount;
+    @FXML private TextField productAmount;
 
     private CartStep parent;
 
@@ -39,13 +42,58 @@ public class CartStepProduct extends AnchorPane {
     private void populateProduct(){
         this.productName.setText(shoppingItem.getProduct().getName());
         this.productImage.setImage(Model.getInstance().getImage(shoppingItem.getProduct()));
-        this.productCost.setText(shoppingItem.getTotal() + " kr");
-        this.productAmount.setText(shoppingItem.getAmount() + "");
+        updateCostText();
+        updateAmountText();
+    }
+
+    @FXML
+    private void onIncreaseProductAmount(Event event){
+        setProductAmount(shoppingItem.getAmount()+1);
+    }
+
+    @FXML
+    private void onDecreaseProductAmount(Event event){
+        setProductAmount(shoppingItem.getAmount()-1);
+    }
+
+    @FXML
+    private void onSetProductAmount(Event event){
+        int amount;
+        try {
+            amount = Integer.parseInt(getNumbersFromString(productAmount.getText()));
+            }
+        catch (NumberFormatException e)
+        {
+            amount = 1;
+        }
+            setProductAmount(amount);
+            productAmount.positionCaret(productAmount.getLength());
     }
 
     @FXML
     private void onDeleteProduct(){
         parent.removeProduct(shoppingItem);
     }
+    private void setProductAmount(double amount){
+        shoppingItem.setAmount(amount);
+        updateAmountText();
+        updateCostText();
+
+        if(shoppingItem.getAmount() <= 0)
+            onDeleteProduct();
+    }
+
+    private void updateCostText(){
+        this.productCost.setText(shoppingItem.getTotal() + " kr");
+    }
+
+    private void updateAmountText(){
+        this.productAmount.setText((int)shoppingItem.getAmount() + "");
+    }
+
+    private String getNumbersFromString(String text){
+        return text.replaceAll("[^0-9]", "");
+    }
+
 
 }

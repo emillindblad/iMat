@@ -41,37 +41,37 @@
                         <Font size="29.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="320.0" text="Måndag">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="320.0" text="Imorgon">
                      <font>
                         <Font name="System Bold" size="29.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="331.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Tisdag">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="331.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Onsdag">
                      <font>
                         <Font name="System Bold" size="29.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="592.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Onsdag">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="592.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Torsdag">
                      <font>
                         <Font name="System Bold" size="29.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="854.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Torsdag">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="854.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Fredag">
                      <font>
                         <Font name="System Bold" size="29.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1115.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Fredag">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1115.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Lördag">
                      <font>
                         <Font name="System Bold" size="29.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1378.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Lördag">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1378.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Söndag">
                      <font>
                         <Font name="System Bold" size="29.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1642.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Söndag">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1642.0" layoutY="320.0" prefHeight="43.0" prefWidth="212.0" text="Måndag">
                      <font>
                         <Font name="System Bold" size="29.0" />
                      </font>

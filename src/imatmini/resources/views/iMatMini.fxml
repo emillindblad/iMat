@@ -112,10 +112,10 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="1080.0" prefWidth="340.0" styleClass="mainblue">
                      <children>
-                        <Label id="logo" layoutX="93.0" layoutY="21.0" text="iMat" />
-                        <ScrollPane hbarPolicy="NEVER" layoutY="110.0" prefHeight="932.0" prefWidth="340.0">
+                        <Label id="logo" layoutX="93.0" layoutY="42.0" text="iMat" />
+                        <ScrollPane hbarPolicy="NEVER" layoutY="152.0" prefHeight="890.0" prefWidth="340.0">
                            <content>
-                              <FlowPane fx:id="categoryFlowPane" prefHeight="931.0" prefWidth="340.0" />
+                              <FlowPane fx:id="categoryFlowPane" prefHeight="890.0" prefWidth="340.0" />
                            </content>
                         </ScrollPane>
                      </children>

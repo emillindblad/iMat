@@ -80,6 +80,10 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         openAccountView();
     }
 
+    @FXML private void onEnter(ActionEvent ae){
+        handleSearchAction(ae);
+    }
+
     @FXML
     private void handleSearchAction(ActionEvent event) {
 

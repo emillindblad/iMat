@@ -6,11 +6,12 @@
 package imatmini;
 
 import java.io.IOException;
+import java.util.List;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
@@ -41,11 +42,10 @@ public class categoryPanel extends AnchorPane {
         categoryName.setText(category.name());
     }
 
-/*
     @FXML
-    private void openDetailView() {
-        System.out.println("Open " + category.getName());
-        parentController.openProductDetailView(category, kImageWidth, kImageRatio);
+    private void categoryBrowse() {
+        System.out.println("Browse " + category.name());
+        List<Product> products = model.getProducts(category);
+        parentController.updateProductList(products);
     }
-*/
 }

@@ -84,15 +84,17 @@ public class MyInfo extends AnchorPane implements Info {
         city.setFont(Font.font("System", FontWeight.NORMAL, 25));
         phoneNumber.setFont(Font.font("System", FontWeight.NORMAL, 25));
 
+         
+
         cardMonth.setButtonCell(new ListCell(){
 
             @Override
             protected void updateItem(Object item, boolean empty) {
                 super.updateItem(item, empty);
                 if(empty || item==null){
-                    setStyle("-fx-font-size:25");
+                    setStyle("-fx-font-size:22");
                 } else {
-                    setStyle("-fx-font-size:25");
+                    setStyle("-fx-font-size:22");
                     setText(item.toString());
                 }
             }
@@ -104,9 +106,9 @@ public class MyInfo extends AnchorPane implements Info {
             protected void updateItem(Object item, boolean empty) {
                 super.updateItem(item, empty);
                 if(empty || item==null){
-                    setStyle("-fx-font-size:25");
+                    setStyle("-fx-font-size:22");
                 } else {
-                    setStyle("-fx-font-size:25");
+                    setStyle("-fx-font-size:22");
                     setText(item.toString());
                 }
             }

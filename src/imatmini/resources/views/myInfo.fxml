@@ -34,6 +34,10 @@
             </AnchorPane>
             <javafx.scene.layout.AnchorPane prefHeight="971.0" prefWidth="1818.0" styleClass="mainbackgroud">
                <children>
+                  <TextField fx:id="personNum" layoutX="59.0" layoutY="295.0" maxHeight="44.0" maxWidth="406.0" minHeight="38.0" minWidth="406.0" prefHeight="44.0" prefWidth="406.0">
+                     <font>
+                        <Font size="26.0" />
+                     </font></TextField>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#26263a" height="133.0" layoutX="-3.0" stroke="BLACK" strokeType="INSIDE" styleClass="mainblue" width="1825.0" />
                   <Line endX="1377.0" endY="-136.99996948242188" layoutX="438.0" layoutY="269.0" startX="-434.0" startY="-136.99996948242188" stroke="#ad282f" strokeWidth="8.0" />
                   <Label layoutX="55.0" layoutY="160.0" text="Kontaktinformation">
@@ -46,43 +50,60 @@
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="personNum" layoutX="59.0" layoutY="295.0" prefHeight="38.0" prefWidth="406.0" />
-                  <Label layoutX="57.0" layoutY="345.0" text="Förnamn">
+                  <Label layoutX="58.0" layoutY="357.0" text="Förnamn">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="firstName" layoutX="60.0" layoutY="405.0" prefHeight="38.0" prefWidth="406.0" />
-                  <Label layoutX="57.0" layoutY="460.0" text="Efternamn">
+                  <TextField fx:id="firstName" layoutX="60.0" layoutY="408.0" maxHeight="44.0" maxWidth="406.0" minHeight="44.0" minWidth="406.0" prefHeight="44.0" prefWidth="406.0">
+                     <font>
+                        <Font size="26.0" />
+                     </font></TextField>
+                  <Label layoutX="58.0" layoutY="464.0" text="Efternamn">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="lastName" layoutX="59.0" layoutY="512.0" prefHeight="38.0" prefWidth="406.0" />
-                  <Label layoutX="59.0" layoutY="558.0" text="Adress">
+                  <TextField fx:id="lastName" layoutX="60.0" layoutY="516.0" maxHeight="44.0" maxWidth="406.0" minHeight="44.0" minWidth="406.0" prefHeight="44.0" prefWidth="406.0">
+                     <font>
+                        <Font size="26.0" />
+                     </font></TextField>
+                  <Label layoutX="61.0" layoutY="571.0" text="Adress">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="address" layoutX="61.0" layoutY="610.0" prefHeight="38.0" prefWidth="406.0" />
-                  <Label layoutX="61.0" layoutY="660.0" text="Postnr.">
+                  <TextField fx:id="address" layoutX="63.0" layoutY="623.0" maxHeight="44.0" maxWidth="406.0" minHeight="44.0" minWidth="406.0" prefHeight="44.0" prefWidth="406.0">
+                     <font>
+                        <Font size="26.0" />
+                     </font></TextField>
+                  <Label layoutX="64.0" layoutY="684.0" text="Postnr.">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <Label layoutX="207.0" layoutY="662.0" text="Stad">
+                  <Label layoutX="223.0" layoutY="684.0" text="Stad">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="postNum" layoutX="63.0" layoutY="712.0" prefHeight="38.0" prefWidth="106.0" />
-                  <TextField fx:id="city" layoutX="208.0" layoutY="711.0" prefHeight="38.0" prefWidth="258.0" />
-                  <Label layoutX="61.0" layoutY="771.0" text="Telefonnummer">
+                  <TextField fx:id="postNum" layoutX="66.0" layoutY="736.0" maxHeight="44.0" maxWidth="138.0" minHeight="44.0" minWidth="106.0" prefHeight="44.0" prefWidth="138.0">
+                     <font>
+                        <Font size="26.0" />
+                     </font></TextField>
+                  <TextField fx:id="city" layoutX="225.0" layoutY="735.0" maxHeight="44.0" maxWidth="258.0" minHeight="44.0" minWidth="244.0" prefHeight="44.0" prefWidth="244.0">
+                     <font>
+                        <Font size="26.0" />
+                     </font></TextField>
+                  <Label layoutX="62.0" layoutY="799.0" text="Telefonnummer">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="phoneNumber" layoutX="63.0" layoutY="823.0" prefHeight="38.0" prefWidth="406.0" />
+                  <TextField fx:id="phoneNumber" layoutX="64.0" layoutY="851.0" maxHeight="44.0" maxWidth="406.0" minHeight="44.0" minWidth="406.0" prefHeight="44.0" prefWidth="406.0">
+                     <font>
+                        <Font size="26.0" />
+                     </font></TextField>
                   <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="446.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/baseline_perm_contact_calendar_black_36dp.png" />
@@ -108,14 +129,20 @@
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardName" layoutX="755.0" layoutY="295.0" prefHeight="38.0" prefWidth="406.0" />
+                  <TextField fx:id="cardName" layoutX="755.0" layoutY="295.0" maxHeight="44.0" maxWidth="406.0" minHeight="44.0" minWidth="406.0" prefHeight="44.0" prefWidth="406.0">
+                     <font>
+                        <Font size="26.0" />
+                     </font></TextField>
                   <Label layoutX="754.0" layoutY="353.0" text="Kortnummer">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardNum" layoutX="756.0" layoutY="405.0" prefHeight="38.0" prefWidth="406.0" />
-                  <Label layoutX="755.0" layoutY="460.0" prefHeight="51.0" prefWidth="196.0" text="Giltighetstid">
+                  <TextField fx:id="cardNum" layoutX="756.0" layoutY="405.0" maxHeight="44.0" maxWidth="406.0" minHeight="44.0" minWidth="406.0" prefHeight="44.0" prefWidth="406.0">
+                     <font>
+                        <Font size="26.0" />
+                     </font></TextField>
+                  <Label layoutX="756.0" layoutY="475.0" prefHeight="51.0" prefWidth="196.0" text="Giltighetstid">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -125,8 +152,11 @@
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardCVC" layoutX="1033.0" layoutY="512.0" prefHeight="38.0" prefWidth="128.0" />
-                  <Label layoutX="1033.0" layoutY="460.0" prefHeight="51.0" prefWidth="128.0" text="CVC-kod">
+                  <TextField fx:id="cardCVC" layoutX="1034.0" layoutY="527.0" maxHeight="44.0" minHeight="44.0" prefHeight="44.0" prefWidth="128.0">
+                     <font>
+                        <Font size="26.0" />
+                     </font></TextField>
+                  <Label layoutX="1034.0" layoutY="475.0" prefHeight="51.0" prefWidth="128.0" text="CVC-kod">
                      <font>
                         <Font size="29.0" />
                      </font>
@@ -167,8 +197,8 @@
                      </effect>
                   </Button>
                   <Label id="logo" layoutX="27.0" layoutY="14.0" text="iMat" />
-                  <ComboBox fx:id="cardMonth" layoutX="756.0" layoutY="512.0" prefHeight="38.0" prefWidth="96.0" promptText="MM" />
-                  <ComboBox fx:id="cardYear" layoutX="880.0" layoutY="512.0" prefHeight="38.0" prefWidth="128.0" promptText="ÅÅ" />
+                  <ComboBox fx:id="cardMonth" layoutX="757.0" layoutY="527.0" prefHeight="38.0" prefWidth="96.0" promptText="MM" />
+                  <ComboBox fx:id="cardYear" layoutX="881.0" layoutY="527.0" prefHeight="38.0" prefWidth="128.0" promptText="ÅÅ" />
                </children>
             </javafx.scene.layout.AnchorPane>
          </children>

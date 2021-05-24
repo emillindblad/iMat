@@ -84,7 +84,7 @@ public class MyInfo extends AnchorPane implements Info {
         city.setFont(Font.font("System", FontWeight.NORMAL, 25));
         phoneNumber.setFont(Font.font("System", FontWeight.NORMAL, 25));
 
-         
+
 
         cardMonth.setButtonCell(new ListCell(){
 

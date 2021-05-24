@@ -30,7 +30,7 @@ public class ShoppingCartItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
         this.itemLabel.setText(item.getProduct().getName());
-        this.priceLabel.setText(item.getProduct().getPrice() + " kr");
+        this.priceLabel.setText(Commons.getCorrectDecimalFormat(item.getTotal()) + " kr");
         this.item = item;
     }
 }

@@ -95,6 +95,29 @@ public class Model {
         getShoppingCart().addItem(newItem);
     }
 
+    public void setProductAmount(double amount, Product p) {
+        ShoppingItem item = getShoppingItem(p);
+
+        if (item == null)
+            return;
+
+        item.setAmount(amount);
+        if (item.getAmount() <= 0)
+            getShoppingCart().removeItem(item);
+
+    }
+
+    public ShoppingItem getShoppingItem(Product p) {
+        ShoppingItem newItem = new ShoppingItem(p);
+
+        for (ShoppingItem item : getShoppingCart().getItems())
+            if(item.getProduct().equals(newItem.getProduct()))
+
+                return item;
+
+        return null;
+    }
+
     public List<String> getCardTypes() {
         return availableCardTypes;
     }

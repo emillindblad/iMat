@@ -7,12 +7,16 @@ package imatmini;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 /**
  *
@@ -25,6 +29,11 @@ public class ProductPanel extends AnchorPane {
     @FXML Label nameLabel;
     @FXML Label prizeLabel;
     @FXML Label ecoLabel;
+
+    @FXML private Button addButton;
+    @FXML private AnchorPane addAnchor;
+
+    @FXML private TextField productAmount;
     
     private Model model = Model.getInstance();
 
@@ -52,6 +61,9 @@ public class ProductPanel extends AnchorPane {
         if (!product.isEcological()) {
             ecoLabel.setText("");
         }
+
+        correctViewToFront();
+        updateAmountText();
     }
 
     @FXML
@@ -64,5 +76,69 @@ public class ProductPanel extends AnchorPane {
     private void handleAddAction(ActionEvent event) {
         System.out.println("Add " + product.getName());
         model.addToShoppingCart(product);
+        updateAmountText();
+        addAnchor.toFront();
+    }
+
+    @FXML
+    private void removeProduct(Event event) {
+        System.out.println("remove product");
+
+        ShoppingItem item = model.getShoppingItem(product);
+
+        setProductAmount(item.getAmount() - 1, item);
+
+        correctViewToFront();
+        updateAmountText();
+    }
+
+    @FXML
+    private void addProduct(Event event) {
+        System.out.println("add product");
+
+        ShoppingItem item = model.getShoppingItem(product);
+
+        setProductAmount(item.getAmount() + 1, item);
+
+        updateAmountText();
+    }
+
+    @FXML
+    private void updateAmount(ActionEvent event) {
+        int amount;
+        try {
+            amount = Integer.parseInt(getNumbersFromString(productAmount.getText()));
+        }
+        catch (NumberFormatException e)
+        {
+            amount = 1;
+        }
+        setProductAmount(amount, model.getShoppingItem(product));
+        productAmount.positionCaret(productAmount.getLength());
+    }
+
+    private void setProductAmount(double amount, ShoppingItem item) {
+        if (amount > 0)
+            item.setAmount(amount);
+        else
+            model.getShoppingCart().removeItem(item);
+    }
+
+    private String getNumbersFromString(String text){
+        return text.replaceAll("[^0-9]", "");
+    }
+
+    private void updateAmountText() {
+        ShoppingItem item = model.getShoppingItem(product);
+
+        if (item != null)
+            productAmount.setText((int)item.getAmount() + "");
+    }
+
+    private void correctViewToFront() {
+        if (model.getShoppingItem(product) != null)
+            addAnchor.toFront();
+        else
+            addButton.toFront();
     }
 }

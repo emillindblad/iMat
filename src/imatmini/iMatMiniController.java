@@ -102,8 +102,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private void handleBuyItemsAction(ActionEvent event) {
         if(model.getShoppingCart().getItems().size() == 0)
             return;
-        /*model.placeOrder();
-        costLabel.setText("Köpet klart!");*/
+
         Stage stage;
         Parent root;
         try {
@@ -124,7 +123,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
         model.getShoppingCart().addShoppingCartListener(this);
 
         updateProductList(model.getProducts());
@@ -135,13 +134,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         setupMyInfoView();
         setupPreviousPurchasedDetailView();
 
-        /*
-         Testing purposes
-         */
-        //MyInfo myInfo = new MyInfo(this);
-        //myInfo.toFront();
         shopPane.toFront();
-
     }
 
     private void setupMyInfoView() {
@@ -160,7 +153,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     
     // Shope pane methods
     @Override
-     public void shoppingCartChanged(CartEvent evt) {
+    public void shoppingCartChanged(CartEvent evt) {
         updateCartPanel();
     }
    

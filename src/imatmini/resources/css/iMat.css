@@ -180,3 +180,13 @@
     -fx-cursor: hand;
     -fx-background-color: #c4c4c4;
 }
+
+.product-plus-minus{
+    -fx-fill: #fff;
+    -fx-stroke: #000;
+    -fx-stroke-width: 2px;
+}
+
+.product-plus-minus:hover {
+    -fx-fill: #D2D2D2;
+}

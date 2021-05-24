@@ -66,7 +66,7 @@ public class Commons {
             case NUTS_AND_SEEDS -> name = "Nötter & Frön";
             case ROOT_VEGETABLE -> name = "Rotfrukter";
             case VEGETABLE_FRUIT -> name = "Grönsaker";
-            case FLOUR_SUGAR_SALT -> name = "Mjöl & Socker & Salt";
+            case FLOUR_SUGAR_SALT -> name = "Skafferi";
             default -> name = "unknown";
         }
         return name;

@@ -66,6 +66,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private Product product;
 
    @FXML private FlowPane categoryFlowPane;
+   private CategoryPanel selectedCategoryPanel;
 
     // Other variables
     private final Model model = Model.getInstance();
@@ -256,5 +257,12 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         System.out.println("Add " + product.getName());
         model.addToShoppingCart(product);
         closeProductDetailView();
+    }
+
+    public void selectCategoryPanel(CategoryPanel categoryPanel){
+        if(selectedCategoryPanel != null)
+            selectedCategoryPanel.setSelectedOverlay(false);
+        selectedCategoryPanel = categoryPanel;
+        selectedCategoryPanel.setSelectedOverlay(true);
     }
 }

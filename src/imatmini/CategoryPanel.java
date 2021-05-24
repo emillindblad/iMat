@@ -53,7 +53,14 @@ public class CategoryPanel extends AnchorPane {
         System.out.println("Browse " + category.name());
         List<Product> products = model.getProducts(category);
         //categoryName.getStyleClass().add(foobar); WIP
-        //categoryPanel.getStyleClass().add(selected);
+        parentController.selectCategoryPanel(this);
         parentController.updateProductList(products);
+    }
+
+    public void setSelectedOverlay(boolean bool){
+        if(bool)
+            categoryPanel.getStyleClass().add(selected);
+        else
+            categoryPanel.getStyleClass().remove(selected);
     }
 }

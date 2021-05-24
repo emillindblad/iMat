@@ -4,13 +4,15 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="categoryPanel" minHeight="0.0" minWidth="0.0" onMouseClicked="#categoryBrowse" prefHeight="86.0" prefWidth="340.0" scaleShape="false" styleClass="categoryCard" stylesheets="@../css/iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="categoryPanel" minHeight="0.0" minWidth="0.0" onMouseClicked="#categoryBrowse" prefHeight="86.0" prefWidth="340.0" scaleShape="false" styleClass="categoryCard" stylesheets="@../css/iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="categoryName" alignment="CENTER" layoutX="6.0" layoutY="33.0" prefHeight="21.0" prefWidth="223.0" styleClass="categoryCardText" stylesheets="@../css/iMat.css" text="catName">
+      <Label fx:id="categoryName" alignment="CENTER" layoutX="1.0" layoutY="-1.0" prefHeight="86.0" prefWidth="288.0" styleClass="categoryCardText" stylesheets="@../css/iMat.css" text="Grönsaker">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
       </Label>
       <ImageView fitHeight="58.0" fitWidth="103.0" layoutX="268.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -18,5 +20,10 @@
             <Image url="@../images/sharp_chevron_right_black_48dp.png" />
          </image>
       </ImageView>
+      <Pane layoutX="-9.0" opacity="0.0" prefHeight="92.0" prefWidth="357.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="5.0" layoutX="40.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="223.0" />
+         </children>
+      </Pane>
    </children>
 </fx:root>

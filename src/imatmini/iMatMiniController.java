@@ -164,11 +164,11 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         }
     }
 
-    private void updateCategoryList(List<Product> products) {
+    public void updateCategoryList(List<Product> products) {
         ArrayList<ProductCategory> categories = getCategories(products);
         categoryFlowPane.getChildren().clear();
         for (ProductCategory category : categories) {
-            categoryFlowPane.getChildren().add(new categoryPanel(category, this));
+            categoryFlowPane.getChildren().add(new CategoryPanel(category, this));
         }
     }
 

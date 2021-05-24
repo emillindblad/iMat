@@ -52,8 +52,8 @@ public class CategoryPanel extends AnchorPane {
     private void categoryBrowse() {
         System.out.println("Browse " + category.name());
         List<Product> products = model.getProducts(category);
-        categoryName.getStyleClass().add(foobar);
-        categoryPanel.getStyleClass().add(selected);
+        //categoryName.getStyleClass().add(foobar); WIP
+        //categoryPanel.getStyleClass().add(selected);
         parentController.updateProductList(products);
     }
 }

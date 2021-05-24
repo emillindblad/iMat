@@ -154,7 +154,14 @@
 }
 
 .categoryCard {
-    -fx-background-color: #FFF;
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: 1px;
+    -fx-border-width: 1 1 0 1;
+}
+
+.categorycardSelected {
+    -fx-background-color: #5CC343;
     -fx-border-color: #000;
     -fx-border-width: 1px;
     -fx-border-width: 1 1 0 1;
@@ -164,6 +171,10 @@
     -fx-font-weight: bold;
     -fx-text-fill: #09CDDA;
 }*/
+
+.foobar {
+    -fx-text-fill: #09CDDA;
+}
 
 .categoryCard:hover {
     -fx-cursor: hand;

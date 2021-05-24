@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root minHeight="0.0" minWidth="0.0" onMouseClicked="#categoryBrowse" prefHeight="86.0" prefWidth="340.0" scaleShape="false" styleClass="categoryCard" stylesheets="@../css/iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="categoryPanel" minHeight="0.0" minWidth="0.0" onMouseClicked="#categoryBrowse" prefHeight="86.0" prefWidth="340.0" scaleShape="false" styleClass="categoryCard" stylesheets="@../css/iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="categoryName" alignment="CENTER" layoutX="6.0" layoutY="33.0" prefHeight="21.0" prefWidth="223.0" stylesheets="@../css/iMat.css" text="catName">
+      <Label fx:id="categoryName" alignment="CENTER" layoutX="6.0" layoutY="33.0" prefHeight="21.0" prefWidth="223.0" styleClass="categoryCardText" stylesheets="@../css/iMat.css" text="catName">
          <font>
             <Font size="18.0" />
          </font>

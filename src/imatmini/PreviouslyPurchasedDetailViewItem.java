@@ -35,7 +35,7 @@ public class PreviouslyPurchasedDetailViewItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
         this.productNameLabel.setText(item.getProduct().getName());
-        this.priceLabel.setText(item.getTotal() + " kr");
+        this.priceLabel.setText(Commons.getCorrectDecimalFormat(item.getTotal()) + " kr");
         this.amountLabel.setText(item.getAmount() + " st");
         this.productImage.setImage(model.getImage(item.getProduct()));
 

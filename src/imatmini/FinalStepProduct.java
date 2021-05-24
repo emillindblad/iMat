@@ -34,7 +34,7 @@ public class FinalStepProduct extends AnchorPane {
         productImage.setImage(Model.getInstance().getImage(product, 150, 150));
         productName.setText(product.getName());
         productAmount.setText(shoppingItem.getAmount() + " st");
-        productSum.setText(shoppingItem.getTotal() + " kr");
+        productSum.setText(Commons.getCorrectDecimalFormat(shoppingItem.getTotal()) + " kr");
 
         if (gray)
             this.setStyle("-fx-background-color: #D5D5D5");

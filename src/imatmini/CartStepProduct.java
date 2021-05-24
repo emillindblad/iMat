@@ -13,6 +13,7 @@ import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 public class CartStepProduct extends AnchorPane {
     private ShoppingItem shoppingItem;
@@ -84,7 +85,7 @@ public class CartStepProduct extends AnchorPane {
     }
 
     private void updateCostText(){
-        this.productCost.setText(shoppingItem.getTotal() + " kr");
+        this.productCost.setText(Commons.getCorrectDecimalFormat(shoppingItem.getTotal())  + " kr");
     }
 
     private void updateAmountText(){

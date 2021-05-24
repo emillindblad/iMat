@@ -62,7 +62,7 @@ public class FinalStep extends AnchorPane implements PurchaseStep {
             productFlowPane.getChildren().add(new FinalStepProduct(item, gray));
             gray = !gray;
         }
-        totalSum.setText(Model.getInstance().getShoppingCart().getTotal() + " kr");
+        totalSum.setText(Commons.getCorrectDecimalFormat(Model.getInstance().getShoppingCart().getTotal()) + " kr");
     }
 
     private void addProgressBar(boolean detailsMissing) {

@@ -5,6 +5,8 @@ import javafx.scene.control.TextField;
 import org.w3c.dom.Text;
 import se.chalmers.cse.dat216.project.ProductCategory;
 
+import java.text.DecimalFormat;
+
 public class Commons {
     public static void setTextLimit(TextField textField, int length) {
         textField.setOnKeyTyped(event -> {
@@ -68,5 +70,9 @@ public class Commons {
             default -> name = "unknown";
         }
         return name;
+    }
+
+    public static String getCorrectDecimalFormat(double number){
+        return new DecimalFormat("#.##").format(number);
     }
 }

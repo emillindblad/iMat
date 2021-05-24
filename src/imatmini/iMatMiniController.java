@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -168,6 +169,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     public void updateCategoryList(List<Product> products) {
         ArrayList<ProductCategory> categories = getCategories(products);
         categoryFlowPane.getChildren().clear();
+        categoryFlowPane.getChildren().add((new CategoryPanel("Visa alla produkter", this)));
         for (ProductCategory category : categories) {
             categoryFlowPane.getChildren().add(new CategoryPanel(category, this));
         }

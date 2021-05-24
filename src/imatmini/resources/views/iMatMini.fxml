@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
+<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
    <children>
       <StackPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0">
          <children>
@@ -113,15 +113,6 @@
                               <FlowPane fx:id="categoryFlowPane" prefHeight="804.0" prefWidth="340.0" />
                            </content>
                         </ScrollPane>
-                        <AnchorPane layoutY="155.0" onMouseClicked="#showAllProducts" prefHeight="86.0" prefWidth="340.0" styleClass="categoryCard">
-                           <children>
-                              <Label layoutX="39.0" layoutY="35.0" styleClass="categoryCardText" stylesheets="@../css/iMat.css" text="Visa alla produkter">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
                      </children>
                   </AnchorPane>
                   <ScrollPane hbarPolicy="NEVER" layoutX="391.0" layoutY="150.0" minHeight="0.0" minWidth="0.0" prefHeight="890.0" prefWidth="1112.0" styleClass="mainbackgroud" vbarPolicy="ALWAYS">

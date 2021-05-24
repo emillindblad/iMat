@@ -47,12 +47,32 @@ public class CategoryPanel extends AnchorPane {
         this.category = category;
         categoryName.setText(Commons.getCategoryNameInSwedish(category));
     }
+    public CategoryPanel(String categoryName, iMatMiniController parentController) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/categoryPanel.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
+        category = null;
+        this.parentController = parentController;
+        this.categoryName.setText(categoryName);
+    }
 
     @FXML
     private void categoryBrowse() {
-        System.out.println("Browse " + category.name());
-        List<Product> products = model.getProducts(category);
-        //categoryName.getStyleClass().add(foobar); WIP
+        System.out.println("Browse " + categoryName);
+        List<Product> products;
+
+        if(category != null)
+            products = model.getProducts(category);
+        else
+            products = model.getProducts();
+
+
         parentController.selectCategoryPanel(this);
         parentController.updateProductList(products);
     }

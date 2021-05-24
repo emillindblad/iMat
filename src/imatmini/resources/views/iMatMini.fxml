@@ -71,20 +71,20 @@
             </AnchorPane>
             <AnchorPane id="mainPane" fx:id="shopPane" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
                <children>
-                  <AnchorPane layoutX="340.0" prefHeight="110.0" prefWidth="1580.0" styleClass="mainblue">
+                  <AnchorPane layoutX="340.0" minHeight="0.0" minWidth="0.0" prefHeight="110.0" prefWidth="1580.0" styleClass="mainblue">
                      <children>
-                        <TextField fx:id="searchField" layoutX="150.0" layoutY="34.0" onAction="#onEnter" prefHeight="35.0" prefWidth="476.0" promptText="Sök vara">
+                        <TextField fx:id="searchField" layoutX="45.0" layoutY="11.0" minHeight="0.0" minWidth="0.0" onAction="#onEnter" prefHeight="86.0" prefWidth="730.0" promptText="🔍 Sök vara">
                            <font>
-                              <Font size="18.0" />
+                              <Font size="32.0" />
                            </font>
                         </TextField>
-                        <Button layoutX="634.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleSearchAction" text="Sök" />
-                        <Button layoutX="719.0" layoutY="34.0" mnemonicParsing="false" onAction="#openPurchaseHistoryView" text="Tidigare köp">
+                        <Button layoutX="822.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleSearchAction" text="Sök" />
+                        <Button layoutX="907.0" layoutY="39.0" mnemonicParsing="false" onAction="#openPurchaseHistoryView" text="Tidigare köp">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Button layoutX="873.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleShowAccountAction" text="Mina uppgifter">
+                        <Button layoutX="1061.0" layoutY="39.0" mnemonicParsing="false" onAction="#handleShowAccountAction" text="Mina uppgifter">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -107,7 +107,7 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="1080.0" prefWidth="340.0" styleClass="mainblue">
                      <children>
-                        <Label id="logo" layoutX="93.0" layoutY="42.0" text="iMat" />
+                        <Label id="logo" layoutX="93.0" layoutY="34.0" text="iMat" />
                         <ScrollPane hbarPolicy="NEVER" layoutY="241.0" prefHeight="804.0" prefWidth="340.0">
                            <content>
                               <FlowPane fx:id="categoryFlowPane" prefHeight="804.0" prefWidth="340.0" />

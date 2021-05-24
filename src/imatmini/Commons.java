@@ -44,7 +44,7 @@ public class Commons {
     public static String getCategoryNameInSwedish(ProductCategory category){
         String name;
         switch (category){
-            case POD -> name = "Balväxter";
+            case POD -> name = "Baljväxter";
             case FISH -> name = "Fisk";
             case HERB -> name = "Örter";
             case MEAT -> name = "Kött";

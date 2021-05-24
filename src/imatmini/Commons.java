@@ -52,7 +52,7 @@ public class Commons {
             case BREAD -> name = "Bröd";
             case FRUIT -> name = "Frukt";
             case PASTA -> name = "Pasta";
-            case SWEET -> name = "Godis";
+            case SWEET -> name = "Sötsaker";
             case MELONS -> name = "Meloner";
             case CABBAGE -> name = "Kål";
             case DAIRIES -> name = "Mejeri";

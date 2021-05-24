@@ -23,7 +23,7 @@ import se.chalmers.cse.dat216.project.ProductCategory;
 public class categoryPanel extends AnchorPane {
     private iMatMiniController parentController;
     private Model model = Model.getInstance();
-    private ProductCategory category;
+    private final ProductCategory category;
     @FXML Label categoryName;
 
     public categoryPanel(ProductCategory category, iMatMiniController parentController) {
@@ -39,7 +39,7 @@ public class categoryPanel extends AnchorPane {
 
         this.parentController = parentController;
         this.category = category;
-        categoryName.setText(category.name());
+        categoryName.setText(Commons.getCategoryNameInSwedish(category));
     }
 
     @FXML

@@ -58,8 +58,8 @@ public class Commons {
             case MELONS -> name = "Meloner";
             case CABBAGE -> name = "Kål";
             case DAIRIES -> name = "Mejeri";
-            case HOT_DRINKS -> name = "Varma dryck";
-            case COLD_DRINKS -> name = "Kalla dryck";
+            case HOT_DRINKS -> name = "Varma drycker";
+            case COLD_DRINKS -> name = "Kalla drycker";
             case POTATO_RICE -> name = "Potatis & Ris";
             case CITRUS_FRUIT -> name = "Citrusfrukter";
             case EXOTIC_FRUIT -> name = "Exotiska frukter";

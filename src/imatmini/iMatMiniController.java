@@ -113,6 +113,9 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         }
 
     }
+    @FXML public void showAllProducts() {
+        updateProductList(model.getProducts());
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

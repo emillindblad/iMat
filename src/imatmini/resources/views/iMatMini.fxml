@@ -113,11 +113,20 @@
                   <AnchorPane prefHeight="1080.0" prefWidth="340.0" styleClass="mainblue">
                      <children>
                         <Label id="logo" layoutX="93.0" layoutY="42.0" text="iMat" />
-                        <ScrollPane hbarPolicy="NEVER" layoutY="152.0" prefHeight="890.0" prefWidth="340.0">
+                        <ScrollPane hbarPolicy="NEVER" layoutY="241.0" prefHeight="804.0" prefWidth="340.0">
                            <content>
-                              <FlowPane fx:id="categoryFlowPane" prefHeight="890.0" prefWidth="340.0" />
+                              <FlowPane fx:id="categoryFlowPane" prefHeight="804.0" prefWidth="340.0" />
                            </content>
                         </ScrollPane>
+                        <AnchorPane layoutY="155.0" onMouseClicked="#showAllProducts" prefHeight="86.0" prefWidth="340.0" styleClass="categoryCard">
+                           <children>
+                              <Label layoutX="39.0" layoutY="35.0" styleClass="categoryCardText" stylesheets="@../css/iMat.css" text="Visa alla produkter">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
                      </children>
                   </AnchorPane>
                   <ScrollPane hbarPolicy="NEVER" layoutX="391.0" layoutY="150.0" minHeight="0.0" minWidth="0.0" prefHeight="890.0" prefWidth="1112.0" styleClass="mainbackgroud" vbarPolicy="ALWAYS">

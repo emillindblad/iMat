@@ -7,6 +7,7 @@ package imatmini;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -64,6 +65,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML private Label detailEcoLabel;
     private Product product;
 
+   @FXML private FlowPane categoryFlowPane;
+
     // Other variables
     private final Model model = Model.getInstance();
 
@@ -117,6 +120,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         model.getShoppingCart().addShoppingCartListener(this);
 
         updateProductList(model.getProducts());
+        updateCategoryList(model.getProducts());
         updateCartPanel();
         
         setupPreviouslyPurchasedPane();
@@ -159,7 +163,25 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
             productsFlowPane.getChildren().add(new ProductPanel(product, this));
         }
     }
-    
+
+    private void updateCategoryList(List<Product> products) {
+        ArrayList<ProductCategory> categories = getCategories(products);
+        categoryFlowPane.getChildren().clear();
+        for (ProductCategory category : categories) {
+            categoryFlowPane.getChildren().add(new categoryPanel(category, this));
+        }
+    }
+
+    private ArrayList<ProductCategory> getCategories(List<Product> products) {
+        ArrayList<ProductCategory> categories = new ArrayList<>();
+        for (Product product : products) {
+            if (!categories.contains(product.getCategory())) {
+               categories.add(product.getCategory());
+            }
+        }
+        return categories;
+    }
+
     private void updateCartPanel() {
         ShoppingCart shoppingCart = model.getShoppingCart();
         itemsLabel.setText("Antal varor: " + shoppingCart.getItems().size());

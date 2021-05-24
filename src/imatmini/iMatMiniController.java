@@ -209,6 +209,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     public void openProductDetailView(Product product, double kImageWidth, double kImageRatio) {
         this.product = product;
+        System.out.println("Open " + product.getName() + "\n Category: " + product.getCategory());
         detailNameLabel.setText(product.getName());
         detailPrizeLabel.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
         detailImageView.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));

@@ -26,6 +26,49 @@
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="overlayFade" stylesheets="@../css/iMat.css" />
                </children>
             </AnchorPane>
+            <AnchorPane fx:id="productDetailPane">
+               <children>
+                  <AnchorPane layoutX="413.0" layoutY="170.0" minHeight="0.0" minWidth="0.0" prefHeight="848.0" prefWidth="1095.0" styleClass="productDetailView" stylesheets="@../css/iMat.css">
+                     <children>
+                        <ImageView fx:id="detailImageView" fitHeight="213.0" fitWidth="419.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../.dat215/imat/images/product_134.gif" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="detailNameLabel" layoutX="322.0" layoutY="25.0" prefHeight="71.0" prefWidth="464.0" text="Produktnamn">
+                           <font>
+                              <Font name="System Bold" size="49.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="detailPrizeLabel" layoutX="322.0" layoutY="86.0" prefHeight="6.0" prefWidth="284.0" text="Pris: 600 kr">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="81.0" layoutY="269.0" prefHeight="395.0" prefWidth="929.0" text="Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker." wrapText="true">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="501.0" layoutY="692.0" minHeight="101.0" minWidth="263.0" mnemonicParsing="false" onAction="#closeProductDetailView" styleClass="button-back" text="Tillbaka">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="781.0" layoutY="692.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#productDetailViewAddToCart" prefHeight="101.0" prefWidth="263.0" styleClass="addtocartbutton" text="Lägg till i varukorgen" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="detailEcoLabel" layoutX="322.0" layoutY="132.0" text="Ekologisk" textFill="#5cc343">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
             <AnchorPane id="mainPane" fx:id="shopPane" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
                <children>
                   <AnchorPane layoutX="340.0" prefHeight="110.0" prefWidth="1580.0" styleClass="mainblue">
@@ -70,6 +113,11 @@
                   <AnchorPane prefHeight="1080.0" prefWidth="340.0" styleClass="mainblue">
                      <children>
                         <Label id="logo" layoutX="93.0" layoutY="21.0" text="iMat" />
+                        <ScrollPane hbarPolicy="NEVER" layoutY="110.0" prefHeight="890.0" prefWidth="340.0">
+                           <content>
+                              <FlowPane prefHeight="890.0" prefWidth="340.0" />
+                           </content>
+                        </ScrollPane>
                      </children>
                   </AnchorPane>
                   <ScrollPane hbarPolicy="NEVER" layoutX="391.0" layoutY="150.0" minHeight="0.0" minWidth="0.0" prefHeight="890.0" prefWidth="1112.0" styleClass="mainbackgroud" vbarPolicy="ALWAYS">
@@ -77,49 +125,6 @@
                         <FlowPane fx:id="productsFlowPane" hgap="37.0" prefHeight="890.0" prefWidth="1110.0" styleClass="mainbackgroud" vgap="37.0" />
                      </content>
                   </ScrollPane>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="productDetailPane">
-               <children>
-                  <AnchorPane layoutX="413.0" layoutY="170.0" minHeight="0.0" minWidth="0.0" prefHeight="848.0" prefWidth="1095.0" styleClass="productDetailView" stylesheets="@../css/iMat.css">
-                     <children>
-                        <ImageView fx:id="detailImageView" fitHeight="213.0" fitWidth="419.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../../../.dat215/imat/images/product_134.gif" />
-                           </image>
-                        </ImageView>
-                        <Label fx:id="detailNameLabel" layoutX="322.0" layoutY="25.0" prefHeight="71.0" prefWidth="464.0" text="Produktnamn">
-                           <font>
-                              <Font name="System Bold" size="49.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="detailPrizeLabel" layoutX="322.0" layoutY="86.0" prefHeight="6.0" prefWidth="284.0" text="Pris: 600 kr">
-                           <font>
-                              <Font size="29.0" />
-                           </font>
-                        </Label>
-                        <Label alignment="TOP_LEFT" layoutX="81.0" layoutY="269.0" prefHeight="395.0" prefWidth="929.0" text="Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker." wrapText="true">
-                           <font>
-                              <Font size="21.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="501.0" layoutY="692.0" minHeight="101.0" minWidth="263.0" mnemonicParsing="false" onAction="#closeProductDetailView" styleClass="button-back" text="Tillbaka">
-                           <font>
-                              <Font size="40.0" />
-                           </font>
-                        </Button>
-                        <Button layoutX="781.0" layoutY="692.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#productDetailViewAddToCart" prefHeight="101.0" prefWidth="263.0" styleClass="addtocartbutton" text="Lägg till i varukorgen" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
-                           <font>
-                              <Font size="40.0" />
-                           </font>
-                        </Button>
-                        <Label fx:id="detailEcoLabel" layoutX="322.0" layoutY="132.0" text="Ekologisk" textFill="#5cc343">
-                           <font>
-                              <Font name="System Bold" size="13.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
                </children>
             </AnchorPane>
          </children>

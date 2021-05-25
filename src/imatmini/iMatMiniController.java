@@ -97,6 +97,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML
     private void handleClearCartAction(ActionEvent event) {
         model.clearShoppingCart();
+        updateProductList(model.getProducts());
     }
 
     @FXML

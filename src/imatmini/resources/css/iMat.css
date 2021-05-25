@@ -92,11 +92,18 @@
 
 .cartbg {
     -fx-background-color: #e4e4e4;
+    -fx-border-color: #000;
+    -fx-border-width: 1px;
+}
+
+.carttitle {
+    -fx-font-weight: bold;
+    -fx-font-size: 48;
 }
 
 .carttext {
     -fx-font-weight: bold;
-    -fx-font-size: 48;
+    -fx-font-size: 30;
 }
 
 .scroll-bar:horizontal, .scroll-bar:vertical {
@@ -188,5 +195,22 @@
 }
 
 .product-plus-minus:hover {
+    -fx-cursor: hand;
     -fx-fill: #D2D2D2;
+}
+
+.button-main-page {
+    -fx-background-color: #26263A;
+    -fx-border-color: #AD282F;
+    -fx-border-width: 3px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 40px;
+
+    -fx-background-radius: 0; //Used to get a proper border on buttons
+    -fx-background-insets: 0;
+}
+
+.button-main-page:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #3e3e55;
 }

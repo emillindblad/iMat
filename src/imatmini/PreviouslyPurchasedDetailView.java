@@ -29,6 +29,8 @@ public class PreviouslyPurchasedDetailView extends AnchorPane {
     @FXML
     private FlowPane flowPane;
 
+    private Order order;
+
     public PreviouslyPurchasedDetailView(iMatMiniController parentController){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/TidigareKop_DetailView.fxml"));
         fxmlLoader.setRoot(this);
@@ -43,6 +45,7 @@ public class PreviouslyPurchasedDetailView extends AnchorPane {
 
     public void populateView(Order order){
         populateItems(order.getItems());
+        this.order = order;
     }
 
     private void populateItems(List<ShoppingItem> items){
@@ -62,5 +65,12 @@ public class PreviouslyPurchasedDetailView extends AnchorPane {
     @FXML
     public void onPrevious(Event event){
         this.toBack();
+    }
+
+    @FXML
+    private void onAddToCart(Event event) {
+        Model.getInstance().addPreviousPurchaseToCart(order);
+        this.toBack();
+        this.getParent().toBack();
     }
 }

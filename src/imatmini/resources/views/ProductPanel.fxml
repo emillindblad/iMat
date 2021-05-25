@@ -37,22 +37,22 @@
                <children>
                   <Circle fill="DODGERBLUE" layoutX="69.0" layoutY="39.0" onMouseClicked="#removeProduct" radius="26.0" stroke="BLACK" strokeType="INSIDE" styleClass="product-plus-minus" />
                   <Circle fill="DODGERBLUE" layoutX="274.0" layoutY="38.0" onMouseClicked="#addProduct" radius="26.0" stroke="BLACK" strokeType="INSIDE" styleClass="product-plus-minus" />
-                  <Label layoutX="63.0" layoutY="13.0" onMouseClicked="#removeProduct" styleClass="product-plus-minus" text="-">
+                  <Label accessibleRole="BUTTON" layoutX="63.0" layoutY="13.0" onMouseClicked="#removeProduct" styleClass="product-plus-minus" text="-">
                      <font>
                         <Font name="System Bold" size="39.0" />
                      </font>
                   </Label>
-                  <Label layoutX="264.0" layoutY="15.0" onMouseClicked="#addProduct" styleClass="product-plus-minus" text="+">
+                  <Label accessibleRole="BUTTON" layoutX="264.0" layoutY="15.0" onMouseClicked="#addProduct" styleClass="product-plus-minus" text="+">
                      <font>
                         <Font name="System Bold" size="39.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="productAmount" alignment="CENTER" layoutX="126.0" layoutY="12.0" onAction="#updateAmount" prefHeight="55.0" prefWidth="60.0">
+                  <TextField fx:id="productAmount" alignment="CENTER" layoutX="126.0" layoutY="12.0" onAction="#updateAmount" prefHeight="55.0" prefWidth="67.0">
                      <font>
                         <Font size="29.0" />
                      </font>
                   </TextField>
-                  <Label fx:id="unitLabel" layoutX="186.0" layoutY="25.0" text="st">
+                  <Label fx:id="unitLabel" layoutX="195.0" layoutY="25.0" text="st">
                      <font>
                         <Font size="24.0" />
                      </font>

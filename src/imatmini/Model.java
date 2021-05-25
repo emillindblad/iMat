@@ -95,16 +95,11 @@ public class Model {
         getShoppingCart().addItem(newItem);
     }
 
-    public void setProductAmount(double amount, Product p) {
-        ShoppingItem item = getShoppingItem(p);
+    public void addPreviousPurchaseToCart(Order order) {
+        getShoppingCart().clear();
 
-        if (item == null)
-            return;
-
-        item.setAmount(amount);
-        if (item.getAmount() <= 0)
-            getShoppingCart().removeItem(item);
-
+        for (ShoppingItem item : order.getItems())
+            getShoppingCart().addItem(item);
     }
 
     public ShoppingItem getShoppingItem(Product p) {

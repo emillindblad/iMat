@@ -4,8 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="149.0" minWidth="309.0" prefHeight="149.0" prefWidth="309.0" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="149.0" minWidth="-Infinity" prefHeight="149.0" prefWidth="340.0" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="itemLabel" layoutX="11.0" layoutY="7.0" prefHeight="47.0" prefWidth="288.0" text="Produktnamn">
          <font>

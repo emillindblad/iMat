@@ -78,13 +78,13 @@
                               <Font size="32.0" />
                            </font>
                         </TextField>
-                        <Button layoutX="822.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleSearchAction" text="Sök" />
-                        <Button layoutX="907.0" layoutY="39.0" mnemonicParsing="false" onAction="#openPurchaseHistoryView" text="Tidigare köp">
+                        <Button layoutX="784.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="86.0" prefWidth="124.0" styleClass="button-main-page" text="Sök" />
+                        <Button layoutX="923.0" layoutY="11.0" mnemonicParsing="false" onAction="#openPurchaseHistoryView" prefHeight="86.0" prefWidth="281.0" styleClass="button-main-page" text="Tidigare köp">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Button layoutX="1061.0" layoutY="39.0" mnemonicParsing="false" onAction="#handleShowAccountAction" text="Mina uppgifter">
+                        <Button layoutX="1219.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleShowAccountAction" prefHeight="86.0" prefWidth="326.0" styleClass="button-main-page" text="Mina uppgifter">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -94,7 +94,7 @@
                   <AnchorPane layoutX="1540.0" layoutY="150.0" minHeight="0.0" minWidth="0.0" prefHeight="890.0" prefWidth="340.0" styleClass="cartbg" stylesheets="@../css/iMat.css">
                      <children>
                         <Label layoutX="64.0" layoutY="14.0" styleClass="carttitle" text="Varukorg" />
-                        <ScrollPane hbarPolicy="NEVER" layoutY="86.0" prefHeight="576.0" prefWidth="340.0">
+                        <ScrollPane hbarPolicy="NEVER" layoutX="1.0" layoutY="86.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="338.0">
                            <content>
                               <FlowPane fx:id="cartFlowPane" prefHeight="428.0" prefWidth="251.0" />
                            </content>
@@ -107,13 +107,13 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="1080.0" prefWidth="340.0" styleClass="mainblue">
                      <children>
-                        <Label id="logo" layoutX="93.0" layoutY="34.0" text="iMat" />
-                        <ScrollPane hbarPolicy="NEVER" layoutY="241.0" prefHeight="804.0" prefWidth="340.0">
+                        <Label id="logo" layoutX="98.0" layoutY="14.0" text="iMat" />
+                        <ScrollPane hbarPolicy="NEVER" layoutY="196.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="854.0" prefWidth="341.0">
                            <content>
-                              <FlowPane fx:id="categoryFlowPane" prefHeight="804.0" prefWidth="340.0" />
+                              <FlowPane fx:id="categoryFlowPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="869.0" prefWidth="340.0" />
                            </content>
                         </ScrollPane>
-                        <AnchorPane layoutY="155.0" onMouseClicked="#showAllProducts" prefHeight="86.0" prefWidth="340.0" styleClass="categoryCard">
+                        <AnchorPane layoutY="109.0" onMouseClicked="#showAllProducts" prefHeight="86.0" prefWidth="340.0" styleClass="categoryCard">
                            <children>
                               <Label layoutX="39.0" layoutY="35.0" styleClass="categoryCardText" stylesheets="@../css/iMat.css" text="Visa alla produkter">
                                  <font>

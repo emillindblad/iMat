@@ -73,13 +73,13 @@
                <children>
                   <AnchorPane layoutX="340.0" minHeight="0.0" minWidth="0.0" prefHeight="110.0" prefWidth="1580.0" styleClass="mainblue">
                      <children>
-                        <TextField fx:id="searchField" layoutX="45.0" layoutY="11.0" minHeight="0.0" minWidth="0.0" onAction="#onEnter" prefHeight="86.0" prefWidth="730.0" promptText="🔍 Sök vara">
+                        <TextField fx:id="searchField" layoutY="11.0" minHeight="0.0" minWidth="0.0" onAction="#onEnter" prefHeight="86.0" prefWidth="775.0" promptText="🔍 Sök vara">
                            <font>
                               <Font size="32.0" />
                            </font>
                         </TextField>
                         <Button layoutX="784.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="86.0" prefWidth="124.0" styleClass="button-main-page" text="Sök" />
-                        <Button layoutX="923.0" layoutY="11.0" mnemonicParsing="false" onAction="#openPurchaseHistoryView" prefHeight="86.0" prefWidth="281.0" styleClass="button-main-page" text="Tidigare köp">
+                        <Button layoutX="923.0" layoutY="11.0" mnemonicParsing="false" onAction="#openPurchaseHistoryView" prefHeight="86.0" prefWidth="284.0" styleClass="button-main-page" text="Tidigare köp">
                            <font>
                               <Font size="18.0" />
                            </font>

@@ -56,8 +56,10 @@ public class CartStep extends AnchorPane implements PurchaseStep {
     {
         sumLabel.setText("" + (float)shoppingCart.getTotal() + " kr");
         flowPane.getChildren().clear();
+        boolean gray = true;
         for(ShoppingItem item : shoppingCart.getItems()){
-            CartStepProduct product = new CartStepProduct(item, this);
+            CartStepProduct product = new CartStepProduct(item, this, gray);
+            gray = !gray;
             flowPane.getChildren().add(product);
         }
     }

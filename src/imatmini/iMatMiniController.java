@@ -158,7 +158,6 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     public void shoppingCartChanged(CartEvent evt) {
         updateCartPanel();
     }
-   
     
     public void updateProductList(List<Product> products) {
         productsFlowPane.getChildren().clear();

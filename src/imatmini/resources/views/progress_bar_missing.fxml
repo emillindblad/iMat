@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="1920.0" styleClass="mainblue" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="1920.0" styleClass="mainblue" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="1614.0" layoutY="33.0" styleClass="cross-and-info">
          <children>
@@ -32,22 +32,22 @@
       <Line fx:id="firstLine" endX="40.0" layoutX="768.0" layoutY="65.0" startX="-40.0" strokeWidth="5.0" />
       <Line fx:id="secondLine" endX="40.0" layoutX="960.0" layoutY="68.0" startX="-40.0" strokeWidth="5.0" />
       <Line fx:id="thirdLine" endX="40.0" layoutX="1152.0" layoutY="68.0" startX="-40.0" strokeWidth="5.0" />
-      <Label fx:id="one" layoutX="660.0" layoutY="34.0" text="1">
+      <Label fx:id="one" layoutX="660.0" layoutY="40.0" text="1">
          <font>
             <Font name="System Bold" size="42.0" />
          </font>
       </Label>
-      <Label fx:id="two" layoutX="852.0" layoutY="34.0" text="2">
+      <Label fx:id="two" layoutX="852.0" layoutY="40.0" text="2">
          <font>
             <Font name="System Bold" size="42.0" />
          </font>
       </Label>
-      <Label fx:id="three" layoutX="1044.0" layoutY="34.0" text="3">
+      <Label fx:id="three" layoutX="1044.0" layoutY="40.0" text="3">
          <font>
             <Font name="System Bold" size="42.0" />
          </font>
       </Label>
-      <Label fx:id="four" layoutX="1236.0" layoutY="34.0" text="4">
+      <Label fx:id="four" layoutX="1236.0" layoutY="40.0" text="4">
          <font>
             <Font name="System Bold" size="42.0" />
          </font>

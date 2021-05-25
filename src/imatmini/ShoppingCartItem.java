@@ -19,7 +19,7 @@ public class ShoppingCartItem extends AnchorPane {
     @FXML
     private Label priceLabel;
 
-    public ShoppingCartItem(ShoppingItem item) {
+    public ShoppingCartItem(ShoppingItem item, boolean gray) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/ShoppingCart_Item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -32,5 +32,8 @@ public class ShoppingCartItem extends AnchorPane {
         this.itemLabel.setText(item.getProduct().getName());
         this.priceLabel.setText(Commons.getCorrectDecimalFormat(item.getTotal()) + " kr");
         this.item = item;
+
+        if (gray)
+            this.setStyle("-fx-background-color: #D5D5D5");
     }
 }

@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -76,17 +77,17 @@ public class ProductPanel extends AnchorPane {
     private void handleAddAction(ActionEvent event) {
         System.out.println("Add " + product.getName());
         model.addToShoppingCart(product);
+        parentController.shoppingCartChanged(new CartEvent(this));
         updateAmountText();
         addAnchor.toFront();
     }
 
     @FXML
     private void removeProduct(Event event) {
-        System.out.println("remove product");
-
         ShoppingItem item = model.getShoppingItem(product);
 
         setProductAmount(item.getAmount() - 1, item);
+        parentController.shoppingCartChanged(new CartEvent(this));
 
         correctViewToFront();
         updateAmountText();
@@ -94,11 +95,10 @@ public class ProductPanel extends AnchorPane {
 
     @FXML
     private void addProduct(Event event) {
-        System.out.println("add product");
-
         ShoppingItem item = model.getShoppingItem(product);
 
         setProductAmount(item.getAmount() + 1, item);
+        parentController.shoppingCartChanged(new CartEvent(this));
 
         updateAmountText();
     }
@@ -133,6 +133,8 @@ public class ProductPanel extends AnchorPane {
 
         if (item != null)
             productAmount.setText((int)item.getAmount() + "");
+
+        productAmount.positionCaret(productAmount.getLength());
     }
 
     private void correctViewToFront() {

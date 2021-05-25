@@ -93,16 +93,16 @@
                   </AnchorPane>
                   <AnchorPane layoutX="1540.0" layoutY="150.0" minHeight="0.0" minWidth="0.0" prefHeight="890.0" prefWidth="340.0" styleClass="cartbg" stylesheets="@../css/iMat.css">
                      <children>
-                        <Label layoutX="45.0" layoutY="14.0" styleClass="carttext" text="Varukorg" />
-                        <ScrollPane layoutY="86.0" prefHeight="576.0" prefWidth="340.0">
+                        <Label layoutX="64.0" layoutY="14.0" styleClass="carttitle" text="Varukorg" />
+                        <ScrollPane hbarPolicy="NEVER" layoutY="86.0" prefHeight="576.0" prefWidth="340.0">
                            <content>
                               <FlowPane fx:id="cartFlowPane" prefHeight="428.0" prefWidth="251.0" />
                            </content>
                         </ScrollPane>
-                        <Button layoutX="22.0" layoutY="680.0" mnemonicParsing="false" onAction="#handleClearCartAction" text="Töm" />
+                        <Button layoutX="149.0" layoutY="672.0" mnemonicParsing="false" onAction="#handleClearCartAction" text="Töm" />
                         <Button layoutY="804.0" mnemonicParsing="false" onAction="#handleBuyItemsAction" prefHeight="86.0" prefWidth="340.0" styleClass="addtocartbutton" text="Till kassan" />
-                        <Label fx:id="itemsLabel" layoutX="112.0" layoutY="704.0" prefHeight="17.0" prefWidth="150.0" text="Antal varor: 3456" />
-                        <Label fx:id="costLabel" layoutX="129.0" layoutY="676.0" text="Kostnad: 3456.60" />
+                        <Label fx:id="itemsLabel" alignment="CENTER" layoutX="22.0" layoutY="754.0" prefHeight="36.0" prefWidth="297.0" styleClass="carttext" text="Antal varor: 3456" />
+                        <Label fx:id="costLabel" alignment="CENTER" layoutX="49.0" layoutY="711.0" styleClass="carttext" text="Kostnad: 3456.60" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="1080.0" prefWidth="340.0" styleClass="mainblue">

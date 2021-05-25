@@ -94,9 +94,14 @@
     -fx-background-color: #e4e4e4;
 }
 
-.carttext {
+.carttitle {
     -fx-font-weight: bold;
     -fx-font-size: 48;
+}
+
+.carttext {
+    -fx-font-weight: bold;
+    -fx-font-size: 30;
 }
 
 .scroll-bar:horizontal, .scroll-bar:vertical {

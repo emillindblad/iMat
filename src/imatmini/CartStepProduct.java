@@ -25,7 +25,7 @@ public class CartStepProduct extends AnchorPane {
 
     private CartStep parent;
 
-    public CartStepProduct(ShoppingItem shoppingItem, CartStep parent) {
+    public CartStepProduct(ShoppingItem shoppingItem, CartStep parent, boolean gray) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/cart_step_product.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -38,6 +38,9 @@ public class CartStepProduct extends AnchorPane {
         this.shoppingItem = shoppingItem;
         this.parent = parent;
         populateProduct();
+
+        if (gray)
+            this.setStyle("-fx-background-color: #D5D5D5");
     }
 
     private void populateProduct(){

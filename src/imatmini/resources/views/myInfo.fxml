@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane layoutX="3.0">
          <children>
@@ -147,7 +147,7 @@
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <Label layoutX="859.0" layoutY="506.0" text="/">
+                  <Label layoutX="859.0" layoutY="526.0" text="/">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -188,7 +188,7 @@
                         <DropShadow />
                      </effect>
                   </Button>
-                  <Button fx:id="backButton" layoutX="1300.0" layoutY="861.0" mnemonicParsing="false" onAction="#onClose" prefHeight="75.0" prefWidth="226.0" styleClass="button-back" text="Tillbaka">
+                  <Button fx:id="backButton" layoutX="1300.0" layoutY="861.0" mnemonicParsing="false" onAction="#onClose" prefHeight="86.0" prefWidth="226.0" styleClass="button-back" text="Tillbaka">
                      <font>
                         <Font name="System Bold" size="40.0" />
                      </font>

@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane prefHeight="150.0" prefWidth="200.0">
          <children>
@@ -46,7 +46,7 @@
                         </Label>
                         <ScrollPane hbarPolicy="NEVER" layoutX="2.0" layoutY="91.0" prefHeight="662.0" prefWidth="1672.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <content>
-                              <FlowPane fx:id="flowPane" prefHeight="660.0" prefWidth="1674.0" vgap="25.0" />
+                              <FlowPane fx:id="flowPane" prefHeight="660.0" prefWidth="1674.0" />
                            </content>
                         </ScrollPane>
                      </children>

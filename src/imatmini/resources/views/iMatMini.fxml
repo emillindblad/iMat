@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
+<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
    <children>
       <StackPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0">
          <children>
@@ -73,7 +73,7 @@
                <children>
                   <AnchorPane layoutX="340.0" minHeight="0.0" minWidth="0.0" prefHeight="110.0" prefWidth="1580.0" styleClass="mainblue">
                      <children>
-                        <TextField fx:id="searchField" layoutX="20.0" layoutY="12.0" minHeight="0.0" minWidth="0.0" onAction="#onEnter" prefHeight="86.0" prefWidth="730.0" promptText="🔍 Sök vara">
+                        <TextField fx:id="searchField" layoutX="14.0" layoutY="12.0" minHeight="0.0" minWidth="0.0" onAction="#onEnter" prefHeight="86.0" prefWidth="730.0" promptText="🔍 Sök vara">
                            <font>
                               <Font size="32.0" />
                            </font>
@@ -108,7 +108,7 @@
                   <AnchorPane prefHeight="1080.0" prefWidth="340.0" styleClass="mainblue">
                      <children>
                         <Label id="logo" layoutX="98.0" layoutY="14.0" text="iMat" />
-                        <ScrollPane hbarPolicy="NEVER" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="940.0" prefWidth="341.0">
+                        <ScrollPane hbarPolicy="NEVER" layoutY="196.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="854.0" prefWidth="341.0">
                            <content>
                               <FlowPane fx:id="categoryFlowPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="869.0" prefWidth="340.0" />
                            </content>

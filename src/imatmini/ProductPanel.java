@@ -35,6 +35,7 @@ public class ProductPanel extends AnchorPane {
     @FXML private AnchorPane addAnchor;
 
     @FXML private TextField productAmount;
+    @FXML private Label unitLabel;
     
     private Model model = Model.getInstance();
 
@@ -135,6 +136,7 @@ public class ProductPanel extends AnchorPane {
             productAmount.setText((int)item.getAmount() + "");
 
         productAmount.positionCaret(productAmount.getLength());
+        unitLabel.setText(product.getUnit().substring(3));
     }
 
     private void correctViewToFront() {

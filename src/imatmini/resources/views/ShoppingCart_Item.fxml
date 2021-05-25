@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="149.0" minWidth="-Infinity" prefHeight="149.0" prefWidth="340.0" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="149.0" minWidth="-Infinity" prefHeight="149.0" prefWidth="340.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="itemLabel" layoutX="11.0" layoutY="7.0" prefHeight="47.0" prefWidth="288.0" text="Produktnamn">
          <font>
@@ -16,5 +21,37 @@
             <Font size="24.0" />
          </font>
       </Label>
+      <Circle fill="DODGERBLUE" layoutX="73.0" layoutY="117.0" onMouseClicked="#removeProduct" radius="22.0" stroke="BLACK" strokeType="INSIDE" styleClass="product-plus-minus" />
+      <Circle fill="DODGERBLUE" layoutX="276.0" layoutY="114.0" onMouseClicked="#addProduct" radius="22.0" stroke="BLACK" strokeType="INSIDE" styleClass="product-plus-minus" />
+      <Label accessibleRole="BUTTON" layoutX="67.0" layoutY="91.0" onMouseClicked="#removeProduct" styleClass="product-plus-minus" text="-">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label accessibleRole="BUTTON" layoutX="265.0" layoutY="91.0" onMouseClicked="#addProduct" styleClass="product-plus-minus" text="+">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label fx:id="unitLabel" layoutX="181.0" layoutY="105.0" text="st">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="productAmount" alignment="CENTER" layoutX="114.0" layoutY="87.0" onAction="#updateAmount" prefHeight="55.0" prefWidth="67.0">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </TextField>
+      <Pane layoutX="248.0" layoutY="14.0" prefHeight="55.0" prefWidth="56.0">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="56.0" layoutX="1.0" layoutY="-1.0" onMouseClicked="#onDeleteProduct" pickOnBounds="true" preserveRatio="true" styleClass="cross-and-info">
+               <image>
+                  <Image url="@../images/baseline_delete_black_48dp.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="6.0" layoutY="5.0" onMouseClicked="#onDeleteProduct" opacity="0.27" prefHeight="44.0" prefWidth="44.0" styleClass="delete-product-overlay" />
+         </children>
+      </Pane>
    </children>
 </fx:root>

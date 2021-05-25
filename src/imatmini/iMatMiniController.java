@@ -196,7 +196,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         cartFlowPane.getChildren().clear();
         boolean gray = true;
         for (ShoppingItem item : model.getShoppingCart().getItems()) {
-            cartFlowPane.getChildren().add(new ShoppingCartItem(item, gray));
+            cartFlowPane.getChildren().add(new ShoppingCartItem(this, item, gray));
             gray = !gray;
         }
     }

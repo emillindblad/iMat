@@ -32,7 +32,7 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <javafx.scene.layout.AnchorPane prefHeight="971.0" prefWidth="1818.0" styleClass="mainbackgroud">
+            <javafx.scene.layout.AnchorPane prefHeight="971.0" prefWidth="1818.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
                <children>
                   <TextField fx:id="personNum" layoutX="59.0" layoutY="295.0" maxHeight="44.0" maxWidth="406.0" minHeight="38.0" minWidth="406.0" prefHeight="44.0" prefWidth="406.0">
                      <font>

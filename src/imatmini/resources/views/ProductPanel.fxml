@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root minHeight="0.0" minWidth="0.0" prefHeight="425.0" prefWidth="340.0" scaleShape="false" styleClass="itemcard" stylesheets="@../css/iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root minHeight="0.0" minWidth="0.0" prefHeight="425.0" prefWidth="340.0" scaleShape="false" styleClass="itemcard" stylesheets="@../css/iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#openDetailView" prefHeight="339.0" prefWidth="340.0" styleClass="openDetailView">
          <children>
@@ -23,16 +23,11 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Label fx:id="ecoLabel" layoutX="241.0" layoutY="14.0" text="Ekologisk" textFill="#5cc343">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
+            <Label fx:id="ecoLabel" layoutX="241.0" layoutY="14.0" styleClass="ecolabel" stylesheets="@../css/iMat.css" text="Ekologisk" />
          </children>
       </AnchorPane>
       <StackPane layoutY="339.0">
          <children>
-            <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="86.0" prefWidth="340.0" styleClass="addtocartbutton" stylesheets="@../css/iMat.css" text="Lägg till i Varukorgen" textAlignment="CENTER" />
             <AnchorPane fx:id="addAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="338.0" styleClass="mainbackgroud">
                <children>
                   <Circle fill="DODGERBLUE" layoutX="69.0" layoutY="39.0" onMouseClicked="#removeProduct" radius="26.0" stroke="BLACK" strokeType="INSIDE" styleClass="product-plus-minus" />
@@ -59,6 +54,7 @@
                   </Label>
                </children>
             </AnchorPane>
+            <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="86.0" prefWidth="340.0" styleClass="addtocartbutton" stylesheets="@../css/iMat.css" text="Lägg till i Varukorgen" textAlignment="CENTER" />
          </children>
       </StackPane>
    </children>

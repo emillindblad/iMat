@@ -1,4 +1,5 @@
 .button-next{
+    -fx-font-family: Arial;
     -fx-background-color: #AD282F;
     -fx-border-color: #000;
     -fx-border-width: 1px;
@@ -10,6 +11,7 @@
 }
 
 .button-back{
+    -fx-font-family: Arial;
     -fx-background-color: #FFFFFF;
     -fx-border-color: #000;
     -fx-border-width: 1px;
@@ -51,10 +53,11 @@
 #logo{
     -fx-font-size: 72px;
     -fx-text-fill: #FFFFFF;
-    -fx-font-family: "Kelly Slab";
+    -fx-font-family: "Kelly Slab", "Arial";
 }
 
 .mainbackgroud {
+    -fx-font-family: Arial;
     -fx-background-color: #D9DCE4;
 }
 
@@ -76,8 +79,9 @@
     -fx-border-width: 1;
 
     -fx-text-fill: #FFFFFF;
-    -fx-font-size: 24px;
+    -fx-font-size: 28px;
     -fx-font-weight: bold;
+    -fx-font-family: Arial;
 }
 
 .addtocartbutton:hover {
@@ -97,11 +101,13 @@
 }
 
 .carttitle {
+    -fx-font-family: Arial;
     -fx-font-weight: bold;
     -fx-font-size: 48;
 }
 
 .carttext {
+    -fx-font-family: Arial;
     -fx-font-weight: bold;
     -fx-font-size: 30;
 }
@@ -155,8 +161,9 @@
 }
 
 .ecolabel {
-    -fx-font-size: 13px;
-    -fx-font-weight: bold;
+    -fx-font-family: Arial;
+    -fx-font-size: 14px;
+    -fx-font-weight: Bold;
     -fx-text-fill: #5cc343;
 }
 
@@ -174,10 +181,11 @@
     -fx-border-width: 1 0 1 0;
 }
 
-/*.categoryCardText {
+.categoryCardText {
+    -fx-font-family: Arial;
     -fx-font-weight: bold;
-    -fx-text-fill: #09CDDA;
-}*/
+    -fx-font-size: 24px;
+}
 
 .foobar {
     -fx-text-fill: #09CDDA;
@@ -205,6 +213,7 @@
     -fx-border-width: 3px;
     -fx-text-fill: #FFFFFF;
     -fx-font-size: 40px;
+    -fx-font-family: Arial;
 
     -fx-background-radius: 0; //Used to get a proper border on buttons
     -fx-background-insets: 0;

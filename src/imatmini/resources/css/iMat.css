@@ -265,3 +265,23 @@
     -fx-font-size: 44px;
     -fx-font-weight: bold;
 }
+
+.myinfobigtext {
+    -fx-font-family: Arial;
+    -fx-text-fill: #000000;
+    -fx-font-size: 44px;
+    -fx-font-weight: bold;
+}
+
+.myinfosmallText {
+    -fx-font-family: Arial;
+    -fx-text-fill: #000000;
+    -fx-font-size: 36px;
+}
+
+.getmyinfobtn {
+    -fx-background-color: #AD282F;
+    -fx-font-family: Arial;
+    -fx-text-fill: #fff;
+    -fx-font-size: 20px;
+}

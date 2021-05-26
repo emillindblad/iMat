@@ -10,7 +10,7 @@
    <children>
        <Label fx:id="itemLabel" layoutX="11.0" layoutY="7.0" prefHeight="47.0" prefWidth="278.0" styleClass="carttext" text="Produktnamn" />
        <Label fx:id="priceLabel" layoutX="11.0" layoutY="49.0" prefHeight="11.0" prefWidth="288.0" styleClass="cartsmalltext" text="12,50 kr" />
-      <Label fx:id="unitLabel" layoutX="191.0" layoutY="98.0" styleClass="cartsmalltext" text="st">
+      <Label fx:id="unitLabel" layoutX="184.0" layoutY="103.0" styleClass="cartsmalltext" text="st">
          <font>
             <Font size="24.0" />
          </font>

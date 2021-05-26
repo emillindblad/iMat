@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<fx:root minHeight="0.0" minWidth="0.0" prefHeight="971.0" prefWidth="1818.0" style="-fx-background-color: #D9DCE4;" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root minHeight="0.0" minWidth="0.0" prefHeight="971.0" prefWidth="1818.0" style="-fx-background-color: #D9DCE4;" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.10-internal" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane minHeight="206.0" minWidth="1818.0" prefHeight="206.0" prefWidth="1818.0" style="-fx-background-color: #26263A;">
          <children>
@@ -225,7 +220,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="14.0" text="Leveransinformation">
+            <Label layoutX="14.0" layoutY="14.0" styleClass="laststepBigText" text="Leveransinformation">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
@@ -245,7 +240,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="195.0" text="Betalningsinformation">
+            <Label layoutX="14.0" layoutY="195.0" styleClass="laststepBigText" text="Betalningsinformation">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
@@ -265,7 +260,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="188.0" layoutY="584.0" prefHeight="35.0" prefWidth="191.0" text="Totalt">
+            <Label alignment="CENTER_RIGHT" layoutX="188.0" layoutY="590.0" prefHeight="35.0" prefWidth="191.0" text="Totalt">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -280,7 +275,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="410.0" layoutY="584.0" prefHeight="45.0" prefWidth="126.0" text="1337 kr">
+            <Label alignment="CENTER_RIGHT" layoutX="410.0" layoutY="584.0" prefHeight="45.0" prefWidth="126.0" styleClass="carttext" text="1337 kr">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>

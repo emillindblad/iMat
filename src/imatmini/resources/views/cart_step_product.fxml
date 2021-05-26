@@ -24,12 +24,12 @@
             <Image url="@../../../../../../../.dat215/imat/images/product_22.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="productName" layoutX="122.0" layoutY="-1.0" prefHeight="100.0" prefWidth="482.0" text="Produktnamn" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="-1.0">
+      <Label fx:id="productName" layoutX="122.0" layoutY="-1.0" prefHeight="100.0" prefWidth="482.0" styleClass="laststepBigText" text="Produktnamn" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="-1.0">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label fx:id="productCost" alignment="CENTER_RIGHT" layoutX="1177.0" layoutY="-1.0" prefHeight="100.0" prefWidth="324.0" text="500 kr">
+      <Label fx:id="productCost" alignment="CENTER_RIGHT" layoutX="1177.0" layoutY="-1.0" prefHeight="100.0" prefWidth="324.0" styleClass="laststepBigText" text="500 kr">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>

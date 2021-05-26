@@ -19,7 +19,7 @@
                      <children>
                         <AnchorPane prefHeight="100.0" prefWidth="960.0" styleClass="mainblue" />
                         <Line endX="857.0" layoutX="101.0" layoutY="100.0" startX="-99.0" stroke="#ad282f" strokeWidth="5.0" />
-                        <Label fx:id="endMessage" layoutX="55.0" layoutY="136.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="163.0" prefWidth="850.0" text="tack blablablablalballbalbalblabalblalba" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="endMessage" layoutX="55.0" layoutY="116.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="267.0" prefWidth="850.0" styleClass="myinfobigtext" text="tack blablablablalballbalbalblabalblalba" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="System Bold" size="45.0" />
                            </font>

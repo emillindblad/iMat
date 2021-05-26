@@ -23,7 +23,7 @@
                   <AnchorPane layoutX="606.5" layoutY="330.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#mouseTrap" prefHeight="313.0" prefWidth="609.0" styleClass="mainbackgroud">
                      <children>
                         <Button fx:id="okButton" layoutX="250.0" layoutY="157.0" mnemonicParsing="false" onAction="#onClose" styleClass="button-next" text="OK" />
-                        <Label layoutX="25.0" layoutY="66.0" text="Dina uppgifter sparades!">
+                        <Label layoutX="48.0" layoutY="67.0" styleClass="laststepBigText" text="Dina uppgifter sparades!">
                            <font>
                               <Font name="System Bold" size="48.0" />
                            </font>
@@ -40,17 +40,17 @@
                      </font></TextField>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#26263a" height="133.0" layoutX="-3.0" stroke="BLACK" strokeType="INSIDE" styleClass="mainblue" width="1825.0" />
                   <Line endX="1377.0" endY="-136.99996948242188" layoutX="438.0" layoutY="269.0" startX="-434.0" startY="-136.99996948242188" stroke="#ad282f" strokeWidth="8.0" />
-                  <Label layoutX="55.0" layoutY="160.0" text="Kontaktinformation">
+                  <Label layoutX="58.0" layoutY="167.0" styleClass="myinfobigtext" text="Kontaktinformation">
                      <font>
                         <Font name="System Bold" size="40.0" />
                      </font>
                   </Label>
-                  <Label layoutX="55.0" layoutY="244.0" text="Personnummer (12 siffror)">
+                  <Label layoutX="55.0" layoutY="244.0" styleClass="myinfosmallText" text="Personnummer (12 siffror)">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <Label layoutX="58.0" layoutY="357.0" text="Förnamn">
+                  <Label layoutX="58.0" layoutY="357.0" styleClass="myinfosmallText" text="Förnamn">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -59,7 +59,7 @@
                      <font>
                         <Font size="26.0" />
                      </font></TextField>
-                  <Label layoutX="58.0" layoutY="464.0" text="Efternamn">
+                  <Label layoutX="58.0" layoutY="464.0" styleClass="myinfosmallText" text="Efternamn">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -68,7 +68,7 @@
                      <font>
                         <Font size="26.0" />
                      </font></TextField>
-                  <Label layoutX="61.0" layoutY="571.0" text="Adress">
+                  <Label layoutX="61.0" layoutY="571.0" styleClass="myinfosmallText" text="Adress">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -77,12 +77,12 @@
                      <font>
                         <Font size="26.0" />
                      </font></TextField>
-                  <Label layoutX="64.0" layoutY="684.0" text="Postnr.">
+                  <Label layoutX="64.0" layoutY="684.0" styleClass="myinfosmallText" text="Postnr.">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <Label layoutX="223.0" layoutY="684.0" text="Stad">
+                  <Label layoutX="223.0" layoutY="684.0" styleClass="myinfosmallText" text="Stad">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -95,7 +95,7 @@
                      <font>
                         <Font size="26.0" />
                      </font></TextField>
-                  <Label layoutX="62.0" layoutY="799.0" text="Telefonnummer">
+                  <Label layoutX="62.0" layoutY="799.0" styleClass="myinfosmallText" text="Telefonnummer">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -104,27 +104,27 @@
                      <font>
                         <Font size="26.0" />
                      </font></TextField>
-                  <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="446.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="468.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/baseline_perm_contact_calendar_black_36dp.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="getInfoButton" layoutX="484.0" layoutY="289.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="159.0" style="-fx-background-color: #AD282F;" text="Hämta uppgifter" textFill="WHITE">
+                  <Button fx:id="getInfoButton" layoutX="484.0" layoutY="289.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="174.0" style="-fx-background-color: #AD282F;" styleClass="getmyinfobtn" stylesheets="@../css/iMat.css" text="Hämta uppgifter" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Label layoutX="751.0" layoutY="160.0" text="Betalningsinformation">
+                  <Label layoutX="754.0" layoutY="167.0" styleClass="myinfobigtext" text="Betalningsinformation">
                      <font>
                         <Font name="System Bold" size="40.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="1201.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="1222.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/baseline_payment_black_36dp.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="751.0" layoutY="244.0" text="Namn på kortet">
+                  <Label layoutX="751.0" layoutY="244.0" styleClass="myinfosmallText" text="Namn på kortet">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -133,7 +133,7 @@
                      <font>
                         <Font size="26.0" />
                      </font></TextField>
-                  <Label layoutX="754.0" layoutY="353.0" text="Kortnummer">
+                  <Label layoutX="754.0" layoutY="353.0" styleClass="myinfosmallText" text="Kortnummer">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -142,7 +142,7 @@
                      <font>
                         <Font size="26.0" />
                      </font></TextField>
-                  <Label layoutX="756.0" layoutY="475.0" prefHeight="51.0" prefWidth="196.0" text="Giltighetstid">
+                  <Label layoutX="756.0" layoutY="475.0" prefHeight="51.0" prefWidth="196.0" styleClass="myinfosmallText" text="Giltighetstid">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -156,19 +156,19 @@
                      <font>
                         <Font size="26.0" />
                      </font></TextField>
-                  <Label layoutX="1034.0" layoutY="475.0" prefHeight="51.0" prefWidth="128.0" text="CVC-kod">
+                  <Label layoutX="1034.0" layoutY="475.0" prefHeight="51.0" prefWidth="155.0" styleClass="myinfosmallText" text="CVC">
                      <font>
                         <Font size="29.0" />
                      </font>
                   </Label>
-                  <AnchorPane layoutX="1413.0" layoutY="33.0" styleClass="cross-and-info">
+                  <AnchorPane layoutX="1395.0" layoutY="33.0" prefHeight="62.0" prefWidth="290.0" styleClass="cross-and-info">
                      <children>
-                        <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="204.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="228.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/baseline_info_white_48dp.png" />
                            </image>
                         </ImageView>
-                        <Label layoutY="4.0" onMouseClicked="#onInfo" text="Hjälp/Info" textFill="WHITE">
+                        <Label layoutX="6.0" layoutY="1.0" onMouseClicked="#onInfo" styleClass="helpbtntext" text="Hjälp/Info" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="40.0" />
                            </font>

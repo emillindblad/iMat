@@ -17,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
 
@@ -80,9 +81,13 @@ public class CategoryPanel extends AnchorPane {
     }
 
     public void setSelectedOverlay(boolean bool){
-        if(bool)
+        if(bool){
             categoryPanel.getStyleClass().add(selected);
-        else
+            categoryName.setTextFill(Color.WHITE);
+        }
+        else{
             categoryPanel.getStyleClass().remove(selected);
+            categoryName.setTextFill(Color.BLACK);
+        }
     }
 }

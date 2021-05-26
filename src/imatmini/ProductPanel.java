@@ -86,7 +86,7 @@ public class ProductPanel extends AnchorPane {
     @FXML
     private void removeProduct(Event event) {
         ShoppingItem item = model.getShoppingItem(product);
-
+        System.out.println("Removing product " + item.getProduct().getName());
         setProductAmount(item.getAmount() - 1, item);
         parentController.shoppingCartChanged(new CartEvent(this));
 
@@ -97,7 +97,7 @@ public class ProductPanel extends AnchorPane {
     @FXML
     private void addProduct(Event event) {
         ShoppingItem item = model.getShoppingItem(product);
-
+        System.out.println("Adding " + item.getProduct().getName());
         setProductAmount(item.getAmount() + 1, item);
         parentController.shoppingCartChanged(new CartEvent(this));
 

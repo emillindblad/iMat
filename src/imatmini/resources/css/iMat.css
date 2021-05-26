@@ -200,14 +200,14 @@
 }
 
 .product-plus-minus{
+    -fx-font-family: Arial;
+    -fx-font-weight: bold;
     -fx-fill: #fff;
     -fx-stroke: #000;
     -fx-stroke-width: 2px;
 }
-
-.product-plus-minus:hover {
+.product-plus-minus:hover{
     -fx-cursor: hand;
-    -fx-fill: #D2D2D2;
 }
 
 .button-main-page {

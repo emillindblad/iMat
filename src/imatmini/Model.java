@@ -9,9 +9,8 @@ package imatmini;
  *
  * @author oloft
  */
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+
 import javafx.scene.image.Image;
 import se.chalmers.cse.dat216.project.*;
 
@@ -157,8 +156,13 @@ public class Model {
         return iMatDataHandler.getOrders().size();
     }
 
-    public List<Order> getOrders(){
-        return iMatDataHandler.getOrders();
+    public List<Order> getOrders() {
+        List<Order> orders = iMatDataHandler.getOrders();
+        List<Order> ordersSorted = new ArrayList<>();
+        ordersSorted.addAll(orders);
+        ordersSorted.sort(Comparator.comparing(Order::getOrderNumber));
+        Collections.reverse(ordersSorted);
+        return ordersSorted;
     }
 
     public void shutDown() {

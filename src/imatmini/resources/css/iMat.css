@@ -171,14 +171,22 @@
     -fx-background-color: #fff;
     -fx-border-color: #000;
     -fx-border-width: 1px;
-    -fx-border-width: 1 0 1 0;
+    -fx-border-width: 1 1 1 1;
+}
+
+.categoryCard:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #EBF0FF;
+    -fx-border-color: #8A0000;
+    -fx-border-width: 3px;
+    -fx-border-width: 1 1 1 1;
 }
 
 .categorycardSelected {
-    -fx-background-color: #e6edff;
-    -fx-border-color: red;
-    -fx-border-width: 3px;
-    -fx-border-width: 1 0 1 0;
+    -fx-background-color: #DEE6FC;
+    -fx-border-color: #BD0000;
+    -fx-border-width: 24px;
+    -fx-border-width: 1 1 1 1;
 }
 
 .categoryCardText {
@@ -189,11 +197,6 @@
 
 .foobar {
     -fx-text-fill: #09CDDA;
-}
-
-.categoryCard:hover {
-    -fx-cursor: hand;
-    -fx-background-color: #c4c4c4;
 }
 
 .product-plus-minus{

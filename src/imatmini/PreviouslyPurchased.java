@@ -35,6 +35,8 @@ public class PreviouslyPurchased extends AnchorPane{
     }
 
     private PreviouslyPurchasedItem purchasedItem;
+
+    // Called by Controller
     public void updateReceipts(List<Order> orders){
 
         //Testing

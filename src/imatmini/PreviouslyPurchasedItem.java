@@ -37,7 +37,7 @@ public class PreviouslyPurchasedItem extends AnchorPane {
         }
         this.parentController = parentController;
         this.order = order;
-        this.receiptPrice.setText(Commons.getCorrectDecimalFormat(calculateTotalCost(order)) + " kr");
+        this.receiptPrice.setText(Commons.getCorrectDecimalFormat(getOrderTotalCost(order)) + " kr");
         updateOverviewImages();
         this.receiptDate.setText("Ordernummer: " + order.getOrderNumber());
     }
@@ -51,10 +51,10 @@ public class PreviouslyPurchasedItem extends AnchorPane {
     /*
     Den här delen kanske skall sitta i model
  */
-    public double calculateTotalCost(Order order){
+    public double getOrderTotalCost(Order order){
         double cost = 0;
         for (ShoppingItem item: order.getItems()) {
-            cost += item.getProduct().getPrice();
+            cost += item.getTotal();
         }
         return cost;
     }

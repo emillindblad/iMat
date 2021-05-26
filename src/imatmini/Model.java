@@ -9,9 +9,8 @@ package imatmini;
  *
  * @author oloft
  */
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+
 import javafx.scene.image.Image;
 import se.chalmers.cse.dat216.project.*;
 
@@ -157,8 +156,13 @@ public class Model {
         return iMatDataHandler.getOrders().size();
     }
 
-    public List<Order> getOrders(){
-        return iMatDataHandler.getOrders();
+    public List<Order> getOrders() {
+        List<Order> orders = iMatDataHandler.getOrders();
+        List<Order> ordersSorted = new ArrayList<>();
+        ordersSorted.addAll(orders);
+        ordersSorted.sort(Comparator.comparing(Order::getOrderNumber));
+        Collections.reverse(ordersSorted);
+        return ordersSorted;
     }
 
     public void shutDown() {
@@ -180,5 +184,57 @@ public class Model {
         CreditCard card = getCreditCard();
 
         return card.getCardNumber().isEmpty() || card.getHoldersName().isEmpty();
+    }
+
+    public ArrayList<ProductCategory> getPantryCategory(){
+        ArrayList<ProductCategory> pantry = new ArrayList<>();
+        pantry.add(ProductCategory.POTATO_RICE);
+        pantry.add(ProductCategory.PASTA);
+        pantry.add(ProductCategory.FLOUR_SUGAR_SALT);
+        return pantry;
+    }
+    public ArrayList<ProductCategory> getProteinCategory(){
+        ArrayList<ProductCategory> protein = new ArrayList<>();
+        protein.add(ProductCategory.MEAT);
+        protein.add(ProductCategory.FISH);
+        return protein;
+    }
+    public ArrayList<ProductCategory> getGreeniesCategory(){
+        ArrayList<ProductCategory> greenies = new ArrayList<>();
+        greenies.add(ProductCategory.VEGETABLE_FRUIT);
+        greenies.add(ProductCategory.CABBAGE);
+        return greenies;
+    }
+    public ArrayList<ProductCategory> getFruitCategory(){
+        ArrayList<ProductCategory> fruit = new ArrayList<>();
+        fruit.add(ProductCategory.FRUIT);
+        fruit.add(ProductCategory.BERRY);
+        fruit.add(ProductCategory.EXOTIC_FRUIT);
+        fruit.add(ProductCategory.CITRUS_FRUIT);
+        fruit.add(ProductCategory.MELONS);
+        return fruit;
+    }
+    public ArrayList<ProductCategory> getAltGreeniesCategory(){
+        ArrayList<ProductCategory> altGreenies = new ArrayList<>();
+        altGreenies.add(ProductCategory.ROOT_VEGETABLE);
+        altGreenies.add(ProductCategory.POD);
+        return altGreenies;
+    }
+    public ArrayList<ProductCategory> getDairiesCategory(){
+        ArrayList<ProductCategory> mejeri = new ArrayList<>();
+        mejeri.add(ProductCategory.DAIRIES);
+        return mejeri;
+    }
+    public ArrayList<ProductCategory> getDrinksCategory(){
+        ArrayList<ProductCategory> drinks = new ArrayList<>();
+        drinks.add(ProductCategory.COLD_DRINKS);
+        drinks.add(ProductCategory.HOT_DRINKS);
+        return drinks;
+    }
+    public ArrayList<ProductCategory> getSweetsAndNutsCategory(){
+        ArrayList<ProductCategory> sweetsAndNuts = new ArrayList<>();
+        sweetsAndNuts.add(ProductCategory.NUTS_AND_SEEDS);
+        sweetsAndNuts.add(ProductCategory.SWEET);
+        return sweetsAndNuts;
     }
 }

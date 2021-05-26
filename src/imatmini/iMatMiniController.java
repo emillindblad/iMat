@@ -6,6 +6,7 @@
 package imatmini;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -129,7 +130,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         model.getShoppingCart().addShoppingCartListener(this);
 
         updateProductList(model.getProducts());
-        updateCategoryList(model.getProducts());
+        updateCategoryList();
         updateCartPanel();
         
         setupPreviouslyPurchasedPane();
@@ -166,13 +167,17 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         }
     }
 
-    public void updateCategoryList(List<Product> products) {
-        ArrayList<ProductCategory> categories = getCategories(products);
+    public void updateCategoryList() {
         categoryFlowPane.getChildren().clear();
         categoryFlowPane.getChildren().add((new CategoryPanel("Visa alla produkter", this)));
-        for (ProductCategory category : categories) {
-            categoryFlowPane.getChildren().add(new CategoryPanel(category, this));
-        }
+        categoryFlowPane.getChildren().add(new CategoryPanel(model.getPantryCategory(), "Skafferi", this));
+        categoryFlowPane.getChildren().add(new CategoryPanel(model.getProteinCategory(), "Kött & Fisk", this));
+        categoryFlowPane.getChildren().add(new CategoryPanel(model.getGreeniesCategory(),"Grönsaker & Kål", this));
+        categoryFlowPane.getChildren().add(new CategoryPanel(model.getFruitCategory(), "Frukt, Meloner & Bär", this));
+        categoryFlowPane.getChildren().add(new CategoryPanel(model.getAltGreeniesCategory(), "Rotfrukter & Baljväxter", this));
+        categoryFlowPane.getChildren().add(new CategoryPanel(model.getDairiesCategory(), "Mejeri", this));
+        categoryFlowPane.getChildren().add(new CategoryPanel(model.getDrinksCategory(), "Dryck", this));
+        categoryFlowPane.getChildren().add(new CategoryPanel(model.getSweetsAndNutsCategory(), "Nötter & Sötsaker", this));
     }
 
     private ArrayList<ProductCategory> getCategories(List<Product> products) {

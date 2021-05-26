@@ -112,6 +112,11 @@
     -fx-font-size: 30;
 }
 
+.carttextSmaller {
+    -fx-font-family: Arial;
+    -fx-font-size: 26;
+}
+
 .scroll-bar:horizontal, .scroll-bar:vertical {
     -fx-background-color: #c4c4c4;
     -fx-border-color: #000;

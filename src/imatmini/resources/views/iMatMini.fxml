@@ -102,8 +102,11 @@
                         </ScrollPane>
                         <Button layoutX="149.0" layoutY="672.0" mnemonicParsing="false" onAction="#handleClearCartAction" text="Töm" />
                         <Button layoutY="804.0" mnemonicParsing="false" onAction="#handleBuyItemsAction" prefHeight="86.0" prefWidth="340.0" styleClass="addtocartbutton" text="Till kassan" />
-                        <Label fx:id="itemsLabel" alignment="CENTER" layoutX="22.0" layoutY="754.0" prefHeight="36.0" prefWidth="297.0" styleClass="carttext" text="Antal varor: 3456" />
-                        <Label fx:id="costLabel" alignment="CENTER" layoutX="49.0" layoutY="711.0" styleClass="carttext" text="Kostnad: 3456.60" />
+                        <Label fx:id="itemsLabel" alignment="CENTER" layoutX="21.0" layoutY="721.0" prefHeight="36.0" prefWidth="297.0" styleClass="carttextSmaller" text="Antal varor: 3456">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font></Label>
+                        <Label fx:id="costLabel" alignment="CENTER" layoutX="-4.0" layoutY="757.0" prefHeight="36.0" prefWidth="348.0" styleClass="carttext" text="Total summa: 3456.60" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="1080.0" prefWidth="340.0" styleClass="mainblue">

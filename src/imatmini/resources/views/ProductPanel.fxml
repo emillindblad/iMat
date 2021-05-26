@@ -39,9 +39,9 @@
                         <Rectangle arcHeight="5.0" arcWidth="5.0" height="5.0" layoutX="13.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
                      </children>
                   </Pane>
-                  <TextField fx:id="productAmount" alignment="CENTER" layoutX="136.0" layoutY="16.0" onAction="#updateAmount" prefHeight="24.0" prefWidth="67.0">
+                  <TextField fx:id="productAmount" alignment="CENTER" layoutX="136.0" layoutY="16.0" maxHeight="42.0" maxWidth="67.0" minHeight="24.0" minWidth="67.0" onAction="#updateAmount" prefHeight="42.0" prefWidth="67.0">
                      <font>
-                        <Font size="19.0" />
+                        <Font size="23.0" />
                      </font>
                   </TextField>
                   <Label fx:id="unitLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="15.0" prefHeight="42.0" prefWidth="46.0" text="st">

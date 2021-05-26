@@ -77,7 +77,7 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
 
         for (int i = 0; i < 7; i++) { // Add a timeslot for each week
             for (int j = 0; j < 7; j++) { // Timeslot for each day
-                TimeSlot newSlot = new TimeSlot(String.format("%02d:00", h+(2*i), h+2+(2*i)), this);
+                TimeSlot newSlot = new TimeSlot(String.format("%02d:00", h+(2*i), h+2+(2*i)), this, j);
                 flowPane.getChildren().add(newSlot);
             }
         }
@@ -107,7 +107,8 @@ public class DeliveryStep extends AnchorPane implements PurchaseStep {
             this.timeLabel.setText("Välj en tid ovan");
             this.nextButton.setDisable(true);
         }else {
-            timeLabel.setText("Du har nu valt hemleverans för klockan " + selectedTimeSlot.getTime() + "!");
+            String [] days = {"Imorgon", "onsdag", "torsdag", "fredag", "lördag", "söndag", "måndag"};
+            timeLabel.setText("Du har nu valt hemleverans på " + days[selectedTimeSlot.getDay()] + " kl " + selectedTimeSlot.getTime() + "!");
             this.nextButton.setDisable(false);
         }
     }

@@ -77,6 +77,9 @@ public class CartStepProduct extends AnchorPane {
     @FXML
     private void onDeleteProduct(){
         parent.removeProduct(shoppingItem);
+
+        if (Model.getInstance().getShoppingCart().getItems().size() == 0)
+            parent.back();
     }
     private void setProductAmount(double amount){
         shoppingItem.setAmount(amount);

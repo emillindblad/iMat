@@ -72,7 +72,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     // Other variables
     private final Model model = Model.getInstance();
-
+    private CategoryPanel viewAllCategory;
     private PreviouslyPurchased previouslyPurchased;
     private PreviouslyPurchasedDetailView previouslyPurchasedDetailView;
 
@@ -169,7 +169,9 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     public void updateCategoryList() {
         categoryFlowPane.getChildren().clear();
-        categoryFlowPane.getChildren().add((new CategoryPanel("Visa alla produkter", this)));
+        viewAllCategory = new CategoryPanel("Visa alla produkter", this);
+        categoryFlowPane.getChildren().add(viewAllCategory);
+        selectCategoryPanel(viewAllCategory);
         categoryFlowPane.getChildren().add(new CategoryPanel(model.getPantryCategory(), "Skafferi", this));
         categoryFlowPane.getChildren().add(new CategoryPanel(model.getProteinCategory(), "Kött & Fisk", this));
         categoryFlowPane.getChildren().add(new CategoryPanel(model.getGreeniesCategory(),"Grönsaker & Kål", this));
@@ -262,8 +264,10 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     }
 
     public void selectCategoryPanel(CategoryPanel categoryPanel){
-        if(selectedCategoryPanel != null)
+        if(selectedCategoryPanel != null){
             selectedCategoryPanel.setSelectedOverlay(false);
+        }
+
         selectedCategoryPanel = categoryPanel;
         selectedCategoryPanel.setSelectedOverlay(true);
     }

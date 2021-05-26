@@ -94,7 +94,6 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     }
 
     @FXML private void onSearchTextChanged(Event event){
-        System.out.println("Search text changing");
         if(searchField.getLength() > 0)
             searchButton.toFront();
         else

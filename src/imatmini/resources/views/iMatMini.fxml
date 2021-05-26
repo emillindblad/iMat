@@ -74,7 +74,7 @@
                <children>
                   <AnchorPane layoutX="340.0" minHeight="0.0" minWidth="0.0" prefHeight="110.0" prefWidth="1580.0" styleClass="mainblue">
                      <children>
-                        <Button fx:id="searchButton" layoutX="764.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="85.0" prefWidth="144.0" styleClass="searchButton" text="Sök" />
+                        <Button fx:id="searchButton" layoutX="760.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="86.0" prefWidth="150.0" styleClass="button-main-page" text="Sök" />
                         <TextField fx:id="searchField" layoutX="14.0" layoutY="12.0" minHeight="0.0" minWidth="0.0" onAction="#onEnterSearch" onKeyTyped="#onSearchTextChanged" prefHeight="86.0" prefWidth="896.0" promptText="🔍 Sök vara">
                            <font>
                               <Font size="32.0" />

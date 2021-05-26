@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" xmlns="http://javafx.com/javafx/11.0.10-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
+<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
    <children>
       <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="940.0" prefWidth="341.0" />
       <StackPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0">
@@ -68,14 +74,14 @@
                <children>
                   <AnchorPane layoutX="340.0" minHeight="0.0" minWidth="0.0" prefHeight="110.0" prefWidth="1580.0" styleClass="mainblue">
                      <children>
-                        <Button fx:id="searchButton" layoutX="760.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="86.0" prefWidth="150.0" styleClass="button-main-page" text="Sök" />
-                        <TextField fx:id="searchField" layoutX="14.0" layoutY="12.0" minHeight="0.0" minWidth="0.0" onAction="#onEnterSearch" onKeyTyped="#onSearchTextChanged" prefHeight="86.0" prefWidth="896.0" promptText="🔍 Sök vara">
+                        <Button fx:id="searchButton" layoutX="616.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="86.0" prefWidth="150.0" styleClass="button-main-page" text="Sök" />
+                        <TextField fx:id="searchField" layoutX="51.0" layoutY="12.0" minHeight="0.0" minWidth="0.0" onAction="#onEnterSearch" onKeyTyped="#onSearchTextChanged" prefHeight="86.0" prefWidth="715.0" promptText="🔍 Sök vara">
                            <font>
                               <Font size="32.0" />
                            </font>
                         </TextField>
-                        <Button layoutX="923.0" layoutY="11.0" mnemonicParsing="false" onAction="#openPurchaseHistoryView" prefHeight="92.0" prefWidth="281.0" styleClass="button-main-page" text="Tidigare köp" />
-                        <Button layoutX="1219.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleShowAccountAction" prefHeight="92.0" prefWidth="326.0" styleClass="button-main-page" text="Mina uppgifter" />
+                        <Button layoutX="802.0" layoutY="11.0" mnemonicParsing="false" onAction="#openPurchaseHistoryView" prefHeight="86.0" prefWidth="340.0" styleClass="button-main-page" text="Tidigare köp" />
+                        <Button layoutX="1199.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleShowAccountAction" prefHeight="86.0" prefWidth="340.0" styleClass="button-main-page" text="Mina uppgifter" />
                      </children>
                   </AnchorPane>
                   <AnchorPane layoutX="1540.0" layoutY="150.0" minHeight="0.0" minWidth="0.0" prefHeight="890.0" prefWidth="340.0" styleClass="cartbg" stylesheets="@../css/iMat.css">

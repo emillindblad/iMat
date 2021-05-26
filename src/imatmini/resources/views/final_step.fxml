@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane prefHeight="150.0" prefWidth="200.0">
          <children>
@@ -39,7 +39,7 @@
                   <Button layoutX="1615.0" layoutY="958.0" mnemonicParsing="false" onAction="#next" styleClass="button-next" text="Slutför köp" AnchorPane.rightAnchor="30.0" />
                   <AnchorPane layoutX="1267.0" layoutY="159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="775.0" prefWidth="625.0" styleClass="anchor-box">
                      <children>
-                        <Label layoutX="20.0" layoutY="14.0" text="Leveransinformation">
+                        <Label layoutX="20.0" layoutY="14.0" styleClass="laststepBigText" text="Leveransinformation">
                            <font>
                               <Font name="System Bold" size="45.0" />
                            </font>
@@ -59,7 +59,7 @@
                               <Font size="30.0" />
                            </font>
                         </Label>
-                        <Label layoutX="20.0" layoutY="358.0" text="Betalningsuppgifter">
+                        <Label layoutX="20.0" layoutY="358.0" styleClass="laststepBigText" text="Betalningsuppgifter">
                            <font>
                               <Font name="System Bold" size="45.0" />
                            </font>
@@ -95,7 +95,7 @@
                      <children>
                         <AnchorPane layoutX="1.0" layoutY="697.0" prefHeight="77.0" prefWidth="1200.0" style="-fx-background-color: #D5d5d5; -fx-border-width: 1px;">
                            <children>
-                              <Label layoutX="798.0" layoutY="21.0" text="Att betala:">
+                              <Label layoutX="775.0" layoutY="12.0" styleClass="laststepBigText" text="Att betala:">
                                  <font>
                                     <Font name="System Bold" size="30.0" />
                                  </font>

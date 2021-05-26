@@ -10,18 +10,14 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="1920.0" styleClass="mainblue" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="1614.0" layoutY="35.0" styleClass="cross-and-info">
+      <AnchorPane layoutX="1579.0" layoutY="35.0" prefHeight="58.0" prefWidth="300.0" styleClass="cross-and-info">
          <children>
-            <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="203.0" layoutY="-4.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="69.0" fitWidth="62.0" layoutX="234.0" layoutY="-4.0" onMouseClicked="#onInfo" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/baseline_info_white_48dp.png" />
                </image>
             </ImageView>
-            <Label layoutY="1.0" onMouseClicked="#onInfo" text="Hjälp/Info" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="40.0" />
-               </font>
-            </Label>
+            <Label layoutX="9.0" layoutY="1.0" onMouseClicked="#onInfo" styleClass="helpbtntext" text="Hjälp/Info" />
          </children>
       </AnchorPane>
       <Label id="logo" layoutX="25.0" layoutY="16.0" text="iMat" />

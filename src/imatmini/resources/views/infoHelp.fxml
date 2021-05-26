@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root onMouseClicked="#onClose" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root onMouseClicked="#onClose" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="659.0" layoutY="41.0" onMouseClicked="#mouseTrap" prefHeight="594.0" prefWidth="1000.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
          <children>
@@ -21,12 +21,12 @@
                   <Image url="@../images/baseline_close_white_48dp.png" />
                </image>
             </ImageView>
-            <Label layoutX="314.0" layoutY="209.0" text="Behöver du hjälp?" wrapText="true">
+            <Label layoutX="314.0" layoutY="209.0" styleClass="helptext" text="Behöver du hjälp?" wrapText="true">
                <font>
                   <Font name="System Bold" size="44.0" />
                </font>
             </Label>
-            <Label layoutX="215.0" layoutY="313.0" text="Ring vår kundtjänst på 112.">
+            <Label layoutX="251.0" layoutY="313.0" prefHeight="111.0" prefWidth="499.0" styleClass="helptext" text="Ring vår kundtjänst på 0734111337" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="44.0" />
                </font>

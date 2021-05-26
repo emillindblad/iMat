@@ -13,11 +13,13 @@ import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -49,6 +51,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML
     private FlowPane productsFlowPane;
 
+    @FXML
+    private Button searchButton;
 
     @FXML
     private FlowPane cartFlowPane;
@@ -82,9 +86,19 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private void handleShowAccountAction(ActionEvent event) {
         openAccountView();
     }
-
-    @FXML private void onEnter(ActionEvent ae){
+    /*
+         SEARCH METHODS
+     */
+    @FXML private void onEnterSearch(ActionEvent ae){
         handleSearchAction(ae);
+    }
+
+    @FXML private void onSearchTextChanged(Event event){
+        System.out.println("Search text changing");
+        if(searchField.getLength() > 0)
+            searchButton.toFront();
+        else
+            searchButton.toBack();
     }
 
     @FXML

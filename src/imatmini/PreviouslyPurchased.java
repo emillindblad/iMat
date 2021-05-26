@@ -38,8 +38,6 @@ public class PreviouslyPurchased extends AnchorPane{
 
     // Called by Controller
     public void updateReceipts(List<Order> orders){
-
-        //Testing
         /*
         Den ska hämta alla tidigare köp och lägga in i flowpane på ett snyggt sätt
          */

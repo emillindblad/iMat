@@ -6,6 +6,7 @@
 package imatmini;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javafx.css.PseudoClass;
@@ -26,13 +27,13 @@ import se.chalmers.cse.dat216.project.ProductCategory;
 public class CategoryPanel extends AnchorPane {
     private iMatMiniController parentController;
     private Model model = Model.getInstance();
-    private final ProductCategory category;
+    private final List<ProductCategory> categories;
     private static final String foobar = "foobar";
     private static final String selected = "categorycardSelected";
     @FXML Label categoryName;
     @FXML AnchorPane categoryPanel;
 
-    public CategoryPanel(ProductCategory category, iMatMiniController parentController) {
+    public CategoryPanel(List<ProductCategory> categories, String categoryName, iMatMiniController parentController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/categoryPanel.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -44,8 +45,8 @@ public class CategoryPanel extends AnchorPane {
         }
 
         this.parentController = parentController;
-        this.category = category;
-        categoryName.setText(Commons.getCategoryNameInSwedish(category));
+        this.categories = categories;
+        this.categoryName.setText(categoryName);
     }
     public CategoryPanel(String categoryName, iMatMiniController parentController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/categoryPanel.fxml"));
@@ -57,20 +58,21 @@ public class CategoryPanel extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        category = null;
+        categories = null;
         this.parentController = parentController;
         this.categoryName.setText(categoryName);
     }
 
     @FXML
     private void categoryBrowse() {
-        System.out.println("Browse " + categoryName);
-        List<Product> products;
+        System.out.println("Browse " + categoryName.getText());
+        ArrayList<Product> products = new ArrayList<>();
 
-        if(category != null)
-            products = model.getProducts(category);
+        if(categories != null)
+            for (ProductCategory category : categories)
+                products.addAll(model.getProducts(category));
         else
-            products = model.getProducts();
+            products.addAll(model.getProducts());
 
 
         parentController.selectCategoryPanel(this);

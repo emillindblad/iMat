@@ -181,4 +181,56 @@ public class Model {
 
         return card.getCardNumber().isEmpty() || card.getHoldersName().isEmpty();
     }
+
+    public ArrayList<ProductCategory> getPantryCategory(){
+        ArrayList<ProductCategory> pantry = new ArrayList<>();
+        pantry.add(ProductCategory.POTATO_RICE);
+        pantry.add(ProductCategory.PASTA);
+        pantry.add(ProductCategory.FLOUR_SUGAR_SALT);
+        return pantry;
+    }
+    public ArrayList<ProductCategory> getProteinCategory(){
+        ArrayList<ProductCategory> protein = new ArrayList<>();
+        protein.add(ProductCategory.MEAT);
+        protein.add(ProductCategory.FISH);
+        return protein;
+    }
+    public ArrayList<ProductCategory> getGreeniesCategory(){
+        ArrayList<ProductCategory> greenies = new ArrayList<>();
+        greenies.add(ProductCategory.VEGETABLE_FRUIT);
+        greenies.add(ProductCategory.CABBAGE);
+        return greenies;
+    }
+    public ArrayList<ProductCategory> getFruitCategory(){
+        ArrayList<ProductCategory> fruit = new ArrayList<>();
+        fruit.add(ProductCategory.FRUIT);
+        fruit.add(ProductCategory.BERRY);
+        fruit.add(ProductCategory.EXOTIC_FRUIT);
+        fruit.add(ProductCategory.CITRUS_FRUIT);
+        fruit.add(ProductCategory.MELONS);
+        return fruit;
+    }
+    public ArrayList<ProductCategory> getAltGreeniesCategory(){
+        ArrayList<ProductCategory> altGreenies = new ArrayList<>();
+        altGreenies.add(ProductCategory.ROOT_VEGETABLE);
+        altGreenies.add(ProductCategory.POD);
+        return altGreenies;
+    }
+    public ArrayList<ProductCategory> getDairiesCategory(){
+        ArrayList<ProductCategory> mejeri = new ArrayList<>();
+        mejeri.add(ProductCategory.DAIRIES);
+        return mejeri;
+    }
+    public ArrayList<ProductCategory> getDrinksCategory(){
+        ArrayList<ProductCategory> drinks = new ArrayList<>();
+        drinks.add(ProductCategory.COLD_DRINKS);
+        drinks.add(ProductCategory.HOT_DRINKS);
+        return drinks;
+    }
+    public ArrayList<ProductCategory> getSweetsAndNutsCategory(){
+        ArrayList<ProductCategory> sweetsAndNuts = new ArrayList<>();
+        sweetsAndNuts.add(ProductCategory.NUTS_AND_SEEDS);
+        sweetsAndNuts.add(ProductCategory.SWEET);
+        return sweetsAndNuts;
+    }
 }

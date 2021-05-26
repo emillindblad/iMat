@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root onMouseClicked="#onClose" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root onMouseClicked="#onClose" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="659.0" layoutY="41.0" onMouseClicked="#mouseTrap" prefHeight="594.0" prefWidth="1000.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
          <children>
@@ -39,6 +39,11 @@
                   <DropShadow />
                </effect>
             </Button>
+            <Label layoutX="40.0" layoutY="35.0" prefHeight="64.0" prefWidth="292.0" styleClass="modalScreenTitle" text="Hjälp" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

@@ -316,6 +316,13 @@
     -fx-font-weight: bold;
 }
 
+.modalScreenTitle {
+    -fx-font-family: Arial;
+    -fx-text-fill: white;
+    -fx-font-size: 56px;
+    -fx-font-weight: bold;
+}
+
 .laststepBigText {
     -fx-font-family: Arial;
     -fx-text-fill: #000000;

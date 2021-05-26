@@ -53,7 +53,6 @@ public class ShoppingCartItem extends AnchorPane {
     private void removeProduct(Event event) {
         setProductAmount(item.getAmount() - 1, item);
         parentController.shoppingCartChanged(new CartEvent(this));
-
         updateAmountText();
     }
 
@@ -83,9 +82,7 @@ public class ShoppingCartItem extends AnchorPane {
         if (amount > 0)
             item.setAmount(amount);
         else
-            model.getShoppingCart().removeItem(item);
-
-        parentController.shoppingCartChanged(new CartEvent(this));
+            onDeleteProduct();
     }
 
     private String getNumbersFromString(String text){
@@ -101,6 +98,7 @@ public class ShoppingCartItem extends AnchorPane {
 
     @FXML
     private void onDeleteProduct(){
+        System.out.println("Deleting product " + item.getProduct().getName() + " from the cart");
         model.getShoppingCart().removeItem(item);
         parentController.shoppingCartChanged(new CartEvent(this));
         parentController.updateProductList(model.getProducts());

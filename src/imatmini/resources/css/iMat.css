@@ -224,15 +224,15 @@
 
 .categoryCard:hover {
     -fx-cursor: hand;
-    -fx-background-color: #EBF0FF;
-    -fx-border-color: #8A0000;
+    -fx-background-color: #C55F65;
+    -fx-border-color: black;
     -fx-border-width: 3px;
     -fx-border-width: 1 1 1 1;
 }
 
 .categorycardSelected {
-    -fx-background-color: #DEE6FC;
-    -fx-border-color: #BD0000;
+    -fx-background-color: #AD282F;
+    -fx-border-color: black;
     -fx-border-width: 24px;
     -fx-border-width: 1 1 1 1;
 }

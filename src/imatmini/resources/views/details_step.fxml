@@ -118,7 +118,7 @@
                      </font>
                   </Label>
                   <ComboBox fx:id="cardMonth" layoutX="1097.0" layoutY="586.0" prefHeight="38.0" prefWidth="86.0" />
-                  <ComboBox fx:id="cardYear" layoutX="1203.0" layoutY="586.0" prefHeight="38.0" prefWidth="114.0" />
+                  <ComboBox fx:id="cardYear" layoutX="1203.0" layoutY="586.0" prefHeight="38.0" prefWidth="123.0" />
                   <Label fx:id="errorMessage" layoutX="1071.0" layoutY="947.0" prefHeight="88.0" prefWidth="555.0" textFill="RED" wrapText="true">
                      <font>
                         <Font size="35.0" />

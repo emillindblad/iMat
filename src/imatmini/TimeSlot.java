@@ -17,7 +17,8 @@ public class TimeSlot extends AnchorPane {
     @FXML private Pane selectPane;
     private DeliveryStep parent;
     private Boolean selected = false;
-    public TimeSlot(String time, DeliveryStep parent) {
+    private int day;
+    public TimeSlot(String time, DeliveryStep parent, int day) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/views/Time_Slot.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -29,6 +30,7 @@ public class TimeSlot extends AnchorPane {
         timeLabel.setText(time);
         selectPane.setOpacity(0);
         this.parent = parent;
+        this.day = day;
     }
 
     @FXML
@@ -49,4 +51,6 @@ public class TimeSlot extends AnchorPane {
     public String getTime(){
         return timeLabel.getText();
     }
+
+    public int getDay() { return day; }
 }

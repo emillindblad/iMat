@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import se.chalmers.cse.dat216.project.CreditCard;
+import se.chalmers.cse.dat216.project.Customer;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -25,7 +27,10 @@ public class PreviouslyPurchasedDetailView extends AnchorPane {
     private Label creditNameLabel;
     @FXML
     private Label creditCardLabel;
+    @FXML
+    private Label creditDateLabel;
 
+    @FXML private Label costLabel;
     @FXML
     private FlowPane flowPane;
 
@@ -44,8 +49,23 @@ public class PreviouslyPurchasedDetailView extends AnchorPane {
     }
 
     public void populateView(Order order){
-        populateItems(order.getItems());
         this.order = order;
+        populateItems(order.getItems());
+        populateInfo();
+    }
+
+    private void populateInfo(){
+        Customer customer = Model.getInstance().getCustomer();
+        CreditCard card = Model.getInstance().getCreditCard();
+        nameLabel.setText(customer.getFirstName() + " " + customer.getLastName());
+        adressLabel.setText(customer.getAddress());
+        cityLabel.setText(customer.getPostCode() + " " + customer.getPostAddress());
+
+        creditNameLabel.setText(card.getHoldersName());
+        creditCardLabel.setText(card.getCardNumber());
+        creditDateLabel.setText(card.getValidMonth() + "/" + card.getValidYear());
+
+        costLabel.setText(Commons.getCorrectDecimalFormat(Commons.getOrderTotalCost(order)) + " kr");
     }
 
     private void populateItems(List<ShoppingItem> items){

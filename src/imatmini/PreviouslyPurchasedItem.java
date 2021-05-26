@@ -37,7 +37,7 @@ public class PreviouslyPurchasedItem extends AnchorPane {
         }
         this.parentController = parentController;
         this.order = order;
-        this.receiptPrice.setText(Commons.getCorrectDecimalFormat(getOrderTotalCost(order)) + " kr");
+        this.receiptPrice.setText(Commons.getCorrectDecimalFormat(Commons.getOrderTotalCost(order)) + " kr");
         updateOverviewImages();
         this.receiptDate.setText("Ordernummer: " + order.getOrderNumber());
     }
@@ -47,17 +47,6 @@ public class PreviouslyPurchasedItem extends AnchorPane {
         parentController.openPreviousPurchasedDetailView(order);
     }
 
-
-    /*
-    Den här delen kanske skall sitta i model
- */
-    public double getOrderTotalCost(Order order){
-        double cost = 0;
-        for (ShoppingItem item: order.getItems()) {
-            cost += item.getTotal();
-        }
-        return cost;
-    }
 
     private void updateOverviewImages(){
         for (int i = 0; i < imageSlotSize; i++) {

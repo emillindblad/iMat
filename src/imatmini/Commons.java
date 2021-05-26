@@ -3,7 +3,9 @@ package imatmini;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import org.w3c.dom.Text;
+import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ProductCategory;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.text.DecimalFormat;
 
@@ -42,6 +44,15 @@ public class Commons {
 
         });
     }
+
+    public static double getOrderTotalCost(Order order){
+        double cost = 0;
+        for (ShoppingItem item: order.getItems()) {
+            cost += item.getTotal();
+        }
+        return cost;
+    }
+
 
     public static String getCategoryNameInSwedish(ProductCategory category){
         String name;

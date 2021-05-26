@@ -166,7 +166,7 @@ public class MyInfo extends AnchorPane implements Info {
         lastName.setText(customer.getLastName());
         address.setText(customer.getAddress());
         postNum.setText(customer.getPostCode());
-        city.setText(customer.getPostCode());
+        city.setText(customer.getPostAddress());
         phoneNumber.setText(customer.getPhoneNumber());
     }
 

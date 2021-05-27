@@ -285,6 +285,10 @@
     -fx-cursor: hand;
 }
 
+.product-plus-minus:hover{
+    -fx-cursor:hand;
+}
+
 .button-main-page {
     -fx-background-color: #26263A;
     -fx-border-color: #AD282F;

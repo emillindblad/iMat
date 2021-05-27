@@ -47,7 +47,7 @@
    <children>
       <ScrollPane hbarPolicy="NEVER" layoutY="209.0" prefHeight="763.0" prefWidth="1818.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css">
          <content>
-            <FlowPane fx:id="flowPane" alignment="CENTER" hgap="70.0" prefHeight="537.0" prefWidth="1801.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" vgap="70.0">
+            <FlowPane fx:id="flowPane" alignment="CENTER" hgap="70.0" prefHeight="763.0" prefWidth="1801.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" vgap="70.0">
                <padding>
                   <Insets bottom="150.0" right="200.0" top="100.0" />
                </padding>

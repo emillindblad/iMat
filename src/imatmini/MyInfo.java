@@ -153,7 +153,7 @@ public class MyInfo extends AnchorPane implements Info {
         cardNum.setText(card.getCardNumber());
         cardName.setText(card.getHoldersName());
 
-        cardMonth.getSelectionModel().select(card.getValidMonth());
+        cardMonth.getSelectionModel().select(card.getValidMonth()-1);
         cardYear.getSelectionModel().select(card.getValidYear());
 
         cardCVC.setText(""+card.getVerificationCode());

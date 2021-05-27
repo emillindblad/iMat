@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane prefHeight="150.0" prefWidth="200.0">
          <children>
@@ -95,12 +95,12 @@
                      <children>
                         <AnchorPane layoutX="1.0" layoutY="697.0" prefHeight="77.0" prefWidth="1200.0" style="-fx-background-color: #D5d5d5; -fx-border-width: 1px;">
                            <children>
-                              <Label layoutX="775.0" layoutY="12.0" styleClass="laststepBigText" text="Att betala:">
+                              <Label layoutX="716.0" layoutY="13.0" styleClass="laststepBigText" text="Att betala:">
                                  <font>
-                                    <Font name="System Bold" size="30.0" />
+                                    <Font size="30.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="totalSum" layoutX="1003.0" layoutY="21.0" prefHeight="36.0" prefWidth="162.0" textAlignment="RIGHT">
+                              <Label fx:id="totalSum" layoutX="943.0" layoutY="13.0" prefHeight="52.0" prefWidth="222.0" styleClass="laststepBigText" text="3523532" textAlignment="RIGHT">
                                  <font>
                                     <Font size="30.0" />
                                  </font>

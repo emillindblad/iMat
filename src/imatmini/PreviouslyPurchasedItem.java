@@ -39,7 +39,8 @@ public class PreviouslyPurchasedItem extends AnchorPane {
         this.order = order;
         this.receiptPrice.setText(Commons.getCorrectDecimalFormat(Commons.getOrderTotalCost(order)) + " kr");
         updateOverviewImages();
-        this.receiptDate.setText("Ordernummer: " + order.getOrderNumber());
+        this.receiptDate.setText(Commons.simpleDateFormat.format(order.getDate()));
+        //this.receiptDate.setText("Ordernummer: " + order.getOrderNumber());
     }
 
     @FXML

@@ -8,6 +8,7 @@ import se.chalmers.cse.dat216.project.ProductCategory;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 
 public class Commons {
     public static void setTextLimit(TextField textField, int length) {
@@ -54,36 +55,9 @@ public class Commons {
     }
 
 
-    public static String getCategoryNameInSwedish(ProductCategory category){
-        String name;
-        switch (category){
-            case POD -> name = "Baljväxter";
-            case FISH -> name = "Fisk";
-            case HERB -> name = "Örter";
-            case MEAT -> name = "Kött";
-            case BERRY -> name = "Bär";
-            case BREAD -> name = "Bröd";
-            case FRUIT -> name = "Frukt";
-            case PASTA -> name = "Pasta";
-            case SWEET -> name = "Sötsaker";
-            case MELONS -> name = "Meloner";
-            case CABBAGE -> name = "Kål";
-            case DAIRIES -> name = "Mejeri";
-            case HOT_DRINKS -> name = "Varma drycker";
-            case COLD_DRINKS -> name = "Kalla drycker";
-            case POTATO_RICE -> name = "Potatis & Ris";
-            case CITRUS_FRUIT -> name = "Citrusfrukter";
-            case EXOTIC_FRUIT -> name = "Exotiska frukter";
-            case NUTS_AND_SEEDS -> name = "Nötter & Frön";
-            case ROOT_VEGETABLE -> name = "Rotfrukter";
-            case VEGETABLE_FRUIT -> name = "Grönsaker";
-            case FLOUR_SUGAR_SALT -> name = "Skafferi";
-            default -> name = "unknown";
-        }
-        return name;
-    }
-
     public static String getCorrectDecimalFormat(double number){
         return new DecimalFormat("#.##").format(number);
     }
+
+    public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 }

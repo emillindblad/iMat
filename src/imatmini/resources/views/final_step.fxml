@@ -64,7 +64,7 @@
                               <Font name="System Bold" size="45.0" />
                            </font>
                         </Label>
-                        <Label fx:id="cardName" layoutX="24.0" layoutY="434.0" text="Label">
+                        <Label fx:id="cardName" layoutX="24.0" layoutY="434.0" prefHeight="45.0" prefWidth="559.0" text="Label">
                            <font>
                               <Font size="30.0" />
                            </font>

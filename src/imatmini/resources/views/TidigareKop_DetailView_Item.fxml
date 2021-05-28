@@ -18,14 +18,19 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Label fx:id="priceLabel" layoutX="109.0" layoutY="46.0" text="500 kr">
+      <Label fx:id="priceLabel" alignment="CENTER_RIGHT" layoutX="310.0" layoutY="29.0" prefHeight="35.0" prefWidth="182.0" text="500 kr">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="amountLabel" layoutX="109.0" layoutY="46.0" prefHeight="27.0" prefWidth="86.0" text="15 st">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="amountLabel" layoutX="427.0" layoutY="29.0" text="15 st">
+      <Label fx:id="unitLabel" layoutX="198.0" layoutY="46.0" prefHeight="27.0" prefWidth="139.0" text="15 st">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Label>
    </children>

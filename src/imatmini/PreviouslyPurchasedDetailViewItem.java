@@ -21,6 +21,8 @@ public class PreviouslyPurchasedDetailViewItem extends AnchorPane {
     @FXML
     private Label amountLabel;
     @FXML
+    private Label unitLabel;
+    @FXML
     private ImageView productImage;
 
     private final Model model = Model.getInstance();
@@ -37,6 +39,7 @@ public class PreviouslyPurchasedDetailViewItem extends AnchorPane {
         this.productNameLabel.setText(item.getProduct().getName());
         this.priceLabel.setText(Commons.getCorrectDecimalFormat(item.getTotal()) + " kr");
         this.amountLabel.setText((int)item.getAmount() + " " + item.getProduct().getUnitSuffix());
+        this.unitLabel.setText(item.getProduct().getPrice() + " " + item.getProduct().getUnit());
         this.productImage.setImage(model.getImage(item.getProduct()));
 
     }

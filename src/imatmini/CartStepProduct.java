@@ -38,7 +38,8 @@ public class CartStepProduct extends AnchorPane {
         this.shoppingItem = shoppingItem;
         this.parent = parent;
         populateProduct();
-
+        Commons.setTextLimit(productAmount, 2);
+        Commons.allowIntegersOnly(productAmount);
         if (gray)
             this.setStyle("-fx-background-color: #D5D5D5");
     }

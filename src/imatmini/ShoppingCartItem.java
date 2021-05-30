@@ -43,6 +43,8 @@ public class ShoppingCartItem extends AnchorPane {
         this.item = item;
         this.parentController = parentController;
 
+        Commons.setTextLimit(productAmount, 2);
+        Commons.allowIntegersOnly(productAmount);
         if (gray)
             this.setStyle("-fx-background-color: #D5D5D5");
 

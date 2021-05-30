@@ -78,6 +78,7 @@ public class ShoppingCartItem extends AnchorPane {
         }
         setProductAmount(amount, item);
         productAmount.positionCaret(productAmount.getLength());
+        parentController.shoppingCartChanged(new CartEvent(this));
     }
 
     private void setProductAmount(double amount, ShoppingItem item) {

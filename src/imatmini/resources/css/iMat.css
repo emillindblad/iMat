@@ -85,6 +85,7 @@
 }
 
 .addtocartbutton:hover {
+    -fx-background-color: #8E2328;
     -fx-cursor: hand;
 }
 

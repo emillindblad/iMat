@@ -136,7 +136,7 @@
 .scroll-bar:horizontal .track,
 .scroll-bar:vertical .track{
     -fx-background-color: #D9DCE4;
-    -fx-border-color :transparent;
+    -fx-border-color :#000;
     -fx-background-radius : 0.0em;
     -fx-border-radius :2.0em;
 }
@@ -364,4 +364,10 @@
     -fx-font-family: Arial;
     -fx-text-fill: #fff;
     -fx-font-size: 20px;
+}
+
+.text-field-error {
+  -fx-text-box-border: red;
+  -fx-text-box-border-width: 3;
+  -fx-focus-color: red;
 }

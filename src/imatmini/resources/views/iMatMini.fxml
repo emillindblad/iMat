@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
+<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainbackgroud" stylesheets="@../css/iMat.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
    <children>
       <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="940.0" prefWidth="341.0" />
       <StackPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0">
@@ -92,7 +93,10 @@
                               <FlowPane fx:id="cartFlowPane" prefHeight="428.0" prefWidth="251.0" />
                            </content>
                         </ScrollPane>
-                        <Button layoutX="283.0" layoutY="670.0" maxHeight="43.0" maxWidth="43.0" minHeight="43.0" minWidth="43.0" mnemonicParsing="false" onAction="#handleClearCartAction" prefHeight="43.0" prefWidth="43.0" styleClass="button-back" />
+                        <Button layoutX="283.0" layoutY="670.0" maxHeight="43.0" maxWidth="43.0" minHeight="43.0" minWidth="43.0" mnemonicParsing="false" onAction="#handleClearCartAction" prefHeight="43.0" prefWidth="43.0" styleClass="button-back">
+                           <tooltip>
+                              <Tooltip text="Töm varukorgen" />
+                           </tooltip></Button>
                         <Button layoutY="804.0" mnemonicParsing="false" onAction="#handleBuyItemsAction" prefHeight="86.0" prefWidth="340.0" styleClass="addtocartbutton" text="Till kassan" />
                         <Label fx:id="itemsLabel" alignment="CENTER" layoutX="21.0" layoutY="721.0" prefHeight="36.0" prefWidth="297.0" styleClass="carttextSmaller" text="Antal varor: 3456">
                            <font>

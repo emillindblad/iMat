@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane layoutX="3.0">
          <children>
@@ -109,7 +109,7 @@
                         <Image url="@../images/baseline_perm_contact_calendar_black_36dp.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="getInfoButton" layoutX="484.0" layoutY="289.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="174.0" style="-fx-background-color: #AD282F;" styleClass="getmyinfobtn" stylesheets="@../css/iMat.css" text="Hämta uppgifter" textFill="WHITE">
+                  <Button fx:id="getInfoButton" layoutX="487.0" layoutY="296.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: #AD282F;" styleClass="getmyinfobtn" stylesheets="@../css/iMat.css" text="Hämta uppgifter" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>

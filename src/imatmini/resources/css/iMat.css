@@ -22,6 +22,17 @@
     -fx-background-insets: 0;
 }
 
+.logoText{
+    -fx-font-size: 72px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Kelly Slab", "Arial";
+}
+
+.logoText:hover{
+    -fx-cursor: hand;
+    -fx-text-fill: #DADADA;
+}
+
 .button-next:hover{
     -fx-cursor: hand;
     -fx-background-color:  #92230C
@@ -50,11 +61,11 @@
     -fx-opacity: 0.25;
 }
 
-#logo{
-    -fx-font-size: 72px;
-    -fx-text-fill: #FFFFFF;
-    -fx-font-family: "Kelly Slab", "Arial";
-}
+//#logo{
+//    -fx-font-size: 72px;
+//    -fx-text-fill: #FFFFFF;
+//    -fx-font-family: "Kelly Slab", "Arial";
+//}
 
 .mainbackgroud {
     -fx-font-family: Arial;

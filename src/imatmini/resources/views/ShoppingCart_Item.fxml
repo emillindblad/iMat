@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="149.0" minWidth="-Infinity" prefHeight="149.0" prefWidth="340.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.10-internal" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="149.0" minWidth="-Infinity" prefHeight="149.0" prefWidth="340.0" stylesheets="@../css/iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
        <Label fx:id="itemLabel" layoutX="11.0" layoutY="7.0" prefHeight="47.0" prefWidth="278.0" styleClass="carttext" text="Produktnamn" />
        <Label fx:id="priceLabel" layoutX="11.0" layoutY="49.0" prefHeight="11.0" prefWidth="288.0" styleClass="cartsmalltext" text="12,50 kr" />
@@ -20,7 +24,7 @@
             <Font size="29.0" />
          </font>
       </TextField>
-      <Pane layoutX="270.0" layoutY="14.0" prefHeight="55.0" prefWidth="56.0">
+      <Pane layoutX="243.0" layoutY="14.0" prefHeight="55.0" prefWidth="56.0">
          <children>
             <ImageView fitHeight="55.0" fitWidth="56.0" layoutX="1.0" layoutY="-1.0" onMouseClicked="#onDeleteProduct" pickOnBounds="true" preserveRatio="true" styleClass="cross-and-info">
                <image>

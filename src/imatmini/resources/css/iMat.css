@@ -365,3 +365,9 @@
     -fx-text-fill: #fff;
     -fx-font-size: 20px;
 }
+
+.text-field-error {
+  -fx-text-box-border: red;
+  -fx-text-box-border-width: 3;
+  -fx-focus-color: red;
+}

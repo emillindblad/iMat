@@ -114,6 +114,9 @@ public class DetailsStep extends AnchorPane implements PurchaseStep {
             }
 
         });
+
+
+
         addProgressBar(detailsMissing);
         this.parentProcess = parentProcess;
     }
@@ -153,10 +156,24 @@ public class DetailsStep extends AnchorPane implements PurchaseStep {
     @Override
     public void next() {
         saveDetails();
-        if (model.isDetailMissing())
+        if (model.isDetailMissing()) {
             errorMessage.setText("Var snäll och fyll i alla uppgifter!");
+            textFieldError();
+        }
         else
             parentProcess.deliveryStep();
+    }
+
+    private void textFieldError() {
+        Commons.setEmptyWarning(firstName);
+        Commons.setEmptyWarning(lastName);
+        Commons.setEmptyWarning(address);
+        Commons.setEmptyWarning(city);
+        Commons.setEmptyWarning(phoneNumber);
+        Commons.setEmptyWarning(postNum);
+        Commons.setEmptyWarning(cardCVC);
+        Commons.setEmptyWarning(cardName);
+        Commons.setEmptyWarning(cardNum);
     }
 
     private void saveDetails() {

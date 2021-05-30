@@ -71,4 +71,10 @@ public class Commons {
     }
 
     public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+
+    public static void setEmptyWarning(TextField textField) {
+            if (textField.getText().isEmpty()) {
+                textField.getStyleClass().add("text-field-error");
+            }
+    }
 }

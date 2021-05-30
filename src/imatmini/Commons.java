@@ -2,6 +2,7 @@ package imatmini;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextFormatter;
 import org.w3c.dom.Text;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ProductCategory;
@@ -9,6 +10,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.function.UnaryOperator;
 
 public class Commons {
     public static void setTextLimit(TextField textField, int length) {
@@ -54,7 +56,16 @@ public class Commons {
         return cost;
     }
 
-
+    public static void allowIntegersOnly(TextField textField) {
+        UnaryOperator<TextFormatter.Change> integerFilter = change -> {
+            String input = change.getText();
+            if (input.matches("[0-9]*")) {
+                return change;
+            }
+            return null;
+        };
+        textField.setTextFormatter(new TextFormatter<String>(integerFilter));
+    }
     public static String getCorrectDecimalFormat(double number){
         return new DecimalFormat("#.##").format(number);
     }

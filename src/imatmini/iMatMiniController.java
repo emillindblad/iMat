@@ -21,6 +21,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -56,6 +57,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     @FXML
     private FlowPane cartFlowPane;
+    @FXML
+    private ScrollPane cartScrollPane; // Eventuellt om man vill att skrollen ska hamna längst ned, på senaste vara
 
     @FXML
     private AnchorPane historyPane;
@@ -219,6 +222,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
             cartFlowPane.getChildren().add(new ShoppingCartItem(this, item, gray));
             gray = !gray;
         }
+
     }
 
     /*

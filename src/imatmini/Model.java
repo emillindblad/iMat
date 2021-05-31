@@ -95,8 +95,6 @@ public class Model {
     }
 
     public void addPreviousPurchaseToCart(Order order) {
-        getShoppingCart().clear();
-
         for (ShoppingItem item : order.getItems())
             getShoppingCart().addItem(item);
     }

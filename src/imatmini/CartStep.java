@@ -47,7 +47,7 @@ public class CartStep extends AnchorPane implements PurchaseStep {
         mainPane.toFront();
     }
 
-    public void  updateCartStep() {
+    public void updateCartStep() {
         this.shoppingCart = model.getShoppingCart();
         populateProductList();
     }
@@ -81,6 +81,10 @@ public class CartStep extends AnchorPane implements PurchaseStep {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public void updateCartView(){
+        sumLabel.setText((float)shoppingCart.getTotal() + " kr");
     }
 
     private void addProgressBar(boolean detailsMissing) {

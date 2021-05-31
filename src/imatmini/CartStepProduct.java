@@ -86,6 +86,7 @@ public class CartStepProduct extends AnchorPane {
         shoppingItem.setAmount(amount);
         updateAmountText();
         updateCostText();
+        parent.updateCartView();
 
         if(shoppingItem.getAmount() <= 0)
             onDeleteProduct();
@@ -97,6 +98,7 @@ public class CartStepProduct extends AnchorPane {
 
     private void updateAmountText(){
         this.productAmount.setText((int)shoppingItem.getAmount() + "");
+
     }
 
     private String getNumbersFromString(String text){

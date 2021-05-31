@@ -286,6 +286,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
             selectedCategoryPanel.setSelectedOverlay(false);
         }
 
+        searchField.setText("");
         selectedCategoryPanel = categoryPanel;
         selectedCategoryPanel.setSelectedOverlay(true);
     }

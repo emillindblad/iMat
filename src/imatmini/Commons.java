@@ -30,7 +30,9 @@ public class Commons {
     public static void setTextSplitAndLimit(TextField textField, int splitNumber, int limit){
         textField.setOnKeyTyped(event -> {
             int caretPos = textField.getCaretPosition(); // Get caret position
-            String input = textField.getText().replaceAll("\\s+","");
+            //String input = textField.getText().replaceAll("\\s+","");
+            String input = textField.getText().replaceAll("[^0-9]", "");
+            //text.replaceAll("[^0-9]", "");
 
             if (input.length() > limit) {
                 input = input.substring(0, limit);
@@ -48,14 +50,6 @@ public class Commons {
         });
     }
 
-    public static double getOrderTotalCost(Order order){
-        double cost = 0;
-        for (ShoppingItem item: order.getItems()) {
-            cost += item.getTotal();
-        }
-        return cost;
-    }
-
     public static void allowIntegersOnly(TextField textField) {
         UnaryOperator<TextFormatter.Change> integerFilter = change -> {
             String input = change.getText();
@@ -66,6 +60,16 @@ public class Commons {
         };
         textField.setTextFormatter(new TextFormatter<String>(integerFilter));
     }
+
+
+    public static double getOrderTotalCost(Order order){
+        double cost = 0;
+        for (ShoppingItem item: order.getItems()) {
+            cost += item.getTotal();
+        }
+        return cost;
+    }
+
     public static String getCorrectDecimalFormat(double number){
         return new DecimalFormat("#.##").format(number);
     }

@@ -198,19 +198,23 @@ public class MyInfo extends AnchorPane implements Info {
     }
 
     private void addActions(){
+        Commons.allowIntegersOnly(cardCVC);
+        Commons.allowIntegersOnly(personNum);
+        Commons.allowIntegersOnly(phoneNumber);
         Commons.setTextLimit(personNum, 12);
         Commons.setTextLimit(firstName, 20);
+
         Commons.setTextLimit(lastName, 20);
+
         Commons.setTextLimit(address, 20);
         Commons.setTextLimit(city, 25);
+
         Commons.setTextLimit(phoneNumber, 10);
         Commons.setTextSplitAndLimit(postNum, 3, 5);
         Commons.setTextSplitAndLimit(cardNum, 4, 16);
         Commons.setTextLimit(cardCVC, 3);
+        Commons.setTextLimit(cardName, 40);
 
-        Commons.allowIntegersOnly(cardCVC);
-        Commons.allowIntegersOnly(personNum);
-        Commons.allowIntegersOnly(phoneNumber);
 
     }
 

@@ -60,6 +60,8 @@ public class ProductPanel extends AnchorPane {
         nameLabel.setText(product.getName());
         prizeLabel.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
         imageView.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
+        Commons.allowIntegersOnly(productAmount);
+        Commons.setTextLimit(productAmount, 2);
         if (!product.isEcological()) {
             ecoLabel.setText("");
         }
@@ -122,8 +124,10 @@ public class ProductPanel extends AnchorPane {
     private void setProductAmount(double amount, ShoppingItem item) {
         if (amount > 0)
             item.setAmount(amount);
-        else
+        else{
             model.getShoppingCart().removeItem(item);
+            correctViewToFront();
+        }
     }
 
     private String getNumbersFromString(String text){

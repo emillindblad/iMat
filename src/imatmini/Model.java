@@ -134,6 +134,14 @@ public class Model {
         return iMatDataHandler.getShoppingCart();
     }
 
+
+    public List<ShoppingItem> getShoppingCartItems() {
+        List<ShoppingItem> shoppingItems = getShoppingCart().getItems();
+        List<ShoppingItem> shoppingItemsSorted = new ArrayList<>(shoppingItems);
+        Collections.reverse(shoppingItemsSorted);
+        return shoppingItemsSorted;
+    }
+
     public void clearShoppingCart() {
 
         iMatDataHandler.getShoppingCart().clear();

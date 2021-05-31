@@ -56,7 +56,7 @@ public class FinalStep extends AnchorPane implements PurchaseStep {
     }
 
     private void updateProductList() {
-        List<ShoppingItem> items = Model.getInstance().getShoppingCart().getItems();
+        List<ShoppingItem> items = Model.getInstance().getShoppingCartItems();
         boolean gray = false;
         for (ShoppingItem item : items) {
             productFlowPane.getChildren().add(new FinalStepProduct(item, gray));

@@ -44,6 +44,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML
     private AnchorPane shopPane;
     @FXML
+    private ScrollPane productScrollPane; // Denna skall upp varje gång man väljer en kategori
+    @FXML
     private TextField searchField;
     @FXML
     private Label itemsLabel;
@@ -155,6 +157,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         setupPreviousPurchasedDetailView();
 
         shopPane.toFront();
+        cartScrollPane.setVvalue(0);
     }
 
     private void setupMyInfoView() {
@@ -219,7 +222,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
          */
         cartFlowPane.getChildren().clear();
         boolean gray = true;
-        for (ShoppingItem item : model.getShoppingCart().getItems()) {
+        for (ShoppingItem item : model.getShoppingCartItems()) {
             cartFlowPane.getChildren().add(new ShoppingCartItem(this, item, gray));
             gray = !gray;
         }
@@ -286,6 +289,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
             selectedCategoryPanel.setSelectedOverlay(false);
         }
 
+        productScrollPane.setVvalue(0);
         searchField.setText("");
         selectedCategoryPanel = categoryPanel;
         selectedCategoryPanel.setSelectedOverlay(true);
